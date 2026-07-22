@@ -7,8 +7,8 @@ import { useSession, signOut } from "next-auth/react";
 const NAV_LINKS = [
   { href: "/", label: "Annuaire" },
   { href: "/prompts", label: "Prompts" },
+  { href: "/guides/meilleurs-outils-ia-francophones-2026", label: "Guides" },
   { href: "/submit", label: "Soumettre un site" },
-  { href: "/contact", label: "Contact" },
 ];
 
 export default function Header() {

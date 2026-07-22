@@ -4,6 +4,9 @@ import { SEED_SITES } from "@/data/sites";
 import DirectoryClient from "@/components/DirectoryClient";
 import AdBanner from "@/components/AdBanner";
 import NewsletterCTA from "@/components/NewsletterCTA";
+import NewsletterInline from "@/components/NewsletterInline";
+import JsonLd from "@/components/JsonLd";
+import { directoryItemListSchema } from "@/lib/seo";
 
 export const dynamic = "force-dynamic";
 
@@ -21,6 +24,7 @@ export default async function HomePage() {
 
   return (
     <div className="flex flex-col gap-16">
+      <JsonLd data={directoryItemListSchema(sites)} />
       <section className="relative flex flex-col items-center gap-6 py-12 text-center">
         <span className="chip !cursor-default border-none bg-brand-gradient-soft text-brand-200">
           🚀 {sites.length}+ sites & outils IA référencés
@@ -45,6 +49,8 @@ export default async function HomePage() {
           </a>
         </div>
       </section>
+
+      <NewsletterInline />
 
       <AdBanner />
 

@@ -22,6 +22,7 @@ export default function Footer() {
           <ul className="space-y-2 text-sm text-slate-400">
             <li><Link href="/" className="hover:text-white">Annuaire de sites</Link></li>
             <li><Link href="/prompts" className="hover:text-white">Prompts communautaires</Link></li>
+            <li><Link href="/guides/meilleurs-outils-ia-francophones-2026" className="hover:text-white">Guides IA</Link></li>
             <li><Link href="/submit" className="hover:text-white">Soumettre un site</Link></li>
           </ul>
         </div>
@@ -29,6 +30,7 @@ export default function Footer() {
         <div>
           <h4 className="mb-3 text-sm font-semibold text-slate-200">Légal</h4>
           <ul className="space-y-2 text-sm text-slate-400">
+            <li><Link href="/a-propos" className="hover:text-white">À propos</Link></li>
             <li><Link href="/legal" className="hover:text-white">Mentions légales</Link></li>
             <li><Link href="/privacy" className="hover:text-white">Confidentialité</Link></li>
             <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
