@@ -6,7 +6,7 @@ import JsonLd from "@/components/JsonLd";
 import { websiteSchema, organizationSchema } from "@/lib/seo";
 
 export const metadata = {
-  metadataBase: new URL("https://promptforums.org"),
+  metadataBase: new URL("https://www.promptforums.org"),
   title: {
     default: "PromptForums — L'annuaire des meilleurs sites et prompts IA",
     template: "%s | PromptForums",
@@ -25,7 +25,7 @@ export const metadata = {
     title: "PromptForums — L'annuaire des meilleurs sites et prompts IA",
     description:
       "Découvrez, comparez et notez les meilleurs sites, outils et prompts d'intelligence artificielle.",
-    url: "https://promptforums.org",
+    url: "https://www.promptforums.org",
     siteName: "PromptForums",
     locale: "fr_FR",
     type: "website",
