@@ -11,6 +11,7 @@ export default function sitemap() {
     "/legal",
     "/privacy",
     "/guides/meilleurs-outils-ia-francophones-2026",
+    "/guides/meilleurs-prompts-chatgpt-2026",
   ];
   return routes.map((path) => ({
     url: `${SITE_URL}${path}`,
