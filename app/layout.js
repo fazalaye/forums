@@ -36,6 +36,9 @@ export const metadata = {
     description:
       "Découvrez, comparez et notez les meilleurs sites, outils et prompts d'intelligence artificielle.",
   },
+  verification: {
+    google: "pvZWEpf7e0OU7ON6iM6l2rzdx0T7pd7_mBsLzewXIZ8",
+  },
 };
 
 export default function RootLayout({ children }) {
