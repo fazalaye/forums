@@ -1,0 +1,18 @@
+# PromptForums
+
+> PromptForums est l'annuaire francophone indépendant des meilleurs sites, outils et prompts d'intelligence artificielle. La communauté découvre, compare, note et met à jour chaque semaine les outils IA (ChatGPT, Midjourney, Claude, etc.).
+
+PromptForums s'adresse aux créateurs de contenu, marketeurs, freelances, développeurs et étudiants francophones qui utilisent l'IA et cherchent les meilleurs outils et prompts, en français. La consultation est gratuite ; le site propose aussi une newsletter et des mises en avant payantes pour les éditeurs d'outils.
+
+## Pages principales
+
+- [Annuaire des outils IA](https://www.promptforums.org/) : répertoire d'outils et de sites d'IA, avec recherche, filtres par catégorie et notes de la communauté.
+- [Prompts communautaires](https://www.promptforums.org/prompts) : prompts partagés et notés par la communauté, classés par catégorie.
+- [Guide : les 10 meilleurs outils IA en 2026](https://www.promptforums.org/guides/meilleurs-outils-ia-francophones-2026) : comparatif à jour (ChatGPT, Claude, Midjourney, Perplexity…) avec prix, usages et notes.
+- [À propos](https://www.promptforums.org/a-propos) : présentation et questions fréquentes.
+- [Soumettre un site](https://www.promptforums.org/submit) : référencer un outil ou site IA dans l'annuaire.
+- [Contact](https://www.promptforums.org/contact) : admin@promptforums.org
+
+## Catégories
+
+Chatbots & Assistants, Écriture & Copywriting, Génération d'images, Code & Développement, Marketing & SEO, Productivité, Vidéo & Audio, Business & Stratégie.
