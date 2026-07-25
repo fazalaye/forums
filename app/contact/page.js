@@ -15,8 +15,8 @@ export default function ContactPage() {
         </p>
         <p>
           📧 Email :{" "}
-          <a href="mailto:contact@promptforums.org" className="text-brand-300 underline">
-            contact@promptforums.org
+          <a href="mailto:admin@promptforums.org" className="text-brand-300 underline">
+            admin@promptforums.org
           </a>
         </p>
         <p>
