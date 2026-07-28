@@ -6,9 +6,15 @@ import AdBanner from "@/components/AdBanner";
 import NewsletterCTA from "@/components/NewsletterCTA";
 import NewsletterInline from "@/components/NewsletterInline";
 import JsonLd from "@/components/JsonLd";
-import { directoryItemListSchema } from "@/lib/seo";
+import { directoryItemListSchema, SITE_URL } from "@/lib/seo";
 
 export const dynamic = "force-dynamic";
+
+export const metadata = {
+  alternates: {
+    canonical: SITE_URL,
+  },
+};
 
 async function getSites() {
   const conn = await dbConnect();

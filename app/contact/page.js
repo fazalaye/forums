@@ -1,7 +1,12 @@
+import { SITE_URL } from "@/lib/seo";
+
 export const metadata = {
   title: "Contact",
   description:
     "Contactez l'équipe PromptForums pour toute question, partenariat ou demande de publicité.",
+  alternates: {
+    canonical: `${SITE_URL}/contact`,
+  },
 };
 
 export default function ContactPage() {
