@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BrandMark from "./BrandMark";
 
 export default function Footer() {
   return (
@@ -6,7 +7,7 @@ export default function Footer() {
       <div className="mx-auto grid max-w-7xl grid-cols-2 gap-8 px-6 py-12 md:grid-cols-4">
         <div className="col-span-2 md:col-span-1">
           <div className="mb-3 flex items-center gap-2 text-lg font-extrabold">
-            <span className="text-xl">🧠</span>
+            <BrandMark className="h-6 w-6" />
             <span className="bg-brand-gradient bg-clip-text text-transparent">
               PromptForums
             </span>

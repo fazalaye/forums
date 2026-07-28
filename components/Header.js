@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { useSession, signOut } from "next-auth/react";
+import BrandMark from "./BrandMark";
 
 const NAV_LINKS = [
   { href: "/", label: "Annuaire" },
@@ -19,7 +20,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 glass border-x-0 border-t-0">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center gap-2 text-xl font-extrabold">
-          <span className="text-2xl">🧠</span>
+          <BrandMark className="h-8 w-8" />
           <span className="bg-brand-gradient bg-clip-text text-transparent">
             PromptForums
           </span>
