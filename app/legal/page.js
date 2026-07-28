@@ -1,6 +1,11 @@
+import { SITE_URL } from "@/lib/seo";
+
 export const metadata = {
   title: "Mentions légales",
   description: "Mentions légales du site PromptForums.org.",
+  alternates: {
+    canonical: `${SITE_URL}/legal`,
+  },
 };
 
 export default function LegalPage() {

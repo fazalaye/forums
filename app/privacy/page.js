@@ -1,6 +1,11 @@
+import { SITE_URL } from "@/lib/seo";
+
 export const metadata = {
   title: "Politique de confidentialité",
   description: "Politique de confidentialité et gestion des données personnelles de PromptForums.org.",
+  alternates: {
+    canonical: `${SITE_URL}/privacy`,
+  },
 };
 
 export default function PrivacyPage() {
