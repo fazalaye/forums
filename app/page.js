@@ -25,8 +25,9 @@ async function getSites() {
   return dbSites.length > 0 ? JSON.parse(JSON.stringify(dbSites)) : SEED_SITES;
 }
 
-export default async function HomePage() {
+export default async function HomePage({ searchParams }) {
   const sites = await getSites();
+  const initialCategory = searchParams?.category || "all";
 
   return (
     <div className="flex flex-col gap-16">
@@ -61,7 +62,7 @@ export default async function HomePage() {
       <AdBanner />
 
       <section id="annuaire" className="scroll-mt-24">
-        <DirectoryClient sites={sites} />
+        <DirectoryClient sites={sites} initialCategory={initialCategory} />
       </section>
 
       <NewsletterCTA />

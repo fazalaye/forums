@@ -4,9 +4,9 @@ import { useMemo, useState } from "react";
 import SiteCard from "./SiteCard";
 import { CATEGORIES } from "@/data/categories";
 
-export default function DirectoryClient({ sites }) {
+export default function DirectoryClient({ sites, initialCategory }) {
   const [query, setQuery] = useState("");
-  const [activeCategory, setActiveCategory] = useState("all");
+  const [activeCategory, setActiveCategory] = useState(initialCategory || "all");
 
   const filtered = useMemo(() => {
     let result = sites;
