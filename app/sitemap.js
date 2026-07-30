@@ -1,4 +1,5 @@
 import { SITE_URL } from "@/lib/seo";
+import { CATEGORIES } from "@/data/categories";
 
 export default function sitemap() {
   const now = new Date();
@@ -15,11 +16,16 @@ export default function sitemap() {
     "/guides/meilleurs-prompts-chatgpt-2026",
     "/guides/affiche-produit-chatgpt-etude-de-cas",
     "/guides/outils-ia-gratuits-francais-afrique",
+    ...CATEGORIES.map((c) => `/category/${c.slug}`),
   ];
   return routes.map((path) => ({
     url: `${SITE_URL}${path}`,
     lastModified: now,
-    changeFrequency: path === "" ? "daily" : "weekly",
-    priority: path === "" ? 1 : 0.7,
+    changeFrequency: path.startsWith("/category/")
+      ? "weekly"
+      : path === ""
+        ? "daily"
+        : "weekly",
+    priority: path.startsWith("/category/") ? 0.6 : path === "" ? 1 : 0.7,
   }));
 }

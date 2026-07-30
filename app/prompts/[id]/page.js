@@ -5,6 +5,9 @@ import { SEED_PROMPTS } from "@/data/prompts";
 import { CATEGORIES } from "@/data/categories";
 import CommentForm from "@/components/CommentForm";
 import VoteButton from "@/components/VoteButton";
+import JsonLd from "@/components/JsonLd";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import { breadcrumbSchema, SITE_URL } from "@/lib/seo";
 
 export const dynamic = "force-dynamic";
 
@@ -36,8 +39,16 @@ export default async function PromptDetailPage({ params }) {
 
   const category = CATEGORIES.find((c) => c.slug === prompt.category);
 
+  const breadcrumbItems = [
+    { name: "Accueil", url: SITE_URL },
+    { name: "Prompts", url: `${SITE_URL}/prompts` },
+    { name: prompt.title, url: `${SITE_URL}/prompts/${prompt._id}` },
+  ];
+
   return (
     <div className="mx-auto max-w-3xl">
+      <JsonLd data={breadcrumbSchema(breadcrumbItems)} />
+      <Breadcrumbs items={breadcrumbItems} />
       <div className="glass-card p-8">
         <div className="mb-4 flex items-center justify-between">
           {category && (

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { breadcrumbSchema, SITE_URL } from "@/lib/seo";
 
 export const metadata = {
@@ -38,16 +39,17 @@ const GUIDES = [
   },
 ];
 
+const breadcrumbItems = [
+  { name: "Accueil", url: SITE_URL },
+  { name: "Guides", url: `${SITE_URL}/guides` },
+];
+
 export default function GuidesIndexPage() {
   return (
     <div className="mx-auto max-w-3xl">
-      <JsonLd
-        data={breadcrumbSchema([
-          { name: "Accueil", url: SITE_URL },
-          { name: "Guides", url: `${SITE_URL}/guides` },
-        ])}
-      />
+      <JsonLd data={breadcrumbSchema(breadcrumbItems)} />
 
+      <Breadcrumbs items={breadcrumbItems} />
       <h1 className="mb-4 text-4xl font-extrabold leading-tight">Guides</h1>
       <p className="mb-8 text-lg text-slate-300">
         Comparatifs d'outils, bibliothèques de prompts et études de cas testés
