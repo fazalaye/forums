@@ -18,6 +18,7 @@ const PromptSchema = new mongoose.Schema(
     author: { type: String, required: true },
     authorEmail: { type: String, default: "" },
     upvotes: { type: Number, default: 0 },
+    voters: { type: [String], default: [] },
     comments: { type: [CommentSchema], default: [] },
   },
   { timestamps: true }
