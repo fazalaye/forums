@@ -1,5 +1,6 @@
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { faqSchema, breadcrumbSchema, SITE_URL } from "@/lib/seo";
 
 const UPDATED = "juillet 2026";
@@ -51,6 +52,15 @@ const FAQ = [
   },
 ];
 
+const BREADCRUMB_ITEMS = [
+  { name: "Accueil", url: SITE_URL },
+  { name: "Guides", url: `${SITE_URL}/guides` },
+  {
+    name: "Les 10 meilleurs outils IA en 2026 (comparatif francophone)",
+    url: `${SITE_URL}/guides/meilleurs-outils-ia-francophones-2026`,
+  },
+];
+
 export default function GuidePage() {
   return (
     <article className="mx-auto max-w-3xl">
@@ -79,13 +89,9 @@ export default function GuidePage() {
         }}
       />
       <JsonLd data={faqSchema(FAQ)} />
-      <JsonLd
-        data={breadcrumbSchema([
-          { name: "Accueil", url: SITE_URL },
-          { name: "Guides", url: `${SITE_URL}/guides/meilleurs-outils-ia-francophones-2026` },
-        ])}
-      />
+      <JsonLd data={breadcrumbSchema(BREADCRUMB_ITEMS)} />
 
+      <Breadcrumbs items={BREADCRUMB_ITEMS} />
       <p className="mb-3 text-sm text-slate-400">
         Guide · Mis à jour en {UPDATED}
       </p>

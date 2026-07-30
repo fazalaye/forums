@@ -1,5 +1,6 @@
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { faqSchema, breadcrumbSchema, SITE_URL } from "@/lib/seo";
 
 export const metadata = {
@@ -61,20 +62,22 @@ const PROMPT_TEXT = `[Anti cafard]
 
 Créez une image premium et une infographie publicitaire percutante pour un produit anti cafard dans un style e-commerce éditorial moderne. Mettez le produit en valeur, en l'occupant de 45 à 60 % de l'image. Présentez-le naturellement, en fonction de sa catégorie (tenu, porté, exposé, installé ou en utilisation), avec une perspective cinématographique et une faible profondeur de champ qui préserve la netteté du produit tout en floutant légèrement l'environnement. Intégrez un mannequin professionnel dont le style de vie correspond naturellement à la catégorie du produit, au public cible et à l'image de marque. Le mannequin doit interagir avec le produit de manière réaliste et dégager confiance, accessibilité et authenticité. Adaptez automatiquement l'âge, les vêtements, le style, l'expression et l'environnement du mannequin au produit. Générez un arrière-plan premium adapté à la catégorie du produit (studio, bureau, maison, salle de sport, intérieur de luxe, automobile, extérieur, café, console de jeux, etc.). Ajoutez des versions flottantes subtiles du même produit, un bokeh doux, des fuites de lumière, des reflets et une profondeur atmosphérique pour créer un rendu publicitaire soigné sans détourner l'attention du produit principal. Utilisez une mise en page éditoriale épurée avec une typographie surdimensionnée sur fond semi-transparent affichant la catégorie du produit. Placez anti cafard en évidence en haut avec un slogan court et percutant. Générez automatiquement 4 à 6 encadrés présentant les caractéristiques pertinentes, accompagnés d'icônes élégantes en fonction de la catégorie du produit. N'incluez que les spécifications utiles au produit ; n'affichez jamais de caractéristiques non pertinentes. Utilisez une palette de couleurs haut de gamme, inspirée du produit et de son identité visuelle, pour une harmonie visuelle parfaite. Conservez un espacement équilibré, une typographie raffinée et une esthétique luxueuse et épurée. Style photographique : Photographie de produit commerciale, objectif macro 85 mm, perspective légèrement en contre-plongée, éclairage studio doux à trois points, très faible profondeur de champ, reflets de qualité, matériaux hyperréalistes, détails nets, étalonnage des couleurs naturel. Style graphique : Qualité des keynotes d'Apple, esthétique des campagnes Nike, présentation de lancement Samsung, éditorial de luxe moderne, publicité e-commerce haut de gamme, minimaliste et percutant, composition digne d'un magazine. Qualité d'impression : Ultra-réaliste, photoréaliste, 8K, HDR, netteté impeccable, publicité professionnelle, graphisme épuré, visuel saisissant, visuel commercial haut de gamme. Format 4:5`;
 
+const BREADCRUMB_ITEMS = [
+  { name: "Accueil", url: SITE_URL },
+  { name: "Guides", url: `${SITE_URL}/guides` },
+  {
+    name: "Créer une affiche produit avec ChatGPT : étude de cas (2026)",
+    url: `${SITE_URL}/guides/affiche-produit-chatgpt-etude-de-cas`,
+  },
+];
+
 export default function CaseStudyPage() {
   return (
     <article className="mx-auto max-w-3xl">
       <JsonLd data={faqSchema(FAQ)} />
-      <JsonLd
-        data={breadcrumbSchema([
-          { name: "Accueil", url: SITE_URL },
-          {
-            name: "Guides",
-            url: `${SITE_URL}/guides/affiche-produit-chatgpt-etude-de-cas`,
-          },
-        ])}
-      />
+      <JsonLd data={breadcrumbSchema(BREADCRUMB_ITEMS)} />
 
+      <Breadcrumbs items={BREADCRUMB_ITEMS} />
       <p className="mb-3 text-sm text-slate-400">
         Étude de cas · Prompt image
       </p>

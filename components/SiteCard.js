@@ -68,7 +68,7 @@ export default function SiteCard({ site, index = 0 }) {
       <a
         href={`/out/${site.slug}`}
         target="_blank"
-        rel="noopener sponsored"
+        rel="noopener nofollow sponsored"
         className="btn-primary w-full"
       >
         Visiter le site ↗

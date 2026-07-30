@@ -1,5 +1,6 @@
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { faqSchema, breadcrumbSchema, articleSchema, SITE_URL } from "@/lib/seo";
 
 export const metadata = {
@@ -72,16 +73,20 @@ const FAQ = [
   },
 ];
 
+const BREADCRUMB_ITEMS = [
+  { name: "Accueil", url: SITE_URL },
+  { name: "Guides", url: `${SITE_URL}/guides` },
+  {
+    name: "Outils IA gratuits en français pour l'Afrique (2026)",
+    url: `${SITE_URL}/guides/outils-ia-gratuits-francais-afrique`,
+  },
+];
+
 export default function GuidePage() {
   return (
     <article className="mx-auto max-w-3xl">
       <JsonLd data={faqSchema(FAQ)} />
-      <JsonLd
-        data={breadcrumbSchema([
-          { name: "Accueil", url: SITE_URL },
-          { name: "Guides", url: `${SITE_URL}/guides/outils-ia-gratuits-francais-afrique` },
-        ])}
-      />
+      <JsonLd data={breadcrumbSchema(BREADCRUMB_ITEMS)} />
       <JsonLd
         data={articleSchema({
           title:
@@ -93,6 +98,7 @@ export default function GuidePage() {
         })}
       />
 
+      <Breadcrumbs items={BREADCRUMB_ITEMS} />
       <p className="mb-3 text-sm text-slate-400">Guide · Afrique de l'Ouest</p>
       <h1 className="mb-4 text-4xl font-extrabold leading-tight">
         Les meilleurs outils IA gratuits en français pour les entrepreneurs

@@ -2,12 +2,23 @@ import { dbConnect } from "@/lib/mongodb";
 import Prompt from "@/models/Prompt";
 import { SEED_PROMPTS } from "@/data/prompts";
 import PromptsClient from "@/components/PromptsClient";
+import JsonLd from "@/components/JsonLd";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import { breadcrumbSchema, SITE_URL } from "@/lib/seo";
 
 export const metadata = {
   title: "Prompts communautaires",
   description:
     "Découvrez et partagez les meilleurs prompts IA de la communauté PromptForums, classés par catégorie.",
+  alternates: {
+    canonical: `${SITE_URL}/prompts`,
+  },
 };
+
+const BREADCRUMB_ITEMS = [
+  { name: "Accueil", url: SITE_URL },
+  { name: "Prompts", url: `${SITE_URL}/prompts` },
+];
 
 export const dynamic = "force-dynamic";
 
@@ -22,5 +33,11 @@ async function getPrompts() {
 
 export default async function PromptsPage() {
   const prompts = await getPrompts();
-  return <PromptsClient prompts={prompts} />;
+  return (
+    <div className="flex flex-col gap-4">
+      <JsonLd data={breadcrumbSchema(BREADCRUMB_ITEMS)} />
+      <Breadcrumbs items={BREADCRUMB_ITEMS} />
+      <PromptsClient prompts={prompts} />
+    </div>
+  );
 }
