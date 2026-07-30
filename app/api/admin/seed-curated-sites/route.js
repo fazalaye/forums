@@ -7,7 +7,7 @@ import { CURATED_SITES } from "@/data/curatedSites";
 export const dynamic = "force-dynamic";
 
 /**
- * Admin-only. Inserts the 30 editorially-curated, well-known AI tools from
+ * Admin-only. Inserts the editorially-curated, well-known AI tools from
  * CURATED_SITES into the real Site collection as approved staff picks.
  * Skips tools that already exist (by slug or URL), so re-running is safe.
  */
