@@ -25,6 +25,7 @@ const SiteSchema = new mongoose.Schema(
     logo: { type: String, default: "" },
     tags: { type: [String], default: [] },
     featured: { type: Boolean, default: false, index: true },
+    staffPick: { type: Boolean, default: false, index: true },
     status: {
       type: String,
       enum: ["pending", "approved", "rejected"],

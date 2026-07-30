@@ -31,7 +31,12 @@ export default function SiteCard({ site, index = 0 }) {
             )}
           </div>
         </div>
-        {site.featured && <span className="badge-featured">⭐ Featured</span>}
+        <div className="flex flex-col items-end gap-2">
+          {site.featured && <span className="badge-featured">⭐ Featured</span>}
+          {site.staffPick && (
+            <span className="badge-staffpick">✓ Testé par l'équipe</span>
+          )}
+        </div>
       </div>
 
       <p className="line-clamp-3 flex-1 text-sm text-slate-300">

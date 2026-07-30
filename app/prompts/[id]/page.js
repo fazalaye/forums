@@ -4,6 +4,7 @@ import Prompt from "@/models/Prompt";
 import { SEED_PROMPTS } from "@/data/prompts";
 import { CATEGORIES } from "@/data/categories";
 import CommentForm from "@/components/CommentForm";
+import VoteButton from "@/components/VoteButton";
 
 export const dynamic = "force-dynamic";
 
@@ -44,9 +45,7 @@ export default async function PromptDetailPage({ params }) {
               {category.emoji} {category.label}
             </span>
           )}
-          <span className="flex items-center gap-1 text-sm font-semibold text-amber-300">
-            ▲ {prompt.upvotes || 0}
-          </span>
+          <VoteButton promptId={prompt._id} initialUpvotes={prompt.upvotes || 0} />
         </div>
         <h1 className="mb-2 text-3xl font-extrabold text-white">
           {prompt.title}
