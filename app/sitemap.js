@@ -10,6 +10,7 @@ export default function sitemap() {
     "/contact",
     "/legal",
     "/privacy",
+    "/guides",
     "/guides/meilleurs-outils-ia-francophones-2026",
     "/guides/meilleurs-prompts-chatgpt-2026",
     "/guides/affiche-produit-chatgpt-etude-de-cas",
