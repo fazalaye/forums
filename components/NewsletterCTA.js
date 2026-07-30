@@ -28,7 +28,7 @@ export default function NewsletterCTA() {
   }
 
   return (
-    <section className="glass-card relative overflow-hidden p-8 sm:p-10">
+    <section id="newsletter" className="glass-card relative overflow-hidden p-8 sm:p-10">
       <div className="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-brand-gradient opacity-30 blur-3xl animate-float" />
       <div className="relative flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
         <div className="max-w-xl">
