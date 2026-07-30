@@ -23,7 +23,7 @@ export default function Footer() {
           <ul className="space-y-2 text-sm text-slate-400">
             <li><Link href="/" className="hover:text-white">Annuaire de sites</Link></li>
             <li><Link href="/prompts" className="hover:text-white">Prompts communautaires</Link></li>
-            <li><Link href="/guides/meilleurs-outils-ia-francophones-2026" className="hover:text-white">Guides IA</Link></li>
+            <li><Link href="/guides" className="hover:text-white">Guides IA</Link></li>
             <li><Link href="/submit" className="hover:text-white">Soumettre un site</Link></li>
           </ul>
         </div>

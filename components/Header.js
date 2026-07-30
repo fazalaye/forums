@@ -8,7 +8,7 @@ import BrandMark from "./BrandMark";
 const NAV_LINKS = [
   { href: "/", label: "Annuaire" },
   { href: "/prompts", label: "Prompts" },
-  { href: "/guides/meilleurs-outils-ia-francophones-2026", label: "Guides" },
+  { href: "/guides", label: "Guides" },
   { href: "/submit", label: "Soumettre un site" },
 ];
 
