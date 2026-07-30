@@ -253,7 +253,12 @@ export default function GuidePage() {
               <strong className="text-white">Perplexity</strong> : le
               meilleur pour la recherche, il cite toujours ses sources —
               parfait pour vérifier une info avant de la publier.{" "}
-              <strong className="text-white">DeepSeek</strong> : un modèle
+              <strong className="text-white">
+                <Link href="/out/deepseek" className="text-brand-300 hover:underline">
+                  DeepSeek
+                </Link>
+              </strong>{" "}
+              : un modèle
               très performant et gratuit, excellent rapport qualité/prix
               pour le raisonnement et le code.
             </p>
@@ -299,16 +304,36 @@ export default function GuidePage() {
             directement sur l'image). Offre gratuite.
           </li>
           <li>
-            <strong className="text-white">Leonardo.ai</strong> — Crédits
+            <strong className="text-white">
+              <Link
+                href="/out/leonardo-ai"
+                className="text-brand-300 hover:underline"
+              >
+                Leonardo.ai
+              </Link>
+            </strong>{" "}
+            — Crédits
             gratuits chaque jour, sans carte, pour des images stylisées de
             qualité.
           </li>
           <li>
-            <strong className="text-white">Bing Image Creator</strong> —
-            Accès gratuit au modèle DALL·E via Microsoft, sans carte.
+            <strong className="text-white">
+              <Link
+                href="/out/bing-image-creator"
+                className="text-brand-300 hover:underline"
+              >
+                Bing Image Creator
+              </Link>
+            </strong>{" "}
+            — Accès gratuit au modèle DALL·E via Microsoft, sans carte.
           </li>
           <li>
-            <strong className="text-white">Canva</strong> — Plus qu'un
+            <strong className="text-white">
+              <Link href="/out/canva" className="text-brand-300 hover:underline">
+                Canva
+              </Link>
+            </strong>{" "}
+            — Plus qu'un
             générateur : l'outil tout-en-un du visuel. Plan gratuit sans
             carte, ultra-populaire ici, avec des fonctions IA (fond
             détouré, génération d'images, redimensionnement) intégrées à un
@@ -336,7 +361,12 @@ export default function GuidePage() {
         </h2>
         <ul className="flex flex-col gap-3 text-slate-300">
           <li>
-            <strong className="text-white">CapCut</strong> — Le montage
+            <strong className="text-white">
+              <Link href="/out/capcut" className="text-brand-300 hover:underline">
+                CapCut
+              </Link>
+            </strong>{" "}
+            — Le montage
             vidéo de référence sur mobile, gratuit, avec sous-titres
             automatiques, effets et outils IA. Pensé pour le format
             vertical des réseaux sociaux.
@@ -354,12 +384,22 @@ export default function GuidePage() {
             limitée. Pour des voix off de pub ou de tuto.
           </li>
           <li>
-            <strong className="text-white">Suno</strong> — Génère de la
+            <strong className="text-white">
+              <Link href="/out/suno" className="text-brand-300 hover:underline">
+                Suno
+              </Link>
+            </strong>{" "}
+            — Génère de la
             musique et des jingles à partir d'une simple description. Idéal
             pour une identité sonore de marque.
           </li>
           <li>
-            <strong className="text-white">Kling AI</strong> — Génération de
+            <strong className="text-white">
+              <Link href="/out/kling-ai" className="text-brand-300 hover:underline">
+                Kling AI
+              </Link>
+            </strong>{" "}
+            — Génération de
             vidéo par IA, avec une offre gratuite pour tester.
           </li>
         </ul>
@@ -391,19 +431,40 @@ export default function GuidePage() {
             ou une offre commerciale.
           </li>
           <li>
-            <strong className="text-white">NotebookLM</strong> (Google) —
+            <strong className="text-white">
+              <Link
+                href="/out/notebooklm"
+                className="text-brand-300 hover:underline"
+              >
+                NotebookLM
+              </Link>
+            </strong>{" "}
+            (Google) —
             Gratuit et sans carte : chargez vos documents, il les résume et
             répond à vos questions dessus. Excellent pour les étudiants et
             pour digérer des dossiers.
           </li>
           <li>
-            <strong className="text-white">Make</strong> — Automatisez des
+            <strong className="text-white">
+              <Link href="/out/make" className="text-brand-300 hover:underline">
+                Make
+              </Link>
+            </strong>{" "}
+            — Automatisez des
             tâches entre vos applications (1 000 opérations/mois gratuites)
             : notifications, mises à jour de tableurs, transferts. Pour
             gagner du temps sur le répétitif.
           </li>
           <li>
-            <strong className="text-white">Google AI Studio</strong> — Pour
+            <strong className="text-white">
+              <Link
+                href="/out/google-ai-studio"
+                className="text-brand-300 hover:underline"
+              >
+                Google AI Studio
+              </Link>
+            </strong>{" "}
+            — Pour
             les développeurs : accès{" "}
             <strong className="text-white">
               gratuit à l'API de Gemini, sans carte
