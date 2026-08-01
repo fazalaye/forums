@@ -1,6 +1,7 @@
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import CopyPromptButton from "@/components/CopyPromptButton";
 import { faqSchema, breadcrumbSchema, SITE_URL } from "@/lib/seo";
 
 export const metadata = {
@@ -103,6 +104,9 @@ export default function GuidePage() {
           de rédiger le document section par section.
         </p>
         <div className="glass-card p-6">
+          <div className="mb-3 flex justify-end">
+            <CopyPromptButton text={PROMPT_BUSINESS_PLAN} />
+          </div>
           <pre className="whitespace-pre-wrap rounded-xl bg-black/30 p-5 font-sans text-slate-200">
             {PROMPT_BUSINESS_PLAN}
           </pre>
@@ -119,6 +123,9 @@ export default function GuidePage() {
           existent dans ta zone.
         </p>
         <div className="glass-card p-6">
+          <div className="mb-3 flex justify-end">
+            <CopyPromptButton text={PROMPT_ETUDE_MARCHE} />
+          </div>
           <pre className="whitespace-pre-wrap rounded-xl bg-black/30 p-5 font-sans text-slate-200">
             {PROMPT_ETUDE_MARCHE}
           </pre>
@@ -135,6 +142,9 @@ export default function GuidePage() {
           prochains mois.
         </p>
         <div className="glass-card p-6">
+          <div className="mb-3 flex justify-end">
+            <CopyPromptButton text={PROMPT_STRATEGIE_COMMERCIALE} />
+          </div>
           <pre className="whitespace-pre-wrap rounded-xl bg-black/30 p-5 font-sans text-slate-200">
             {PROMPT_STRATEGIE_COMMERCIALE}
           </pre>

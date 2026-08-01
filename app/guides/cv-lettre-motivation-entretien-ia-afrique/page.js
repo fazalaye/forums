@@ -1,6 +1,7 @@
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import CopyPromptButton from "@/components/CopyPromptButton";
 import { faqSchema, breadcrumbSchema, SITE_URL } from "@/lib/seo";
 
 export const metadata = {
@@ -95,6 +96,9 @@ export default function GuidePage() {
           structuré, plus les points faibles de ton profil à corriger.
         </p>
         <div className="glass-card p-6">
+          <div className="mb-3 flex justify-end">
+            <CopyPromptButton text={PROMPT_CV} />
+          </div>
           <pre className="whitespace-pre-wrap rounded-xl bg-black/30 p-5 font-sans text-slate-200">
             {PROMPT_CV}
           </pre>
@@ -110,6 +114,9 @@ export default function GuidePage() {
           poste précis plutôt que sur des formules génériques.
         </p>
         <div className="glass-card p-6">
+          <div className="mb-3 flex justify-end">
+            <CopyPromptButton text={PROMPT_LETTRE} />
+          </div>
           <pre className="whitespace-pre-wrap rounded-xl bg-black/30 p-5 font-sans text-slate-200">
             {PROMPT_LETTRE}
           </pre>
@@ -152,6 +159,9 @@ export default function GuidePage() {
           par une et te donne un retour honnête après chaque réponse.
         </p>
         <div className="glass-card p-6">
+          <div className="mb-3 flex justify-end">
+            <CopyPromptButton text={PROMPT_ENTRETIEN} />
+          </div>
           <pre className="whitespace-pre-wrap rounded-xl bg-black/30 p-5 font-sans text-slate-200">
             {PROMPT_ENTRETIEN}
           </pre>

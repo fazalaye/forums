@@ -1,6 +1,7 @@
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import CopyPromptButton from "@/components/CopyPromptButton";
 import { faqSchema, breadcrumbSchema, SITE_URL } from "@/lib/seo";
 
 const UPDATED = "juillet 2026";
@@ -218,6 +219,9 @@ export default function GuidePage() {
                   <h3 className="mb-3 font-semibold text-slate-100">
                     {p.label}
                   </h3>
+                  <div className="mb-3 flex justify-end">
+                    <CopyPromptButton text={p.text} />
+                  </div>
                   <pre className="whitespace-pre-wrap rounded-xl bg-black/30 p-5 font-sans text-slate-200">
                     {p.text}
                   </pre>
