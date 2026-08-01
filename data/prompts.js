@@ -4,6 +4,7 @@ export const SEED_PROMPTS = [
   {
     _id: "seed-1",
     title: "Assistant de révision de code impitoyable",
+    slug: "assistant-revision-code-impitoyable",
     content:
       "Tu es un·e senior engineer qui relit ce code avec exigence. Liste uniquement les problèmes réels (bugs, failles de sécurité, edge cases manqués), classés par gravité. Ne complimente pas le code, ne reformule pas ce qu'il fait déjà bien. Voici le code :\n\n[COLLE TON CODE ICI]",
     category: "code",
@@ -18,6 +19,7 @@ export const SEED_PROMPTS = [
   {
     _id: "seed-2",
     title: "Brief créatif Midjourney en 6 paramètres",
+    slug: "brief-creatif-midjourney-6-parametres",
     content:
       "Génère un prompt Midjourney détaillé pour l'idée suivante : [SUJET]. Structure obligatoire : sujet principal, style artistique, éclairage, palette de couleurs, composition, paramètres techniques (--ar, --v, --style). Propose 3 variantes.",
     category: "image",
@@ -30,6 +32,7 @@ export const SEED_PROMPTS = [
   {
     _id: "seed-3",
     title: "Plan de contenu SEO en 30 jours",
+    slug: "plan-contenu-seo-30-jours",
     content:
       "Agis comme un·e stratège SEO. À partir du mot-clé principal [MOT-CLE] et de la cible [PERSONA], génère un calendrier éditorial de 30 jours avec pour chaque article : titre, intention de recherche, mots-clés secondaires, angle unique.",
     category: "marketing",
@@ -42,6 +45,7 @@ export const SEED_PROMPTS = [
   {
     _id: "seed-4",
     title: "Décomposeur de tâches pour chef de projet",
+    slug: "decomposeur-taches-chef-de-projet",
     content:
       "Voici un objectif de projet : [OBJECTIF]. Décompose-le en jalons, puis en tâches actionnables de moins de 4h chacune. Pour chaque tâche, indique une estimation de temps et les dépendances éventuelles.",
     category: "productivite",
@@ -54,6 +58,7 @@ export const SEED_PROMPTS = [
   {
     _id: "seed-5",
     title: "Trouve ta niche en marketing d'affiliation (90 questions guidées)",
+    slug: "trouve-ta-niche-marketing-affiliation",
     content: `Tu es un mentor expert en marketing d'affiliation. Pose-moi ces questions par groupes de 5 maximum, attends ma réponse avant de continuer, puis à la fin propose-moi 3 niches d'affiliation concrètes basées sur mes réponses, avec pour chacune : le type d'audience, des exemples de programmes d'affiliation adaptés et le potentiel de revenu.
 
 Questions :
@@ -157,6 +162,7 @@ Questions :
   {
     _id: "seed-6",
     title: "Analyse un produit avant de le promouvoir en affiliation (100 questions)",
+    slug: "analyse-produit-promouvoir-affiliation",
     content: `Tu es un analyste en marketing d'affiliation rigoureux. Voici un produit ou un programme d'affiliation que j'envisage de promouvoir : [NOM DU PRODUIT / LIEN]. Pose-moi ces questions par groupes de 5 maximum pour m'aider à l'évaluer, puis donne-moi un verdict final : vaut-il la peine d'être promu, et avec quel angle de contenu ?
 
 Questions :
@@ -270,6 +276,7 @@ Questions :
   {
     _id: "seed-7",
     title: "Choisis ta plateforme et ta stratégie d'affiliation (100 questions)",
+    slug: "choisis-plateforme-strategie-affiliation",
     content: `Tu es un stratège en marketing d'affiliation spécialisé dans le choix de plateformes. Pose-moi ces questions par groupes de 5 maximum, puis recommande-moi la ou les plateformes les plus adaptées à mon profil, avec un plan d'action sur 30 jours pour démarrer.
 
 Questions :
@@ -383,6 +390,7 @@ Questions :
   {
     _id: "seed-8",
     title: "90 idées de contenu pour affiliés (avis, comparatifs, réseaux sociaux)",
+    slug: "idees-contenu-affilies",
     content: `Tu es un créateur de contenu spécialisé en marketing d'affiliation, plein d'idées. Voici ma niche : [MA NICHE]. Parcours cette liste d'angles de contenu et sélectionne les 10 plus pertinents pour moi, puis rédige un titre accrocheur en français pour chacun.
 
 Idées de contenu :
@@ -486,6 +494,7 @@ Idées de contenu :
   {
     _id: "seed-9",
     title: "Rédige une recommandation produit qui convertit (copywriting d'affiliation)",
+    slug: "recommandation-produit-qui-convertit",
     content: `Tu es un copywriter expert en marketing d'affiliation. Voici le produit que je veux recommander : [PRODUIT] et mon audience : [DESCRIPTION DE L'AUDIENCE]. Utilise les questions ci-dessous pour construire, étape par étape, un texte de recommandation (article, post ou email) qui convertit sans être insistant. Pose-moi d'abord les questions par groupes de 5, puis rédige le texte final.
 
 Questions :
@@ -561,6 +570,7 @@ Rappel important : indique toujours clairement à ton audience que le lien est u
   {
     _id: "seed-10",
     title: "Business plan complet pour lancer une activité en Afrique",
+    slug: "business-plan-lancer-activite-afrique",
     content:
       "Tu es un consultant en création d'entreprise spécialisé dans le marché africain. Aide-moi à rédiger un business plan complet pour mon projet : [DÉCRIS TON IDÉE DE BUSINESS]. Le document doit inclure : résumé exécutif, description du produit/service, analyse du marché local (taille, concurrence, clientèle cible), stratégie commerciale, plan opérationnel adapté aux réalités locales (accès au financement, secteur informel vs formel, logistique), prévisionnel financier simple sur 12 mois en FCFA, et les risques principaux avec des solutions concrètes. Pose-moi d'abord 5 questions pour cerner mon projet, puis rédige le business plan section par section.",
     category: "business",
@@ -573,6 +583,7 @@ Rappel important : indique toujours clairement à ton audience que le lien est u
   {
     _id: "seed-11",
     title: "Étude de marché locale pour valider une idée business en Afrique",
+    slug: "etude-marche-locale-afrique",
     content:
       "Tu es un analyste de marché spécialisé en Afrique de l'Ouest. Je veux valider cette idée : [DÉCRIS TON IDÉE/PRODUIT]. Aide-moi à structurer une étude de marché locale : qui sont mes clients potentiels dans ma ville/région (âge, pouvoir d'achat, habitudes d'achat), qui sont mes concurrents directs et indirects (formels et informels), quel est le prix psychologique acceptable en FCFA, quels canaux de distribution et de vente fonctionnent le mieux ici (marché physique, WhatsApp, réseaux sociaux, boutique), et quels obstacles culturels ou logistiques dois-je anticiper. Donne-moi une méthode simple pour collecter ces informations avec un budget limité (enquêtes informelles, observation terrain, réseaux sociaux).",
     category: "business",
@@ -585,6 +596,7 @@ Rappel important : indique toujours clairement à ton audience que le lien est u
   {
     _id: "seed-12",
     title: "Stratégie commerciale sur 90 jours pour développer ses ventes en Afrique",
+    slug: "strategie-commerciale-90-jours-afrique",
     content:
       "Tu es un directeur commercial expérimenté sur le marché africain. Voici mon activité : [DÉCRIS TON ACTIVITÉ]. Construis-moi une stratégie commerciale sur 90 jours pour augmenter mes ventes, adaptée à mon contexte (budget limité, vente via WhatsApp/réseaux sociaux/boutique physique). Structure ta réponse en : objectifs chiffrés réalistes, canaux de vente prioritaires, actions concrètes semaine par semaine, argumentaire de vente adapté à ma clientèle, et 3 indicateurs simples à suivre pour savoir si ça fonctionne.",
     category: "business",
@@ -597,6 +609,7 @@ Rappel important : indique toujours clairement à ton audience que le lien est u
   {
     _id: "seed-13",
     title: "Rédige un CV percutant adapté au poste visé",
+    slug: "cv-percutant-poste-vise",
     content:
       "Tu es un recruteur expérimenté et coach carrière. Voici mon parcours : [COLLE TON EXPÉRIENCE, TA FORMATION, TES COMPÉTENCES]. Le poste visé est : [TITRE DU POSTE]. Rédige-moi un CV clair et percutant en français : accroche professionnelle en 2 lignes, expériences reformulées avec des résultats concrets (même si informels ou associatifs), compétences classées par pertinence pour ce poste, formation, et une mise en forme simple à copier dans Word ou Canva. Signale-moi aussi les 3 points faibles de mon profil actuel et comment les compenser dans le CV.",
     category: "emploi",
@@ -609,6 +622,7 @@ Rappel important : indique toujours clairement à ton audience que le lien est u
   {
     _id: "seed-14",
     title: "Lettre de motivation convaincante en 200 mots",
+    slug: "lettre-motivation-convaincante-200-mots",
     content:
       "Tu es un coach en recherche d'emploi. Je postule pour le poste de [TITRE DU POSTE] chez [NOM DE L'ENTREPRISE]. Voici mon profil : [DÉCRIS TON EXPÉRIENCE ET TES MOTIVATIONS]. Rédige-moi une lettre de motivation en français, 200 mots maximum, qui : capte l'attention dès la première phrase, relie mon expérience aux besoins réels du poste (pas une liste générique de qualités), montre que je connais l'entreprise, et se termine par une demande d'entretien claire. Évite les formules toutes faites et le ton trop formel ou distant.",
     category: "emploi",
@@ -621,6 +635,7 @@ Rappel important : indique toujours clairement à ton audience que le lien est u
   {
     _id: "seed-15",
     title: "Prépare-moi à un entretien d'embauche avec des questions réalistes",
+    slug: "preparation-entretien-embauche",
     content:
       "Tu es un recruteur qui va me faire passer un entretien d'embauche pour le poste de [TITRE DU POSTE] dans le secteur [SECTEUR]. Voici mon profil : [DÉCRIS TON EXPÉRIENCE]. Pose-moi 8 questions d'entretien réalistes une par une (mélange de questions générales, techniques et de mise en situation), attends ma réponse à chaque fois, puis donne-moi un feedback honnête sur ma réponse (ce qui est bon, ce qui manque, comment la reformuler) avant de passer à la question suivante. À la fin, donne-moi une note globale sur 10 et mes 3 axes d'amélioration prioritaires.",
     category: "emploi",

@@ -4,6 +4,7 @@ import { authOptions } from "@/lib/auth";
 import { dbConnect } from "@/lib/mongodb";
 import Prompt from "@/models/Prompt";
 import { SEED_PROMPTS } from "@/data/prompts";
+import { slugify, truncateSlug } from "@/lib/slugify";
 
 export async function GET(request) {
   const { searchParams } = new URL(request.url);
@@ -63,8 +64,17 @@ export async function POST(request) {
     );
   }
 
+  const baseSlug = truncateSlug(slugify(title));
+  let slug = baseSlug;
+  let suffix = 2;
+  while (await Prompt.exists({ slug })) {
+    slug = `${baseSlug}-${suffix}`;
+    suffix += 1;
+  }
+
   const prompt = await Prompt.create({
     title,
+    slug,
     content,
     category,
     tags: Array.isArray(tags) ? tags : [],
