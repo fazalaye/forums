@@ -103,6 +103,33 @@ export default function GuidePage() {
             {PROMPT_CV}
           </pre>
         </div>
+        <p className="mb-4 mt-6 text-sm text-slate-400">
+          Voici un exemple réel, envoyé depuis un téléphone :
+        </p>
+        <div className="grid gap-4 sm:grid-cols-2">
+          <figure>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/guide-assets/emploi-cv-prompt-rempli.jpg"
+              alt="Exemple réel : le prompt CV rempli et envoyé dans ChatGPT"
+              className="w-full rounded-2xl border border-white/10"
+            />
+            <figcaption className="mt-2 text-center text-sm text-slate-400">
+              Le prompt rempli avec un exemple concret
+            </figcaption>
+          </figure>
+          <figure>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/guide-assets/emploi-cv-reponse.jpg"
+              alt="Exemple réel : ChatGPT demande les informations nécessaires avant de générer le CV"
+              className="w-full rounded-2xl border border-white/10"
+            />
+            <figcaption className="mt-2 text-center text-sm text-slate-400">
+              La réponse de ChatGPT, qui demande les informations précises avant de générer le CV
+            </figcaption>
+          </figure>
+        </div>
       </section>
 
       <section className="mb-10">
