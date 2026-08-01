@@ -111,6 +111,33 @@ export default function GuidePage() {
             {PROMPT_BUSINESS_PLAN}
           </pre>
         </div>
+        <p className="mb-4 mt-6 text-sm text-slate-400">
+          Voici un exemple réel, envoyé depuis un téléphone :
+        </p>
+        <div className="grid gap-4 sm:grid-cols-2">
+          <figure>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/guide-assets/business-plan-prompt-rempli.jpg"
+              alt="Exemple réel : le prompt business plan rempli et envoyé dans ChatGPT"
+              className="w-full rounded-2xl border border-white/10"
+            />
+            <figcaption className="mt-2 text-center text-sm text-slate-400">
+              Le prompt rempli avec un exemple concret (un pressing)
+            </figcaption>
+          </figure>
+          <figure>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/guide-assets/business-plan-reponse.jpg"
+              alt="Exemple réel : ChatGPT pose ses questions de cadrage avant de rédiger le business plan"
+              className="w-full rounded-2xl border border-white/10"
+            />
+            <figcaption className="mt-2 text-center text-sm text-slate-400">
+              La réponse de ChatGPT, avec les questions de cadrage avant de générer le document
+            </figcaption>
+          </figure>
+        </div>
       </section>
 
       <section className="mb-10">
