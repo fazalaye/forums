@@ -8,6 +8,7 @@ import BrandMark from "./BrandMark";
 const NAV_LINKS = [
   { href: "/", label: "Annuaire" },
   { href: "/prompts", label: "Prompts" },
+  { href: "/prompts?category=emploi", label: "Emploi" },
   { href: "/guides", label: "Guides" },
   { href: "/submit", label: "Soumettre un site" },
 ];

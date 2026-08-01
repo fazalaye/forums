@@ -31,13 +31,14 @@ async function getPrompts() {
     : SEED_PROMPTS;
 }
 
-export default async function PromptsPage() {
+export default async function PromptsPage({ searchParams }) {
   const prompts = await getPrompts();
+  const initialCategory = searchParams?.category || "all";
   return (
     <div className="flex flex-col gap-4">
       <JsonLd data={breadcrumbSchema(BREADCRUMB_ITEMS)} />
       <Breadcrumbs items={BREADCRUMB_ITEMS} />
-      <PromptsClient prompts={prompts} />
+      <PromptsClient prompts={prompts} initialCategory={initialCategory} />
     </div>
   );
 }

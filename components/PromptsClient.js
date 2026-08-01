@@ -5,9 +5,9 @@ import Link from "next/link";
 import PromptCard from "./PromptCard";
 import { CATEGORIES } from "@/data/categories";
 
-export default function PromptsClient({ prompts }) {
+export default function PromptsClient({ prompts, initialCategory }) {
   const [query, setQuery] = useState("");
-  const [activeCategory, setActiveCategory] = useState("all");
+  const [activeCategory, setActiveCategory] = useState(initialCategory || "all");
 
   const filtered = useMemo(() => {
     let result = prompts;
