@@ -114,6 +114,33 @@ export default function GuidePage() {
             {PROMPT_LETTRE}
           </pre>
         </div>
+        <p className="mb-4 mt-6 text-sm text-slate-400">
+          Voici un exemple réel, envoyé depuis un téléphone :
+        </p>
+        <div className="grid gap-4 sm:grid-cols-2">
+          <figure>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/guide-assets/emploi-lettre-prompt-rempli.jpg"
+              alt="Exemple réel : le prompt lettre de motivation rempli et envoyé dans ChatGPT"
+              className="w-full rounded-2xl border border-white/10"
+            />
+            <figcaption className="mt-2 text-center text-sm text-slate-400">
+              Le prompt rempli avec un exemple concret
+            </figcaption>
+          </figure>
+          <figure>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/guide-assets/emploi-lettre-resultat.jpg"
+              alt="Exemple réel : lettre de motivation générée par ChatGPT à partir du prompt"
+              className="w-full rounded-2xl border border-white/10"
+            />
+            <figcaption className="mt-2 text-center text-sm text-slate-400">
+              Le résultat obtenu
+            </figcaption>
+          </figure>
+        </div>
       </section>
 
       <section className="mb-10">
@@ -129,6 +156,20 @@ export default function GuidePage() {
             {PROMPT_ENTRETIEN}
           </pre>
         </div>
+        <p className="mb-4 mt-6 text-sm text-slate-400">
+          Voici un exemple réel, envoyé depuis un téléphone :
+        </p>
+        <figure>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/guide-assets/emploi-entretien-exemple.jpg"
+            alt="Exemple réel : simulation d'entretien avec ChatGPT à partir du prompt"
+            className="w-full rounded-2xl border border-white/10"
+          />
+          <figcaption className="mt-2 text-center text-sm text-slate-400">
+            Exemple réel de simulation d'entretien avec ChatGPT
+          </figcaption>
+        </figure>
       </section>
 
       <section className="mb-10">
