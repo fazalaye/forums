@@ -3,6 +3,8 @@ import { CATEGORIES } from "@/data/categories";
 import { dbConnect } from "@/lib/mongodb";
 import Prompt from "@/models/Prompt";
 
+export const dynamic = "force-dynamic";
+
 export default async function sitemap() {
   const now = new Date();
   const routes = [
