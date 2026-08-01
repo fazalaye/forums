@@ -7,6 +7,7 @@ import CommentForm from "@/components/CommentForm";
 import VoteButton from "@/components/VoteButton";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import CopyPromptButton from "@/components/CopyPromptButton";
 import { breadcrumbSchema, SITE_URL } from "@/lib/seo";
 
 export const dynamic = "force-dynamic";
@@ -62,6 +63,9 @@ export default async function PromptDetailPage({ params }) {
           {prompt.title}
         </h1>
         <p className="mb-6 text-sm text-slate-400">par {prompt.author}</p>
+        <div className="mb-3 flex justify-end">
+          <CopyPromptButton text={prompt.content} />
+        </div>
         <pre className="whitespace-pre-wrap rounded-xl bg-black/30 p-5 font-sans text-slate-200">
           {prompt.content}
         </pre>

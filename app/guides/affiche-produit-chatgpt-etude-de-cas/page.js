@@ -1,6 +1,7 @@
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import CopyPromptButton from "@/components/CopyPromptButton";
 import { faqSchema, breadcrumbSchema, SITE_URL } from "@/lib/seo";
 
 export const metadata = {
@@ -188,6 +189,9 @@ export default function CaseStudyPage() {
           produit à chaque occurrence.
         </p>
         <div className="glass-card p-6">
+          <div className="mb-3 flex justify-end">
+            <CopyPromptButton text={PROMPT_TEXT} />
+          </div>
           <pre className="whitespace-pre-wrap rounded-xl bg-black/30 p-5 font-sans text-slate-200">
             {PROMPT_TEXT}
           </pre>
