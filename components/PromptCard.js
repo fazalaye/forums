@@ -19,7 +19,7 @@ export default function PromptCard({ prompt }) {
         )}
         <VoteButton promptId={prompt._id} initialUpvotes={prompt.upvotes || 0} />
       </div>
-      <Link href={`/prompts/${prompt._id}`} className="flex flex-col gap-3">
+      <Link href={`/prompts/${prompt.slug || prompt._id}`} className="flex flex-col gap-3">
         <h3 className="text-lg font-bold text-white">{prompt.title}</h3>
         <p className="line-clamp-3 text-sm text-slate-300">{excerpt}</p>
         <div className="mt-2 flex items-center justify-between text-xs text-slate-400">

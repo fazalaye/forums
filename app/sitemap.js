@@ -1,7 +1,9 @@
 import { SITE_URL } from "@/lib/seo";
 import { CATEGORIES } from "@/data/categories";
+import { dbConnect } from "@/lib/mongodb";
+import Prompt from "@/models/Prompt";
 
-export default function sitemap() {
+export default async function sitemap() {
   const now = new Date();
   const routes = [
     "",
@@ -20,7 +22,8 @@ export default function sitemap() {
     "/guides/cv-lettre-motivation-entretien-ia-afrique",
     ...CATEGORIES.map((c) => `/category/${c.slug}`),
   ];
-  return routes.map((path) => ({
+
+  const staticEntries = routes.map((path) => ({
     url: `${SITE_URL}${path}`,
     lastModified: now,
     changeFrequency: path.startsWith("/category/")
@@ -30,4 +33,20 @@ export default function sitemap() {
         : "weekly",
     priority: path.startsWith("/category/") ? 0.6 : path === "" ? 1 : 0.7,
   }));
+
+  let promptEntries = [];
+  const conn = await dbConnect();
+  if (conn) {
+    const prompts = await Prompt.find({ slug: { $exists: true, $ne: null } })
+      .select("slug updatedAt")
+      .lean();
+    promptEntries = prompts.map((p) => ({
+      url: `${SITE_URL}/prompts/${p.slug}`,
+      lastModified: p.updatedAt || now,
+      changeFrequency: "monthly",
+      priority: 0.5,
+    }));
+  }
+
+  return [...staticEntries, ...promptEntries];
 }

@@ -1,4 +1,5 @@
-import { notFound } from "next/navigation";
+import { redirect, notFound } from "next/navigation";
+import mongoose from "mongoose";
 import { dbConnect } from "@/lib/mongodb";
 import Prompt from "@/models/Prompt";
 import { SEED_PROMPTS } from "@/data/prompts";
@@ -12,38 +13,55 @@ import { breadcrumbSchema, SITE_URL } from "@/lib/seo";
 
 export const dynamic = "force-dynamic";
 
-async function getPrompt(id) {
+async function getPrompt(slugOrId) {
   const conn = await dbConnect();
   if (!conn) {
-    return SEED_PROMPTS.find((p) => p._id === id) || null;
-  }
-  try {
-    const prompt = await Prompt.findById(id).lean();
-    return prompt ? JSON.parse(JSON.stringify(prompt)) : null;
-  } catch {
+    const bySlug = SEED_PROMPTS.find((p) => p.slug === slugOrId);
+    if (bySlug) return { doc: bySlug, redirectTo: null };
+    const byId = SEED_PROMPTS.find((p) => p._id === slugOrId);
+    if (byId) return { doc: byId, redirectTo: null };
     return null;
   }
+
+  const bySlug = await Prompt.findOne({ slug: slugOrId }).lean();
+  if (bySlug) return { doc: JSON.parse(JSON.stringify(bySlug)), redirectTo: null };
+
+  if (mongoose.isValidObjectId(slugOrId)) {
+    const byId = await Prompt.findById(slugOrId).lean();
+    if (byId) {
+      // Legacy ID-based URL still works, but redirect to the canonical slug URL.
+      return { doc: JSON.parse(JSON.stringify(byId)), redirectTo: byId.slug || null };
+    }
+  }
+
+  return null;
 }
 
 export async function generateMetadata({ params }) {
-  const prompt = await getPrompt(params.id);
-  if (!prompt) return { title: "Prompt introuvable" };
+  const result = await getPrompt(params.slug);
+  if (!result || !result.doc) return { title: "Prompt introuvable" };
+  const { doc } = result;
   return {
-    title: prompt.title,
-    description: prompt.content.slice(0, 150),
+    title: doc.title,
+    description: doc.content.slice(0, 150),
+    alternates: {
+      canonical: `${SITE_URL}/prompts/${doc.slug || doc._id}`,
+    },
   };
 }
 
 export default async function PromptDetailPage({ params }) {
-  const prompt = await getPrompt(params.id);
-  if (!prompt) notFound();
+  const result = await getPrompt(params.slug);
+  if (!result || !result.doc) notFound();
+  if (result.redirectTo) redirect(`/prompts/${result.redirectTo}`);
+  const prompt = result.doc;
 
   const category = CATEGORIES.find((c) => c.slug === prompt.category);
 
   const breadcrumbItems = [
     { name: "Accueil", url: SITE_URL },
     { name: "Prompts", url: `${SITE_URL}/prompts` },
-    { name: prompt.title, url: `${SITE_URL}/prompts/${prompt._id}` },
+    { name: prompt.title, url: `${SITE_URL}/prompts/${prompt.slug || prompt._id}` },
   ];
 
   return (
