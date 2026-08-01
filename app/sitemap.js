@@ -16,6 +16,8 @@ export default function sitemap() {
     "/guides/meilleurs-prompts-chatgpt-2026",
     "/guides/affiche-produit-chatgpt-etude-de-cas",
     "/guides/outils-ia-gratuits-francais-afrique",
+    "/guides/creer-business-plan-etude-marche-ia-afrique",
+    "/guides/cv-lettre-motivation-entretien-ia-afrique",
     ...CATEGORIES.map((c) => `/category/${c.slug}`),
   ];
   return routes.map((path) => ({
