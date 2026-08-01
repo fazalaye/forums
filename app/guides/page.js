@@ -37,6 +37,18 @@ const GUIDES = [
     description:
       "Les meilleurs outils IA gratuits, sans carte bancaire et en français, pour entrepreneurs d'Afrique de l'Ouest. Testés, classés par usage. Mobile-first.",
   },
+  {
+    href: "/guides/creer-business-plan-etude-marche-ia-afrique",
+    title: "Créer un business plan avec l'IA en Afrique (guide + prompts gratuits)",
+    description:
+      "Comment utiliser ChatGPT et l'IA gratuite pour créer un business plan, une étude de marché locale et une stratégie commerciale en Afrique. Prompts prêts à copier.",
+  },
+  {
+    href: "/guides/cv-lettre-motivation-entretien-ia-afrique",
+    title: "CV, lettre de motivation, entretien : décroche un emploi avec l'IA",
+    description:
+      "Utilise ChatGPT gratuitement pour rédiger un CV percutant, une lettre de motivation convaincante et te préparer à l'entretien. Prompts prêts à copier pour le marché de l'emploi en Afrique.",
+  },
 ];
 
 const breadcrumbItems = [
