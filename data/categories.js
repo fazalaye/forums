@@ -7,4 +7,5 @@ export const CATEGORIES = [
   { slug: "productivite", label: "Productivité", emoji: "⚡" },
   { slug: "video", label: "Vidéo & Audio", emoji: "🎬" },
   { slug: "business", label: "Business & Stratégie", emoji: "💼" },
+  { slug: "emploi", label: "Emploi & Carrière", emoji: "👔" },
 ];
