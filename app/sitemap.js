@@ -22,6 +22,7 @@ export default async function sitemap() {
     "/guides/outils-ia-gratuits-francais-afrique",
     "/guides/creer-business-plan-etude-marche-ia-afrique",
     "/guides/cv-lettre-motivation-entretien-ia-afrique",
+    "/guides/deepseek-avis-performances-limites-2026",
     ...CATEGORIES.map((c) => `/category/${c.slug}`),
   ];
 

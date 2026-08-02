@@ -49,6 +49,12 @@ const GUIDES = [
     description:
       "Utilise ChatGPT gratuitement pour rédiger un CV percutant, une lettre de motivation convaincante et te préparer à l'entretien. Prompts prêts à copier pour le marché de l'emploi en Afrique.",
   },
+  {
+    href: "/guides/deepseek-avis-performances-limites-2026",
+    title: "DeepSeek : la vérité sur les performances du modèle chinois gratuit (2026)",
+    description:
+      "DeepSeek est-il vraiment gratuit ? Performances réelles face à ChatGPT, limites du quota gratuit et ce qui consomme le plus de ressources. Analyse honnête, sans chiffres inventés.",
+  },
 ];
 
 const breadcrumbItems = [
