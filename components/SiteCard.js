@@ -9,6 +9,16 @@ const PRICING_LABELS = {
 
 export default function SiteCard({ site, index = 0 }) {
   const category = CATEGORIES.find((c) => c.slug === site.category);
+  const reviewsCount =
+    typeof site.reviewsCount === "number"
+      ? site.reviewsCount
+      : (site.reviews || []).length;
+  const rating =
+    typeof site.rating === "number"
+      ? site.rating
+      : reviewsCount > 0
+        ? site.reviews.reduce((sum, r) => sum + r.rating, 0) / reviewsCount
+        : 0;
 
   return (
     <article
@@ -55,7 +65,11 @@ export default function SiteCard({ site, index = 0 }) {
       </div>
 
       <div className="flex items-center justify-between border-t border-white/10 pt-4">
-        <StarRating rating={site.rating || 0} count={site.reviewsCount} />
+        {reviewsCount > 0 ? (
+          <StarRating rating={rating} count={reviewsCount} />
+        ) : (
+          <span className="text-xs text-slate-500">Pas encore noté</span>
+        )}
         <span
           className={`rounded-full px-3 py-1 text-xs font-semibold ${
             PRICING_LABELS[site.pricing] || PRICING_LABELS.gratuit
