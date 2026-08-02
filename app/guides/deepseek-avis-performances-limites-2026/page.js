@@ -142,6 +142,53 @@ export default function GuidePage() {
 
       <section className="mb-10">
         <h2 className="mb-4 text-2xl font-bold text-white">
+          Aperçu réel : DeepSeek testé en conditions réelles
+        </h2>
+        <p className="mb-6 text-slate-300">
+          Pour ce guide, nous avons testé l'application mobile DeepSeek
+          nous-mêmes. Voici un aperçu concret de l'interface et d'une réponse
+          obtenue.
+        </p>
+        <div className="grid gap-4 sm:grid-cols-2">
+          <figure>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/guide-assets/deepseek-modes-rapide-expert-vision.jpg"
+              alt="Les 3 modes disponibles sur l'application DeepSeek : Rapide, Expert et Vision"
+              className="w-full rounded-2xl border border-white/10"
+            />
+            <figcaption className="mt-2 text-center text-sm text-slate-400">
+              Les 3 modes disponibles : Rapide, Expert et Vision
+            </figcaption>
+          </figure>
+          <figure>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/guide-assets/deepseek-mode-vision-prompt.jpg"
+              alt="Test du mode Vision de DeepSeek avec un prompt créatif"
+              className="w-full rounded-2xl border border-white/10"
+            />
+            <figcaption className="mt-2 text-center text-sm text-slate-400">
+              Test en mode Vision avec un prompt créatif simple
+            </figcaption>
+          </figure>
+        </div>
+        <figure className="mt-4">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/guide-assets/deepseek-reponse-creative.jpg"
+            alt="Réponse créative générée par DeepSeek, avec le temps de réflexion affiché"
+            className="w-full rounded-2xl border border-white/10"
+          />
+          <figcaption className="mt-2 text-center text-sm text-slate-400">
+            La réponse générée, avec le temps de réflexion affiché (4
+            secondes)
+          </figcaption>
+        </figure>
+      </section>
+
+      <section className="mb-10">
+        <h2 className="mb-4 text-2xl font-bold text-white">
           Les performances de DeepSeek : que valent vraiment V3, R1 et Coder
           V2 ?
         </h2>
