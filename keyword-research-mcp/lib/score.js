@@ -9,6 +9,14 @@
  *   - tendance Google Trends si dispo
  */
 
+// Retire les accents (NFD) et met en minuscules. Les regex ci-dessous sont
+// écrites SANS accent (senegal, coute…), mais Google renvoie le texte accentué
+// (sénégal, coûte…). Sans deburr, « au sénégal » ratait le bonus géo — or
+// l'ancrage ouest-africain est tout l'intérêt de l'outil.
+function deburr(s) {
+  return String(s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+}
+
 const TRANSACTIONNEL = /\b(prix|tarif|acheter|abonnement|combien coute|devis|commander|souscrire|payer|telecharger)\b/i;
 // Signaux commerciaux / d'évaluation. Les pluriels (meilleurs, gratuites…) sont
 // couverts par `s?` — sans quoi le « s » cassait le \b et « meilleurs » passait
@@ -21,6 +29,7 @@ const INFORMATIONNEL = /\b(comment|pourquoi|c est quoi|qu est ce que|quels?|quel
 const GEO_OUEST = /\b(senegal|senegalais|dakar|cote d ivoire|ivoirien|abidjan|mali|bamako|burkina|togo|benin|guinee|afrique|africain|fcfa|cfa|wave|orange money|mobile money|sans carte bancaire|sans visa)\b/i;
 
 export function classifyIntent(keyword) {
+  keyword = deburr(keyword);
   // Ordre = priorité. Transactionnel d'abord (« combien coûte », « prix »).
   // Puis interrogatif : une question (« quels sont… », « comment… ») définit le
   // format de contenu (article/FAQ pilier), même si elle contient « gratuit ».
@@ -50,7 +59,9 @@ const TREND_WEIGHT = {
  * @param {{keyword: string, volume?: number|null, trend?: string|null, inGsc?: boolean, gscPosition?: number|null}} k
  */
 export function scoreKeyword(k) {
-  const kw = k.keyword.toLowerCase();
+  // deburr : le test géo (GEO_OUEST) et le comptage de mots opèrent sur du
+  // texte sans accent, pour que « sénégal », « café »… matchent bien.
+  const kw = deburr(k.keyword);
   const words = kw.split(/\s+/).filter(Boolean).length;
 
   const intent = classifyIntent(kw);
