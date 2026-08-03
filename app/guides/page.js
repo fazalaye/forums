@@ -55,6 +55,12 @@ const GUIDES = [
     description:
       "DeepSeek est-il vraiment gratuit ? Performances réelles face à ChatGPT, limites du quota gratuit et ce qui consomme le plus de ressources. Analyse honnête, sans chiffres inventés.",
   },
+  {
+    href: "/guides/se-former-ia-senegal",
+    title: "Se former à l'IA au Sénégal : le guide complet 2026",
+    description:
+      "Formations, écoles, masters et ressources gratuites pour se former à l'intelligence artificielle au Sénégal. Débouchés, salaires et comment débuter sans budget.",
+  },
 ];
 
 const breadcrumbItems = [
