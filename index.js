@@ -291,33 +291,58 @@ function metricsFor(keyword) {
 // Keyword generation
 // ---------------------------------------------------------------------------
 
+// Light singular/plural stem so "prompt" and "prompts" count as the same word.
+function stemWord(w) {
+  return w.length > 3 && w.endsWith("s") ? w.slice(0, -1) : w;
+}
+
+// A keyword variation should never contain the same (stemmed) word twice, e.g.
+// seed "prompt chatgpt" + domain modifier "prompt" would otherwise yield
+// "prompt prompt chatgpt" / "prompts prompt chatgpt".
+function hasRepeatedWord(str) {
+  const seen = new Set();
+  for (const w of str.split(/\s+/).filter(Boolean)) {
+    const s = stemWord(w);
+    if (seen.has(s)) return true;
+    seen.add(s);
+  }
+  return false;
+}
+
 function expandSeed(seed, extraCategories) {
   const base = normalize(seed);
   if (!base) return [];
-  const out = new Set([base]);
 
-  for (const q of MODIFIERS.questions) out.add(`${q} ${base}`);
-  for (const c of MODIFIERS.commercial) out.add(`${c} ${base}`);
-  for (const t of MODIFIERS.transactional) out.add(`${base} ${t}`);
-  for (const q of MODIFIERS.qualifiers) out.add(`${base} ${q}`);
+  // The seed itself is always kept, even if the user's own phrase repeats a
+  // word; the repeat guard only filters generated variations.
+  const out = new Set([base]);
+  const add = (candidate) => {
+    const c = normalize(candidate);
+    if (c.length >= 3 && !hasRepeatedWord(c)) out.add(c);
+  };
+
+  for (const q of MODIFIERS.questions) add(`${q} ${base}`);
+  for (const c of MODIFIERS.commercial) add(`${c} ${base}`);
+  for (const t of MODIFIERS.transactional) add(`${base} ${t}`);
+  for (const q of MODIFIERS.qualifiers) add(`${base} ${q}`);
   for (const d of MODIFIERS.domain) {
-    out.add(`${base} ${d}`);
-    out.add(`${d} ${base}`);
+    add(`${base} ${d}`);
+    add(`${d} ${base}`);
   }
   // A couple of high-intent long-tails.
-  out.add(`meilleur ${base} gratuit`);
-  out.add(`comment utiliser ${base}`);
-  out.add(`${base} en français`);
+  add(`meilleur ${base} gratuit`);
+  add(`comment utiliser ${base}`);
+  add(`${base} en français`);
 
   // Blend with any requested site categories.
   if (Array.isArray(extraCategories)) {
     for (const slug of extraCategories) {
       const cat = CATEGORIES.find((c) => c.slug === slug);
-      if (cat) out.add(`${base} ${normalize(cat.label.split("&")[0])}`);
+      if (cat) add(`${base} ${normalize(cat.label.split("&")[0])}`);
     }
   }
 
-  return Array.from(out).filter((k) => k.length >= 3);
+  return Array.from(out);
 }
 
 function generateKeywordIdeas(args) {
