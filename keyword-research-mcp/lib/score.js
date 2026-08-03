@@ -9,15 +9,25 @@
  *   - tendance Google Trends si dispo
  */
 
-const TRANSACTIONNEL = /\b(prix|tarif|acheter|abonnement|combien coute|devis|commander|souscrire|payer)\b/i;
-const COMPARATIF = /\b(meilleur|meilleure|top \d|vs|versus|alternative|comparatif|ou choisir|avis|test)\b/i;
-const INFORMATIONNEL = /\b(comment|pourquoi|c est quoi|qu est ce que|definition|guide|tutoriel|exemple|apprendre)\b/i;
+const TRANSACTIONNEL = /\b(prix|tarif|acheter|abonnement|combien coute|devis|commander|souscrire|payer|telecharger)\b/i;
+// Signaux commerciaux / d'évaluation. Les pluriels (meilleurs, gratuites…) sont
+// couverts par `s?` — sans quoi le « s » cassait le \b et « meilleurs » passait
+// en navigationnel. `gratuit` compte : chercher un outil gratuit = intention
+// d'adoption, pas une simple navigation.
+const COMPARATIF = /\b(meilleurs?|meilleures?|top \d|classement|vs|versus|alternative|comparatif|comparaison|ou choisir|avis|test|gratuits?|gratuites?|pas cher)\b/i;
+// Ajout des tournures interrogatives « quel(s)/quelle(s) sont », « combien »,
+// « liste »… qui manquaient et faisaient tomber les requêtes-liste en autre.
+const INFORMATIONNEL = /\b(comment|pourquoi|c est quoi|qu est ce que|quels?|quelles?|combien|definition|guide|tutoriel|exemple|apprendre|liste|ou trouver|faut il|est ce que)\b/i;
 const GEO_OUEST = /\b(senegal|senegalais|dakar|cote d ivoire|ivoirien|abidjan|mali|bamako|burkina|togo|benin|guinee|afrique|africain|fcfa|cfa|wave|orange money|mobile money|sans carte bancaire|sans visa)\b/i;
 
 export function classifyIntent(keyword) {
+  // Ordre = priorité. Transactionnel d'abord (« combien coûte », « prix »).
+  // Puis interrogatif : une question (« quels sont… », « comment… ») définit le
+  // format de contenu (article/FAQ pilier), même si elle contient « gratuit ».
+  // Le commercial (comparatif/gratuit) capte le reste.
   if (TRANSACTIONNEL.test(keyword)) return "transactionnel";
-  if (COMPARATIF.test(keyword)) return "comparatif";
   if (INFORMATIONNEL.test(keyword)) return "informationnel";
+  if (COMPARATIF.test(keyword)) return "comparatif";
   return "navigationnel/autre";
 }
 
