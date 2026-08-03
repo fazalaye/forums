@@ -41,34 +41,39 @@ jusqu'à ce que `MONGODB_URI` / les identifiants OAuth soient renseignés.
 Voir `.env.example` : `MONGODB_URI`, `NEXTAUTH_URL`, `NEXTAUTH_SECRET`,
 `GOOGLE_CLIENT_ID`/`GOOGLE_CLIENT_SECRET`, `GITHUB_CLIENT_ID`/`GITHUB_CLIENT_SECRET`.
 
-## Serveur MCP — recherche de mots-clés (`index.js`)
+## Serveur MCP — recherche de mots-clés (`keyword-research-mcp/`)
 
-`index.js` est un serveur **MCP** (Model Context Protocol) autonome, sans
-dépendance, dédié à la recherche de mots-clés SEO en français (orientée outils
-et prompts IA). Il aide à trouver des angles de contenu pour l'annuaire.
+Le dossier [`keyword-research-mcp/`](./keyword-research-mcp/) contient un serveur
+**MCP** (Model Context Protocol) de recherche de mots-clés SEO **100 % gratuit**,
+réglé par défaut sur le **francophone ouest-africain** (fr / Sénégal, avec des
+modificateurs géo : `fcfa`, `wave`, `orange money`…). Il branche Claude sur des
+sources réelles et gratuites, sans remplacer Semrush/Ahrefs par un abonnement.
 
-Enregistrement dans Claude Code :
+Il est **isolé de l'app Next.js** : ses propres dépendances (`package.json`
+`type: module`) n'affectent pas celles du site. Voir son
+[README dédié](./keyword-research-mcp/README.md) pour l'installation complète.
+
+Enregistrement dans Claude Code (depuis la racine du repo) :
 
 ```bash
-claude mcp add --transport stdio keyword-research -- node $(pwd)/index.js
+cd keyword-research-mcp && npm install && cd ..
+claude mcp add --transport stdio keyword-research -- node $(pwd)/keyword-research-mcp/index.js
 ```
 
-Test rapide, sans client MCP :
+### Sources de données
 
-```bash
-node index.js --selftest
-```
+| Source | Clé requise | Ce qu'elle apporte |
+| --- | --- | --- |
+| Google Autocomplete | aucune | Vocabulaire réel des internautes, expansion longue traîne |
+| Google Trends | aucune | Évolution, régions, requêtes associées / émergentes |
+| Bing Webmaster Tools | `BING_WEBMASTER_API_KEY` | **Volumes mensuels chiffrés** (seule source gratuite) |
+| Google Search Console | `GSC_CREDENTIALS_PATH` | Tes **vraies requêtes** Google + gains rapides (position 4–20) |
 
-### Outils exposés
+Sans clé, l'expansion (Autocomplete), les tendances (Trends), le scoring et les
+clusters fonctionnent déjà ; les clés ajoutent les volumes chiffrés et tes
+données réelles. 14 outils au total, dont un pipeline `full_research` tolérant
+aux pannes.
 
-| Outil | Description |
-| --- | --- |
-| `generate_keyword_ideas` | Étend un mot-clé racine en variations SEO françaises (questions, intention commerciale/transactionnelle, long-tail, vocabulaire IA). |
-| `analyze_keyword` | Analyse d'un mot-clé : intention, type de contenu recommandé, fonctionnalités SERP probables. |
-| `cluster_keywords` | Regroupe une liste de mots-clés en clusters thématiques avec mot-clé pilier. |
-| `keyword_gap` | Mots-clés d'opportunité alignés sur les 9 catégories du site, avec la couverture actuelle de l'annuaire (lue depuis `data/`). |
-
-> ⚠️ Les volumes, difficultés et CPC sont des **estimations heuristiques
-> déterministes** (modèle interne stable pour un mot-clé donné), **pas** des
-> données live d'un fournisseur SEO. Branchez une vraie API en remplaçant les
-> fonctions de la section `METRICS` d'`index.js`.
+> ⚠️ Le score d'opportunité est une **heuristique explicable** (longue traîne,
+> intention, ancrage géo, volume, tendance), **pas** un KD Ahrefs. Il indique
+> *pourquoi* il priorise ainsi.
