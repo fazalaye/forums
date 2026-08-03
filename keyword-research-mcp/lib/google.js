@@ -114,7 +114,9 @@ export async function expandSeed(seed, opts = {}) {
   }
 
   const keywords = [...found.entries()].map(([keyword, source]) => ({ keyword, source }));
-  return { keywords, requestsMade: jobs.length, errors: errors.slice(0, 5) };
+  // errorCount = nombre total d'echecs (errors est tronque a 5 pour l'affichage).
+  // Sans lui, un run throttle (beaucoup de 503) est indiscernable d'un run vide.
+  return { keywords, requestsMade: jobs.length, errorCount: errors.length, errors: errors.slice(0, 5) };
 }
 
 /**
@@ -133,10 +135,12 @@ export async function deepExpand(seed, opts = {}) {
 
   const all = new Map(first.keywords.map((k) => [k.keyword, k.source]));
   let requests = first.requestsMade;
+  let errorCount = first.errorCount;
 
   for (const b of branches) {
     const sub = await expandSeed(b, { ...rest, useAlphabet: false, useGeo: false });
     requests += sub.requestsMade;
+    errorCount += sub.errorCount;
     for (const k of sub.keywords) {
       if (!all.has(k.keyword)) all.set(k.keyword, `depth2:${k.source}`);
     }
@@ -145,6 +149,7 @@ export async function deepExpand(seed, opts = {}) {
   return {
     keywords: [...all.entries()].map(([keyword, source]) => ({ keyword, source })),
     requestsMade: requests,
+    errorCount,
     errors: first.errors,
   };
 }

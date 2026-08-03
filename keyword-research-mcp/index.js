@@ -250,6 +250,7 @@ server.setRequestHandler(CallToolRequestSchema, async (req) => {
           seed: a.seed,
           total: r.keywords.length,
           requetesEnvoyees: r.requestsMade,
+          requetesEnEchec: r.errorCount,
           erreurs: r.errors,
           keywords: r.keywords,
         });
@@ -336,7 +337,13 @@ async function fullResearch(a) {
       ? await deepExpand(seed, { gl, depth: 2 })
       : await expandSeed(seed, { gl });
   const allKeywords = exp.keywords.map((k) => k.keyword);
-  notes.push(`Autocomplete: ${allKeywords.length} mots-cles en ${exp.requestsMade} requetes.`);
+  const echecs = exp.errorCount
+    ? ` — ${exp.errorCount}/${exp.requestsMade} requetes en echec (throttling/503 probable, resultats possiblement incomplets : relance plus tard ou reduis l'expansion)`
+    : "";
+  notes.push(`Autocomplete: ${allKeywords.length} mots-cles en ${exp.requestsMade} requetes${echecs}.`);
+  if (allKeywords.length === 0 && exp.errorCount) {
+    notes.push("ATTENTION: 0 mot-cle ET des requetes en echec = throttling, pas un seed vide. Le resultat n'est PAS concluant.");
+  }
 
   // 2. Tendance du seed
   let trendLabel = null;
