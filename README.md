@@ -40,3 +40,40 @@ jusqu'à ce que `MONGODB_URI` / les identifiants OAuth soient renseignés.
 
 Voir `.env.example` : `MONGODB_URI`, `NEXTAUTH_URL`, `NEXTAUTH_SECRET`,
 `GOOGLE_CLIENT_ID`/`GOOGLE_CLIENT_SECRET`, `GITHUB_CLIENT_ID`/`GITHUB_CLIENT_SECRET`.
+
+## Serveur MCP — recherche de mots-clés (`keyword-research-mcp/`)
+
+Le dossier [`keyword-research-mcp/`](./keyword-research-mcp/) contient un serveur
+**MCP** (Model Context Protocol) de recherche de mots-clés SEO **100 % gratuit**,
+réglé par défaut sur le **francophone ouest-africain** (fr / Sénégal, avec des
+modificateurs géo : `fcfa`, `wave`, `orange money`…). Il branche Claude sur des
+sources réelles et gratuites, sans remplacer Semrush/Ahrefs par un abonnement.
+
+Il est **isolé de l'app Next.js** : ses propres dépendances (`package.json`
+`type: module`) n'affectent pas celles du site. Voir son
+[README dédié](./keyword-research-mcp/README.md) pour l'installation complète.
+
+Enregistrement dans Claude Code (depuis la racine du repo) :
+
+```bash
+cd keyword-research-mcp && npm install && cd ..
+claude mcp add --transport stdio keyword-research -- node $(pwd)/keyword-research-mcp/index.js
+```
+
+### Sources de données
+
+| Source | Clé requise | Ce qu'elle apporte |
+| --- | --- | --- |
+| Google Autocomplete | aucune | Vocabulaire réel des internautes, expansion longue traîne |
+| Google Trends | aucune | Évolution, régions, requêtes associées / émergentes |
+| Bing Webmaster Tools | `BING_WEBMASTER_API_KEY` | **Volumes mensuels chiffrés** (seule source gratuite) |
+| Google Search Console | `GSC_CREDENTIALS_PATH` | Tes **vraies requêtes** Google + gains rapides (position 4–20) |
+
+Sans clé, l'expansion (Autocomplete), les tendances (Trends), le scoring et les
+clusters fonctionnent déjà ; les clés ajoutent les volumes chiffrés et tes
+données réelles. 14 outils au total, dont un pipeline `full_research` tolérant
+aux pannes.
+
+> ⚠️ Le score d'opportunité est une **heuristique explicable** (longue traîne,
+> intention, ancrage géo, volume, tendance), **pas** un KD Ahrefs. Il indique
+> *pourquoi* il priorise ainsi.
