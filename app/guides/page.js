@@ -14,6 +14,12 @@ export const metadata = {
 
 const GUIDES = [
   {
+    href: "/guides/definition-intelligence-artificielle",
+    title: "Qu'est-ce que l'intelligence artificielle ? Définition simple",
+    description:
+      "Définition claire de l'intelligence artificielle, avec les définitions officielles (OCDE, UE), des exemples concrets au quotidien, et les avantages et inconvénients.",
+  },
+  {
     href: "/guides/meilleurs-outils-ia-francophones-2026",
     title: "Les 10 meilleurs outils IA en 2026 (comparatif francophone)",
     description:
