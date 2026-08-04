@@ -2,6 +2,7 @@ import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CopyPromptButton from "@/components/CopyPromptButton";
+import ChariowWidget from "@/components/ChariowWidget";
 import { faqSchema, breadcrumbSchema, SITE_URL } from "@/lib/seo";
 
 export const metadata = {
@@ -241,6 +242,48 @@ export default function GuidePage() {
             aisance avant le vrai rendez-vous.
           </li>
         </ul>
+      </section>
+
+      <section className="mb-10">
+        <div className="glass-card p-6">
+          <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-amber-300">
+            Pour aller plus loin
+          </p>
+          <h2 className="mb-3 text-2xl font-bold text-white">
+            Pack Emploi Premium — 18 prompts pour toute ta recherche d'emploi
+          </h2>
+          <p className="mb-4 text-slate-300">
+            Les 3 prompts de ce guide couvrent l'essentiel. Le Pack Emploi
+            Premium va plus loin et accompagne toute la démarche, de la
+            candidature à la négociation salariale :
+          </p>
+          <ul className="mb-6 flex flex-col gap-2 text-slate-300">
+            <li>
+              <strong className="text-white">CV & candidature (5 prompts)</strong>{" "}
+              — poste précis, reconversion, jeune diplômé, LinkedIn, traduction
+              en anglais.
+            </li>
+            <li>
+              <strong className="text-white">
+                Lettre & prise de contact (4 prompts)
+              </strong>{" "}
+              — candidature spontanée, networking, relance, bourse ou formation.
+            </li>
+            <li>
+              <strong className="text-white">Entretien (5 prompts)</strong> —
+              simulation complète, questions pièges, négociation salariale,
+              remerciement, débrief.
+            </li>
+            <li>
+              <strong className="text-white">
+                Après l'embauche (4 prompts)
+              </strong>{" "}
+              — période d'essai, augmentation, plan de carrière sur 5 ans,
+              démission.
+            </li>
+          </ul>
+          <ChariowWidget />
+        </div>
       </section>
 
       <section className="mb-10">
