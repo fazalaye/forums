@@ -33,7 +33,7 @@ export default function ChariowWidget() {
       data-cta-width="xs"
       data-background-color="#FFFFFF"
       data-cta-animation="shine"
-      data-locale="en"
+      data-locale="fr"
       data-primary-color="#ffcc00"
     />
   );
