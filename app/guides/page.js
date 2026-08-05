@@ -62,6 +62,12 @@ const GUIDES = [
       "DeepSeek est-il vraiment gratuit ? Performances réelles face à ChatGPT, limites du quota gratuit et ce qui consomme le plus de ressources. Analyse honnête, sans chiffres inventés.",
   },
   {
+    href: "/guides/ia-pronostics-foot-gratuit",
+    title: "Meilleures IA gratuites pour les pronostics foot (2026)",
+    description:
+      "Comparatif honnête des outils IA gratuits de pronostics football : ce qu'ils font vraiment, leurs limites, et pourquoi aucun ne garantit de gains.",
+  },
+  {
     href: "/guides/se-former-ia-senegal",
     title: "Se former à l'IA au Sénégal : le guide complet 2026",
     description:
