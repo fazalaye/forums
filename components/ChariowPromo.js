@@ -9,8 +9,8 @@ export default function ChariowPromo() {
       <ChariowWidget
         productId="prd_66t2es"
         storeDomain="bundledeals.store"
-        style="tap"
-        borderStyle="rounded"
+        style="showcase"
+        borderStyle="square"
         ctaWidth="xs"
         ctaAnimation="shine"
         locale="fr"
