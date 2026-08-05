@@ -14,6 +14,12 @@ export const metadata = {
 
 const GUIDES = [
   {
+    href: "/guides/definition-intelligence-artificielle",
+    title: "Qu'est-ce que l'intelligence artificielle ? Définition simple",
+    description:
+      "Définition claire de l'intelligence artificielle, avec les définitions officielles (OCDE, UE), des exemples concrets au quotidien, et les avantages et inconvénients.",
+  },
+  {
     href: "/guides/meilleurs-outils-ia-francophones-2026",
     title: "Les 10 meilleurs outils IA en 2026 (comparatif francophone)",
     description:
@@ -54,6 +60,12 @@ const GUIDES = [
     title: "DeepSeek : la vérité sur les performances du modèle chinois gratuit (2026)",
     description:
       "DeepSeek est-il vraiment gratuit ? Performances réelles face à ChatGPT, limites du quota gratuit et ce qui consomme le plus de ressources. Analyse honnête, sans chiffres inventés.",
+  },
+  {
+    href: "/guides/ia-pronostics-foot-gratuit",
+    title: "Meilleures IA gratuites pour les pronostics foot (2026)",
+    description:
+      "Comparatif honnête des outils IA gratuits de pronostics football : ce qu'ils font vraiment, leurs limites, et pourquoi aucun ne garantit de gains.",
   },
   {
     href: "/guides/se-former-ia-senegal",
