@@ -282,7 +282,17 @@ export default function GuidePage() {
               démission.
             </li>
           </ul>
-          <ChariowWidget />
+          <ChariowWidget
+            productId="prd_824w69na"
+            storeDomain="bundledeals.store"
+            style="tap"
+            borderStyle="rounded"
+            ctaWidth="xs"
+            ctaAnimation="shine"
+            locale="fr"
+            primaryColor="#ffcc00"
+            backgroundColor="#FFFFFF"
+          />
         </div>
       </section>
 

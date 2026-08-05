@@ -2,6 +2,7 @@ import "./globals.css";
 import Providers from "@/components/Providers";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ChariowPromo from "@/components/ChariowPromo";
 import JsonLd from "@/components/JsonLd";
 import { websiteSchema, organizationSchema } from "@/lib/seo";
 
@@ -52,6 +53,7 @@ export default function RootLayout({ children }) {
           <main className="mx-auto min-h-[70vh] max-w-7xl px-6 py-10">
             {children}
           </main>
+          <ChariowPromo />
           <Footer />
         </Providers>
       </body>
