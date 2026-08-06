@@ -595,6 +595,45 @@ export default function GuidePage() {
         </div>
       </section>
 
+      <div className="glass-card mb-10 rounded-2xl border border-white/10 p-6">
+        <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-slate-400">
+          Publicité — Partenaire
+        </p>
+        <div className="flex flex-col gap-6 sm:flex-row sm:items-center">
+          <div className="mx-auto w-full max-w-[200px] shrink-0 sm:mx-0">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/guide-assets/zeyow-carte-virtuelle.jpg"
+              alt="Zeyow — carte bancaire virtuelle Visa pour payer en ligne"
+              className="w-full rounded-2xl border border-white/10"
+            />
+          </div>
+          <div className="flex flex-col gap-3">
+            <h3 className="text-xl font-bold text-white">
+              Payer les outils IA sans carte bancaire internationale
+            </h3>
+            <p className="text-sm text-slate-300">
+              Zeyow propose des cartes virtuelles rechargeables par Mobile
+              Money. Voici ce que le service annonce :
+            </p>
+            <ul className="flex flex-col gap-1 text-sm text-slate-300">
+              <li>💳 Des cartes virtuelles instantanées en 5 minutes.</li>
+              <li>📱 Rechargement facile via Mobile Money.</li>
+              <li>💲 Une tarification transparente accessible à tous.</li>
+              <li>💬 Support client 24h/24 et 7j/7.</li>
+            </ul>
+            <a
+              href="https://partners.ly/rl_biph2vkg"
+              target="_blank"
+              rel="noopener nofollow sponsored"
+              className="btn-primary mt-2 w-fit"
+            >
+              Obtenir ma carte Zeyow →
+            </a>
+          </div>
+        </div>
+      </div>
+
       <div className="glass-card flex flex-col items-start gap-4 p-6">
         <p className="text-slate-200">
           Ce guide est un point de départ. Sur{" "}
