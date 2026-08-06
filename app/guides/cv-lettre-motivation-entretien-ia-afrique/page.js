@@ -112,6 +112,8 @@ export default function GuidePage() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/guide-assets/emploi-cv-prompt-rempli.jpg"
+              width={800}
+              height={1733}
               alt="Exemple réel : le prompt CV rempli et envoyé dans ChatGPT"
               className="w-full rounded-2xl border border-white/10"
             />
@@ -123,6 +125,8 @@ export default function GuidePage() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/guide-assets/emploi-cv-reponse.jpg"
+              width={800}
+              height={1567}
               alt="Exemple réel : ChatGPT demande les informations nécessaires avant de générer le CV"
               className="w-full rounded-2xl border border-white/10"
             />
@@ -157,6 +161,8 @@ export default function GuidePage() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/guide-assets/emploi-lettre-prompt-rempli.jpg"
+              width={800}
+              height={669}
               alt="Exemple réel : le prompt lettre de motivation rempli et envoyé dans ChatGPT"
               className="w-full rounded-2xl border border-white/10"
             />
@@ -168,6 +174,8 @@ export default function GuidePage() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/guide-assets/emploi-lettre-resultat.jpg"
+              width={800}
+              height={1567}
               alt="Exemple réel : lettre de motivation générée par ChatGPT à partir du prompt"
               className="w-full rounded-2xl border border-white/10"
             />
@@ -201,6 +209,8 @@ export default function GuidePage() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/guide-assets/emploi-entretien-exemple.jpg"
+              width={800}
+              height={1567}
             alt="Exemple réel : simulation d'entretien avec ChatGPT à partir du prompt"
             className="w-full rounded-2xl border border-white/10"
           />
