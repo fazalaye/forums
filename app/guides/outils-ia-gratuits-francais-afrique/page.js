@@ -604,6 +604,8 @@ export default function GuidePage() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/guide-assets/zeyow-carte-virtuelle.jpg"
+              width={800}
+              height={1000}
               alt="Zeyow — carte bancaire virtuelle Visa pour payer en ligne"
               className="w-full rounded-2xl border border-white/10"
             />

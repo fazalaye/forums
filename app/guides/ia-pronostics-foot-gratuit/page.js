@@ -107,6 +107,8 @@ export default function GuidePage() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/guide-assets/ia-pronostics-foot-forebet.jpg"
+            width={800}
+            height={1124}
             alt="Interface Forebet montrant les probabilités 1X2, le coefficient et le score prédit pour des matchs de l'UEFA Europa League"
             className="w-full rounded-2xl border border-white/10"
           />
@@ -148,6 +150,8 @@ export default function GuidePage() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/guide-assets/ia-pronostics-foot-futpre.jpg"
+            width={800}
+            height={1567}
             alt="Interface FutPre avec le bouton Analyse IA et les onglets Prédictions, Simulations, BetWizard"
             className="w-full rounded-2xl border border-white/10"
           />
@@ -192,6 +196,8 @@ export default function GuidePage() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/guide-assets/ia-pronostics-foot-betmines.jpg"
+            width={800}
+            height={1464}
             alt="Interface BetMines listant des conseils de paris football avec pourcentages de probabilité et cotes"
             className="w-full rounded-2xl border border-white/10"
           />

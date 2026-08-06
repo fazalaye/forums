@@ -118,6 +118,8 @@ export default function GuidePage() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/guide-assets/se-former-ia-senegal-offres-emploi-dakar.jpg"
+              width={800}
+              height={1230}
               alt="Offres d'emploi en intelligence artificielle à Dakar : chargé de projets IA & Innovation, spécialiste IA & automatisation"
               className="w-full rounded-2xl border border-white/10"
             />
@@ -223,6 +225,8 @@ export default function GuidePage() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/guide-assets/se-former-ia-senegal-sonatel-academy.jpg"
+              width={800}
+              height={1321}
               alt="Formation gratuite et certifiante en intelligence artificielle, École du Code Sonatel Academy (4 mois, présentielle)"
               className="w-full rounded-2xl border border-white/10"
             />

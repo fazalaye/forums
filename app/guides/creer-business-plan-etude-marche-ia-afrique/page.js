@@ -119,6 +119,8 @@ export default function GuidePage() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/guide-assets/business-plan-prompt-rempli.jpg"
+              width={800}
+              height={1567}
               alt="Exemple réel : le prompt business plan rempli et envoyé dans ChatGPT"
               className="w-full rounded-2xl border border-white/10"
             />
@@ -130,6 +132,8 @@ export default function GuidePage() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/guide-assets/business-plan-reponse.jpg"
+              width={800}
+              height={1567}
               alt="Exemple réel : ChatGPT pose ses questions de cadrage avant de rédiger le business plan"
               className="w-full rounded-2xl border border-white/10"
             />
