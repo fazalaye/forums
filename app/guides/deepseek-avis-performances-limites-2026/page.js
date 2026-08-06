@@ -154,6 +154,8 @@ export default function GuidePage() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/guide-assets/deepseek-modes-rapide-expert-vision.jpg"
+              width={800}
+              height={1733}
               alt="Les 3 modes disponibles sur l'application DeepSeek : Rapide, Expert et Vision"
               className="w-full rounded-2xl border border-white/10"
             />
@@ -165,6 +167,8 @@ export default function GuidePage() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/guide-assets/deepseek-mode-vision-prompt.jpg"
+              width={800}
+              height={1733}
               alt="Test du mode Vision de DeepSeek avec un prompt créatif"
               className="w-full rounded-2xl border border-white/10"
             />
@@ -177,6 +181,8 @@ export default function GuidePage() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/guide-assets/deepseek-reponse-creative.jpg"
+            width={800}
+            height={1733}
             alt="Réponse créative générée par DeepSeek, avec le temps de réflexion affiché"
             className="w-full rounded-2xl border border-white/10"
           />
