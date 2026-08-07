@@ -12,7 +12,19 @@ PromptForums s'adresse aux créateurs de contenu, marketeurs, freelances, dével
 - [À propos](https://www.promptforums.org/a-propos) : présentation et questions fréquentes.
 - [Soumettre un site](https://www.promptforums.org/submit) : référencer un outil ou site IA dans l'annuaire.
 - [Contact](https://www.promptforums.org/contact) : admin@promptforums.org
+- [Boutique](https://www.promptforums.org/boutique) : produits numériques édités par PromptForums (packs de prompts, catalogues), téléchargeables après achat.
+
+## Guides
+
+- [Outils IA gratuits pour l'Afrique](https://www.promptforums.org/guides/outils-ia-gratuits-francais-afrique) : outils sans carte bancaire, classés par usage.
+- [CV, lettre de motivation, entretien](https://www.promptforums.org/guides/cv-lettre-motivation-entretien-ia-afrique) : prompts pour la recherche d'emploi.
+- [Créer un business plan avec l'IA](https://www.promptforums.org/guides/creer-business-plan-etude-marche-ia-afrique) : business plan, étude de marché, stratégie commerciale.
+- [Se former à l'IA au Sénégal](https://www.promptforums.org/guides/se-former-ia-senegal) : formations et débouchés.
+- [DeepSeek : avis et limites](https://www.promptforums.org/guides/deepseek-avis-performances-limites-2026) : test en conditions réelles.
+- [Qu'est-ce que l'intelligence artificielle ?](https://www.promptforums.org/guides/definition-intelligence-artificielle) : les bases expliquées simplement.
+- [Analyser un match de foot avec l'IA](https://www.promptforums.org/guides/ia-pronostics-foot-gratuit) : données, loi de Poisson et xG.
+- [Les meilleurs prompts ChatGPT](https://www.promptforums.org/guides/meilleurs-prompts-chatgpt-2026) : sélection commentée.
 
 ## Catégories
 
-Chatbots & Assistants, Écriture & Copywriting, Génération d'images, Code & Développement, Marketing & SEO, Productivité, Vidéo & Audio, Business & Stratégie.
+Chatbots & Assistants, Écriture & Copywriting, Génération d'images, Code & Développement, Marketing & SEO, Productivité, Vidéo & Audio, Business & Stratégie, Emploi & Carrière.

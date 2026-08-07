@@ -24,6 +24,7 @@ export default function Footer() {
             <li><Link href="/" className="hover:text-white">Annuaire de sites</Link></li>
             <li><Link href="/prompts" className="hover:text-white">Prompts communautaires</Link></li>
             <li><Link href="/guides" className="hover:text-white">Guides IA</Link></li>
+            <li><Link href="/boutique" className="hover:text-white">Boutique</Link></li>
             <li><Link href="/submit" className="hover:text-white">Soumettre un site</Link></li>
           </ul>
         </div>

@@ -21,6 +21,7 @@ const ROUTES = [
   { path: "/legal", lastModified: "2026-07-28" },
   { path: "/privacy", lastModified: "2026-07-28" },
   { path: "/guides", lastModified: "2026-08-05" },
+  { path: "/boutique", lastModified: "2026-08-07" },
   {
     path: "/guides/meilleurs-outils-ia-francophones-2026",
     lastModified: "2026-07-30",
