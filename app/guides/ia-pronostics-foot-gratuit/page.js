@@ -1,33 +1,41 @@
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import CopyPromptButton from "@/components/CopyPromptButton";
 import { faqSchema, breadcrumbSchema, articleSchema, SITE_URL } from "@/lib/seo";
 
+const TITLE =
+  "Analyser un match de foot avec l'IA : méthodes, données et limites";
+const DESCRIPTION =
+  "Comment les modèles statistiques et le machine learning analysent un match de football : quelles données ils utilisent, la loi de Poisson et les xG expliqués simplement, et pourquoi l'analyse ne devient jamais une prédiction fiable.";
+
 export const metadata = {
-  title: "Meilleures IA gratuites pour les pronostics foot (2026)",
-  description:
-    "Comparatif honnête des outils IA gratuits de pronostics football : ce qu'ils font vraiment, leurs limites, et pourquoi aucun ne garantit de gains.",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: {
     canonical: `${SITE_URL}/guides/ia-pronostics-foot-gratuit`,
   },
 };
 
+const PROMPT_ANALYSE =
+  "Tu es analyste de données sportives. Voici un match à venir : [ÉQUIPE A] contre [ÉQUIPE B], en [COMPÉTITION], le [DATE]. Forme récente de [ÉQUIPE A] : [5 DERNIERS RÉSULTATS]. Forme récente de [ÉQUIPE B] : [5 DERNIERS RÉSULTATS]. Confrontations directes récentes : [RÉSULTATS]. Absences connues : [BLESSÉS ET SUSPENDUS]. Analyse ce match en expliquant ton raisonnement étape par étape : quelles données pèsent le plus dans ce cas précis et pourquoi, quels scénarios sont les plus cohérents avec ces données, et surtout quelles informations te manquent pour que ton analyse soit solide. Ne me donne pas un score final présenté comme une certitude — explique les facteurs, leur poids relatif, et le niveau d'incertitude de chaque conclusion.";
+
 const FAQ = [
   {
-    q: "Existe-t-il une IA gratuite qui prédit les résultats de foot ?",
-    a: "Oui, plusieurs outils gratuits existent (Forebet, FutPre, BetMines notamment), basés sur des modèles statistiques ou de machine learning analysant données historiques, forme des équipes et confrontations directes. Ils produisent des probabilités, pas des certitudes.",
+    q: "Comment une IA analyse-t-elle un match de football ?",
+    a: "En croisant des données historiques — résultats passés, forme des équipes, confrontations directes, buts attendus (xG) — avec des modèles statistiques ou de machine learning. Le résultat est une distribution de probabilités entre plusieurs scénarios, pas une prédiction unique.",
   },
   {
-    q: "Ces outils IA de pronostic sont-ils fiables ?",
-    a: "Les taux de précision annoncés (souvent 70-80%) viennent généralement des éditeurs eux-mêmes et ne sont pas vérifiés indépendamment. Même un outil réellement performant reste soumis à la marge des bookmakers, qui rend une rentabilité durable très difficile à atteindre.",
+    q: "Que signifient les xG (buts attendus) ?",
+    a: "Les xG mesurent la qualité des occasions créées plutôt que les buts réellement marqués. Une équipe qui perd 0-1 en ayant produit 2,5 xG contre 0,4 a largement dominé le jeu : sur la durée, ses résultats ont statistiquement tendance à s'améliorer. C'est un indicateur plus stable que le score brut.",
   },
   {
-    q: "Peut-on gagner de l'argent avec une IA de pronostic sportif ?",
-    a: "Ce n'est pas garanti, et c'est même statistiquement improbable sur le long terme à cause de la marge intégrée dans les cotes des bookmakers. Ces outils sont plus utiles pour s'informer et analyser un match que comme source de revenu fiable.",
+    q: "Peut-on utiliser ChatGPT ou Claude pour analyser un match ?",
+    a: "Oui, à condition de lui fournir vous-même les données (forme, confrontations, absences) : ces modèles n'ont pas d'accès direct aux statistiques sportives à jour. Ils sont utiles pour structurer un raisonnement et pondérer des facteurs, pas pour aller chercher les chiffres.",
   },
   {
-    q: "Quelle est la différence entre Forebet, FutPre et BetMines ?",
-    a: "Forebet mise sur une méthodologie statistique publique et documentée, sans version payante. FutPre est une application mobile avec simulations et génération de tickets, gratuite avec achats intégrés. BetMines ajoute une dimension communautaire (suivi d'autres pronostiqueurs) et un mode paris virtuels pour s'entraîner sans risque.",
+    q: "Ces modèles d'analyse sont-ils fiables ?",
+    a: "Ils décrivent bien ce qui s'est passé et identifient des tendances réelles. Mais les taux de précision annoncés par les applications (souvent 70-80 %) viennent des éditeurs eux-mêmes et ne sont pas vérifiés indépendamment. Un modèle honnête produit des probabilités assorties d'une marge d'incertitude, jamais des certitudes.",
   },
 ];
 
@@ -35,7 +43,7 @@ const BREADCRUMB_ITEMS = [
   { name: "Accueil", url: SITE_URL },
   { name: "Guides", url: `${SITE_URL}/guides` },
   {
-    name: "Meilleures IA gratuites pour les pronostics foot",
+    name: "Analyser un match de foot avec l'IA",
     url: `${SITE_URL}/guides/ia-pronostics-foot-gratuit`,
   },
 ];
@@ -47,61 +55,133 @@ export default function GuidePage() {
       <JsonLd data={breadcrumbSchema(BREADCRUMB_ITEMS)} />
       <JsonLd
         data={articleSchema({
-          title: "Meilleures IA gratuites pour les pronostics foot (2026)",
-          description:
-            "Comparatif honnête des outils IA gratuits de pronostics football : ce qu'ils font vraiment, leurs limites, et pourquoi aucun ne garantit de gains.",
+          title: TITLE,
+          description: DESCRIPTION,
           url: `${SITE_URL}/guides/ia-pronostics-foot-gratuit`,
           datePublished: "2026-08-05",
         })}
       />
 
       <Breadcrumbs items={BREADCRUMB_ITEMS} />
-      <p className="mb-3 text-sm text-slate-400">Guide · Comparatif</p>
+      <p className="mb-3 text-sm text-slate-400">Guide · Analyse de données</p>
       <h1 className="mb-4 text-4xl font-extrabold leading-tight">
-        Meilleures IA gratuites pour les pronostics foot (2026)
+        Analyser un match de foot avec l'IA : méthodes, données et limites
       </h1>
       <p className="mb-6 text-lg text-slate-300">
-        Tape « pronostic foot IA » sur ton téléphone et tu tombes sur une
-        dizaine d'applications qui promettent des « prédictions à 80% de
-        précision ». Le problème : ces chiffres viennent presque toujours du
-        site qui vend l'application. Ce comparatif se limite à ce qui est{" "}
-        <strong className="text-white">vérifiable</strong> — ce que les
-        outils font réellement, s'ils sont gratuits, et une explication
-        honnête de pourquoi aucune IA ne peut garantir de gagner aux paris.
+        Le football est l'un des terrains les plus intéressants pour comprendre
+        ce que l'IA sait faire — et ce qu'elle ne sait pas faire. Beaucoup de
+        données publiques, un résultat mesurable, et une part d'aléatoire
+        irréductible.
+      </p>
+      <p className="mb-6 text-slate-300">
+        Ce guide explique concrètement{" "}
+        <strong className="text-white">
+          comment un modèle analyse un match
+        </strong>{" "}
+        : quelles données il consomme, quelles méthodes statistiques il
+        applique, ce que révèlent les outils existants de leur propre
+        méthodologie, et comment mener cette analyse toi-même avec un assistant
+        IA généraliste. C'est un cas d'école utile bien au-delà du sport.
       </p>
 
       <section className="mb-10">
         <h2 className="mb-4 text-2xl font-bold text-white">
-          Comment ces outils fonctionnent réellement
+          1. Les données que ces modèles consomment
         </h2>
-        <p className="text-slate-300">
-          Aucun outil de pronostic IA ne « prédit l'avenir ». Ils font tous,
-          plus ou moins, la même chose : analyser des données historiques
-          (résultats passés, forme des équipes, confrontations directes,
-          statistiques comme les buts attendus xG) avec des modèles
-          statistiques ou de machine learning, pour produire une{" "}
-          <strong className="text-white">probabilité</strong> — pas une
-          certitude.
+        <p className="mb-4 text-slate-300">
+          Un modèle ne « regarde » pas un match. Il travaille exclusivement sur
+          des variables chiffrées, et sa qualité dépend d'abord de celles qu'on
+          lui donne :
+        </p>
+        <ul className="flex flex-col gap-3 text-slate-300">
+          <li>
+            <strong className="text-white">Les résultats historiques.</strong>{" "}
+            La base de tout, mais aussi la plus trompeuse : un score reflète
+            autant la chance que la performance.
+          </li>
+          <li>
+            <strong className="text-white">
+              Les buts attendus (xG, expected goals).
+            </strong>{" "}
+            La donnée la plus intéressante du lot. Elle mesure la{" "}
+            <em>qualité des occasions créées</em> plutôt que les buts marqués.
+            Une équipe battue 0-1 avec 2,5 xG contre 0,4 a dominé le jeu — et
+            statistiquement, ses résultats ont tendance à se redresser.
+          </li>
+          <li>
+            <strong className="text-white">La forme récente.</strong>{" "}
+            Généralement pondérée : les matchs récents pèsent plus lourd que
+            ceux d'il y a six mois.
+          </li>
+          <li>
+            <strong className="text-white">Le contexte.</strong> Domicile ou
+            extérieur, absences, jours de repos entre deux matchs, enjeu de la
+            rencontre.
+          </li>
+        </ul>
+        <p className="mt-4 text-slate-300">
+          Ce qui n'entre presque jamais dans le modèle : l'état psychologique
+          d'un vestiaire, un conflit interne, la météo du jour, l'arbitre
+          désigné. C'est là que se loge une grande partie de l'imprévu.
         </p>
       </section>
 
       <section className="mb-10">
         <h2 className="mb-4 text-2xl font-bold text-white">
-          Les outils gratuits
+          2. Les méthodes, expliquées simplement
         </h2>
+        <p className="mb-4 text-slate-300">
+          Deux grandes familles d'approches coexistent, et elles ne se valent
+          pas en matière de transparence.
+        </p>
+        <h3 className="mb-2 text-xl font-semibold text-white">
+          La loi de Poisson
+        </h3>
+        <p className="mb-4 text-slate-300">
+          C'est le modèle historique, et il reste largement utilisé. L'idée :
+          les buts sont des événements rares et relativement indépendants, ce
+          qui permet de les modéliser mathématiquement. À partir de la force
+          offensive d'une équipe et de la faiblesse défensive de l'autre, on
+          calcule la probabilité de chaque score possible. Son intérêt : il est{" "}
+          <strong className="text-white">entièrement vérifiable</strong> —
+          n'importe qui peut refaire le calcul.
+        </p>
+        <h3 className="mb-2 text-xl font-semibold text-white">
+          Le machine learning
+        </h3>
+        <p className="text-slate-300">
+          Un modèle entraîné sur des milliers de matchs pour repérer des
+          régularités qu'aucune formule ne capture. Plus puissant sur le
+          papier, mais avec deux faiblesses : il exige énormément de données
+          propres, et il fonctionne souvent en « boîte noire » — il donne un
+          résultat sans que l'on puisse examiner le raisonnement. Quand un
+          outil ne documente pas sa méthode, c'est presque toujours de ça qu'il
+          s'agit.
+        </p>
+      </section>
+
+      <section className="mb-10">
+        <h2 className="mb-4 text-2xl font-bold text-white">
+          3. Trois outils et ce qu'ils révèlent de leur méthode
+        </h2>
+        <p className="mb-6 text-slate-300">
+          Le meilleur critère pour juger un outil d'analyse n'est pas le taux
+          de réussite qu'il affiche — c'est ce qu'il accepte de montrer de son
+          fonctionnement.
+        </p>
 
         <h3 className="mb-3 text-xl font-semibold text-white">Forebet</h3>
         <p className="mb-4 text-slate-300">
           <strong className="text-white">
-            Gratuit, sans abonnement caché.
+            Le plus transparent des trois.
           </strong>{" "}
-          En ligne depuis 2009, Forebet se présente comme un service géré par
-          des statisticiens, sans « boîte noire » : sa méthodologie s'appuie
-          sur des modèles mathématiques (notamment une loi de Poisson pour
-          estimer le nombre de buts probables) appliqués à une base de
-          données de plus de 700 championnats sur 15 ans. C'est l'un des
-          rares outils du secteur à expliquer publiquement sa méthode plutôt
-          que de se contenter d'annoncer un taux de réussite.
+          En ligne depuis 2009, Forebet documente publiquement sa méthodologie :
+          des modèles mathématiques, dont une loi de Poisson pour estimer le
+          nombre de buts probables, appliqués à une base de plus de 700
+          championnats sur 15 ans. C'est l'un des rares outils du secteur à
+          expliquer <em>comment</em> il calcule plutôt qu'à annoncer un taux de
+          réussite. Du point de vue de l'analyse de données, c'est le seul des
+          trois dont on peut réellement discuter la méthode.
         </p>
         <figure className="mb-4">
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -113,8 +193,8 @@ export default function GuidePage() {
             className="w-full rounded-2xl border border-white/10"
           />
           <figcaption className="mt-2 text-center text-sm text-slate-400">
-            L'interface Forebet : probabilités 1X2, cote et score prédit pour
-            chaque match.
+            Forebet affiche une distribution de probabilités (1X2) plutôt qu'une
+            réponse unique — la bonne façon de présenter une sortie de modèle.
           </figcaption>
         </figure>
         <p className="mb-6 text-slate-300">
@@ -127,24 +207,21 @@ export default function GuidePage() {
           >
             forebet.com
           </Link>{" "}
-          — accessible directement depuis un navigateur, sans installation.
+          — accessible depuis un navigateur, sans installation.
         </p>
 
-        <h3 className="mb-3 text-xl font-semibold text-white">
-          FutPre : Pronostic Foot IA
-        </h3>
+        <h3 className="mb-3 text-xl font-semibold text-white">FutPre</h3>
         <p className="mb-4 text-slate-300">
           <strong className="text-white">
-            Gratuit avec achats intégrés.
+            L'approche par simulation.
           </strong>{" "}
           Application mobile qui combine forme des équipes, blessures et
-          confrontations directes pour générer des pronostics, avec un mode
-          « simulation » (jusqu'à 100 simulations par match sélectionné) et un
-          générateur de tickets personnalisés. La version gratuite couvre les
-          pronostics quotidiens des principales ligues ; la version payante
-          retire la publicité et ajoute plus de marchés et d'analyses. Fait
-          notable : l'application cible spécifiquement l'App Store de Côte
-          d'Ivoire.
+          confrontations directes, avec un mode « simulation » qui rejoue
+          jusqu'à 100 fois le même match. C'est une méthode statistique
+          classique (proche d'une simulation de Monte-Carlo) et pédagogiquement
+          intéressante : elle rend visible le fait qu'un même match peut
+          produire des issues très différentes. La méthodologie sous-jacente
+          n'est en revanche pas documentée publiquement.
         </p>
         <figure className="mb-4">
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -156,8 +233,8 @@ export default function GuidePage() {
             className="w-full rounded-2xl border border-white/10"
           />
           <figcaption className="mt-2 text-center text-sm text-slate-400">
-            FutPre : bouton « Analyse IA » sur chaque match, avec les onglets
-            Prédictions, Simulations et BetWizard.
+            FutPre : le mode « Simulations » rejoue le match de nombreuses fois
+            pour montrer la dispersion des résultats possibles.
           </figcaption>
         </figure>
         <p className="mb-6 text-slate-300">
@@ -168,7 +245,7 @@ export default function GuidePage() {
             rel="noopener noreferrer"
             className="text-brand-300 hover:underline"
           >
-            App Store (Côte d'Ivoire)
+            App Store
           </Link>{" "}
           ·{" "}
           <Link
@@ -183,14 +260,16 @@ export default function GuidePage() {
 
         <h3 className="mb-3 text-xl font-semibold text-white">BetMines</h3>
         <p className="mb-4 text-slate-300">
-          <strong className="text-white">Gratuit (Android et iOS).</strong>{" "}
-          Application qui combine pronostics quotidiens générés par un
-          algorithme, statistiques d'équipes, suivi d'autres pronostiqueurs
-          et un mode « paris virtuels » pour tester une stratégie sans argent
-          réel. Selon AppBrain, l'application a été téléchargée près de 6,9
-          millions de fois. BetMines dispose d'un domaine dédié à la Côte
-          d'Ivoire (betmines.ci), signe d'un ciblage direct du marché
-          ouest-africain.
+          <strong className="text-white">
+            Le plus opaque sur sa méthode.
+          </strong>{" "}
+          L'application fournit des statistiques d'équipes détaillées, utiles
+          en tant que source de données brutes, mais ne documente pas comment
+          son algorithme parvient à ses conclusions. Son mode « paris virtuels »
+          a en revanche une vraie valeur analytique : il permet de tester une
+          hypothèse sur plusieurs dizaines de matchs sans argent réel, ce qui
+          est exactement la bonne façon d'évaluer un modèle — sur un
+          échantillon, pas sur trois résultats.
         </p>
         <figure className="mb-4">
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -198,12 +277,12 @@ export default function GuidePage() {
             src="/guide-assets/ia-pronostics-foot-betmines.jpg"
             width={800}
             height={1464}
-            alt="Interface BetMines listant des conseils de paris football avec pourcentages de probabilité et cotes"
+            alt="Interface BetMines listant des analyses de matchs football avec pourcentages de probabilité"
             className="w-full rounded-2xl border border-white/10"
           />
           <figcaption className="mt-2 text-center text-sm text-slate-400">
-            BetMines : conseils de paris du jour avec pourcentage de
-            probabilité et cote associée pour chaque match.
+            BetMines affiche un pourcentage de probabilité par match, sans
+            expliquer comment il est obtenu.
           </figcaption>
         </figure>
         <p className="text-slate-300">
@@ -215,95 +294,91 @@ export default function GuidePage() {
             className="text-brand-300 hover:underline"
           >
             betmines.com
-          </Link>{" "}
-          — également disponible sur{" "}
-          <Link
-            href="https://play.google.com/store/apps/details?id=com.betmines"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-brand-300 hover:underline"
-          >
-            Google Play
           </Link>
-          .
         </p>
       </section>
 
       <section className="mb-10">
         <h2 className="mb-4 text-2xl font-bold text-white">
-          ⚠️ Ce qu'aucun outil IA ne peut faire
+          4. Mener l'analyse toi-même avec ChatGPT ou Claude
+        </h2>
+        <p className="mb-4 text-slate-300">
+          Un assistant IA généraliste n'a pas accès aux statistiques sportives à
+          jour — c'est sa limite principale, et il faut donc lui fournir les
+          données. En revanche, il est excellent pour{" "}
+          <strong className="text-white">structurer un raisonnement</strong>,
+          pondérer des facteurs et, surtout, nommer ce qui lui manque. Ce prompt
+          est écrit pour l'obliger à expliquer sa démarche plutôt qu'à cracher
+          un score :
+        </p>
+        <div className="glass-card p-6">
+          <div className="mb-3 flex justify-end">
+            <CopyPromptButton text={PROMPT_ANALYSE} />
+          </div>
+          <pre className="whitespace-pre-wrap rounded-xl bg-black/30 p-5 font-sans text-slate-200">
+            {PROMPT_ANALYSE}
+          </pre>
+        </div>
+        <p className="mt-4 text-sm text-slate-400">
+          L'intérêt de ce prompt n'est pas la conclusion : c'est le
+          raisonnement. Un modèle qui explique pourquoi il hésite t'apprend
+          davantage qu'un chiffre affirmé sans justification.
+        </p>
+      </section>
+
+      <section className="mb-10">
+        <h2 className="mb-4 text-2xl font-bold text-white">
+          5. Là où l'analyse s'arrête
         </h2>
         <div className="glass-card p-6">
           <p className="mb-3 font-semibold text-slate-100">
-            La marge des bookmakers change tout le calcul
+            Analyser n'est pas prédire
           </p>
           <p className="mb-3 text-sm text-slate-300">
-            C'est le point le plus important de cet article, et celui que la
-            plupart des sites de pronostics passent sous silence.
+            Un modèle bien construit décrit correctement ce qui s'est passé et
+            identifie des tendances réelles. Il ne supprime pas pour autant la
+            part d'aléatoire du football — un poteau, une erreur d'arbitrage ou
+            une blessure à la 10ᵉ minute font basculer un match sans qu'aucune
+            donnée ne l'ait annoncé.
           </p>
           <p className="mb-3 text-sm text-slate-300">
-            <strong className="text-white">
-              Les bookmakers intègrent une marge dans leurs cotes
-            </strong>{" "}
-            (souvent appelée « vig » ou marge bookmaker). Concrètement, même
-            si tu devinais parfaitement qui va gagner un match sur deux,
-            cette marge fait que tu perdrais de l'argent sur le long terme si
-            tu paries systématiquement. Pour être rentable, un outil de
-            pronostic ne doit pas seulement « avoir raison » plus souvent
-            qu'au hasard — il doit avoir raison{" "}
-            <strong className="text-white">
-              plus souvent que la marge du bookmaker ne le permet
-            </strong>
-            . C'est une barre beaucoup plus haute que ce que suggèrent les
-            publicités « 80% de précision ».
-          </p>
-          <p className="mb-3 text-sm text-slate-300">
-            Aucun des trois outils présentés ici — ni aucun autre outil IA
-            grand public, gratuit ou payant — ne peut te garantir de gagner
-            de l'argent aux paris sportifs sur la durée. Les modèles
-            statistiques peuvent aider à mieux comprendre un match, mais ils
-            ne suppriment pas le risque financier réel des paris.
+            C'est aussi pourquoi les taux de précision affichés par les
+            applications (« 80 % de réussite ») doivent être lus avec méfiance :
+            ils viennent presque toujours de l'éditeur, sans vérification
+            indépendante, et sans préciser sur quel échantillon ni sur quel
+            type de pari ils sont calculés.
           </p>
           <p className="text-sm text-slate-300">
             <strong className="text-white">
-              Si tu paries, fais-le uniquement avec de l'argent que tu peux
-              te permettre de perdre
-            </strong>
-            , fixe-toi une limite avant de commencer, et ne considère jamais
-            les paris sportifs comme une source de revenu.
+              Et si tu envisages de parier :
+            </strong>{" "}
+            les cotes des bookmakers intègrent une marge structurelle. Aucun
+            outil grand public, gratuit ou payant, ne l'annule de façon fiable.
+            Ces modèles servent à comprendre un match — pas à générer un
+            revenu. Ne joue jamais un argent dont tu as besoin.
           </p>
         </div>
       </section>
 
       <section className="mb-10">
         <h2 className="mb-4 text-2xl font-bold text-white">
-          Pour aller plus loin
+          Ce qu'il faut retenir
         </h2>
         <p className="text-slate-300">
-          Tu veux comprendre l'intelligence artificielle avant d'utiliser ce
-          type d'outil ? Notre guide{" "}
+          Le football est un bon révélateur du fonctionnement réel de l'IA : des
+          données de qualité inégale, des méthodes qui vont de la formule
+          vérifiable à la boîte noire, et un résultat qui reste probabiliste.
+          Le réflexe utile, ici comme ailleurs, est simple : préférer un outil
+          qui explique sa méthode à un outil qui annonce un score de réussite.
+          Pour aller plus loin sur le fonctionnement de ces systèmes, notre
+          guide{" "}
           <Link
             href="/guides/definition-intelligence-artificielle"
             className="text-brand-300 hover:underline"
           >
             Qu'est-ce que l'intelligence artificielle ?
           </Link>{" "}
-          explique simplement comment ces systèmes fonctionnent, avec des
-          exemples concrets.
-        </p>
-      </section>
-
-      <section className="mb-10">
-        <h2 className="mb-4 text-2xl font-bold text-white">Conclusion</h2>
-        <p className="text-slate-300">
-          Les outils IA de pronostic foot gratuits existent bel et bien —
-          Forebet, FutPre et BetMines en sont des exemples réels et
-          vérifiés, chacun avec sa propre approche (statistique publique,
-          simulation, communauté de pronostiqueurs). Mais aucun ne change une
-          règle mathématique de base : les bookmakers ont un avantage
-          structurel, et aucune IA grand public ne l'annule de façon fiable.
-          Utilise ces outils pour t'informer, pas pour espérer un revenu
-          garanti.
+          reprend les bases avec des exemples concrets.
         </p>
       </section>
 

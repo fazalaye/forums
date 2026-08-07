@@ -75,9 +75,9 @@ const GUIDES = [
   },
   {
     href: "/guides/ia-pronostics-foot-gratuit",
-    title: "Meilleures IA gratuites pour les pronostics foot (2026)",
+    title: "Analyser un match de foot avec l'IA : méthodes, données et limites",
     description:
-      "Comparatif honnête des outils IA gratuits de pronostics football : ce qu'ils font vraiment, leurs limites, et pourquoi aucun ne garantit de gains.",
+      "Quelles données ces modèles consomment, la loi de Poisson et les xG expliqués simplement, et un prompt pour mener l'analyse toi-même.",
   },
   {
     href: "/guides/se-former-ia-senegal",

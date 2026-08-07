@@ -50,7 +50,7 @@ const ROUTES = [
     path: "/guides/definition-intelligence-artificielle",
     lastModified: "2026-08-05",
   },
-  { path: "/guides/ia-pronostics-foot-gratuit", lastModified: "2026-08-05" },
+  { path: "/guides/ia-pronostics-foot-gratuit", lastModified: "2026-08-07" },
   { path: "/guides/se-former-ia-senegal", lastModified: "2026-08-03" },
 ];
 
