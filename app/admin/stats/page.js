@@ -51,12 +51,24 @@ export default async function StatsPage() {
   return (
     <div className="mx-auto max-w-4xl">
       <h1 className="mb-2 text-3xl font-extrabold">Clics sortants</h1>
-      <p className="mb-8 text-slate-300">
+      <p className="mb-4 text-slate-300">
         Nombre de fois où chaque outil a été ouvert depuis l&apos;annuaire, via
         le redirecteur <code className="text-brand-300">/out/[slug]</code>. Les
-        outils les plus cliqués sont ceux qui valent la peine d&apos;être
-        démarchés en affiliation.
+        robots identifiés ne sont pas comptés — seules les visites réelles
+        incrémentent le compteur.
       </p>
+      <div className="mb-8 rounded-xl border border-amber-400/30 bg-amber-400/5 p-4">
+        <p className="text-sm text-slate-200">
+          <strong className="text-white">Lecture des chiffres.</strong> Si tous
+          les outils affichent un total proche et que 100 % d&apos;entre eux ont
+          été cliqués, ce sont des robots : ils parcourent chaque lien
+          systématiquement. Un vrai trafic donne l&apos;inverse — quelques
+          outils en tête et beaucoup à zéro. Les compteurs accumulés avant le
+          filtrage anti-robots peuvent être remis à zéro via{" "}
+          <code className="text-brand-300">/api/admin/reset-clicks</code>{" "}
+          (action définitive).
+        </p>
+      </div>
 
       <div className="mb-8 grid gap-4 sm:grid-cols-3">
         <div className="glass-card p-5">
