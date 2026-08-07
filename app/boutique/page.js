@@ -107,10 +107,41 @@ export default function BoutiquePage() {
         <h2 className="mb-3 text-2xl font-bold text-white">
           1000 idées de produits digitaux
         </h2>
-        <p className="mb-5 text-slate-300">
-          Un catalogue d'idées de produits numériques à créer et à vendre, pour
-          celles et ceux qui veulent lancer une activité en ligne sans partir
-          de la page blanche.
+        <p className="mb-4 text-slate-300">
+          Le plus dur, quand on veut vendre un produit numérique, c'est rarement
+          de le fabriquer — c'est de savoir quoi faire. Ce catalogue rassemble
+          1000 idées de produits digitaux réparties sur de nombreuses
+          thématiques, pour sortir de la page blanche et repérer une piste qui
+          correspond à tes compétences.
+        </p>
+        <div className="mb-4 rounded-xl border border-amber-400/30 bg-amber-400/5 p-4">
+          <p className="text-sm text-slate-200">
+            <strong className="text-white">
+              À lire avant d'acheter :
+            </strong>{" "}
+            ce catalogue contient des <strong className="text-white">idées</strong>{" "}
+            de produits à créer toi-même. Ce ne sont{" "}
+            <strong className="text-white">pas</strong> des produits finis
+            livrés prêts à la revente. Tu repars avec une liste de pistes, pas
+            avec un stock à vendre en l'état.
+          </p>
+        </div>
+        <ul className="mb-5 flex flex-col gap-2 text-slate-300">
+          <li>
+            <strong className="text-white">1000 idées</strong> de produits
+            numériques, classées par thématique.
+          </li>
+          <li>
+            <strong className="text-white">Plusieurs niches couvertes</strong>,
+            pour trouver un angle proche de ce que tu sais déjà faire.
+          </li>
+          <li>
+            <strong className="text-white">Bonus inclus :</strong> un lot de
+            presets Lightroom.
+          </li>
+        </ul>
+        <p className="mb-5 text-sm text-slate-400">
+          Téléchargement immédiat après l'achat.
         </p>
         <ChariowWidget
           productId="prd_66t2es"
