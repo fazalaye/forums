@@ -44,6 +44,12 @@ const GUIDES = [
       "Les meilleurs outils IA gratuits, sans carte bancaire et en français, pour entrepreneurs d'Afrique de l'Ouest. Testés, classés par usage. Mobile-first.",
   },
   {
+    href: "/guides/nano-banana-prompts",
+    title: "Nano Banana : les meilleurs prompts en français (2026)",
+    description:
+      "Prompts Nano Banana prêts à copier : photo LinkedIn pro, photo CV, logo, retouche d'image. Comment accéder gratuitement à l'outil de Google.",
+  },
+  {
     href: "/guides/creer-business-plan-etude-marche-ia-afrique",
     title: "Créer un business plan avec l'IA en Afrique (guide + prompts gratuits)",
     description:
