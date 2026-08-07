@@ -11,7 +11,7 @@ export default function robots() {
         // /api/auth/_log. The endpoint returns an empty session for an
         // anonymous crawler, so it is safe to expose while /api/ stays closed.
         allow: ["/", "/api/auth/session"],
-        disallow: ["/api/", "/profile", "/out/"],
+        disallow: ["/api/", "/profile", "/out/", "/admin"],
       },
     ],
     sitemap: `${SITE_URL}/sitemap.xml`,
