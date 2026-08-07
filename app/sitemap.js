@@ -1,5 +1,6 @@
 import { SITE_URL } from "@/lib/seo";
 import { CATEGORIES } from "@/data/categories";
+import { GUIDES } from "@/data/guides";
 import { dbConnect } from "@/lib/mongodb";
 import Prompt from "@/models/Prompt";
 
@@ -22,37 +23,6 @@ const ROUTES = [
   { path: "/privacy", lastModified: "2026-07-28" },
   { path: "/guides", lastModified: "2026-08-05" },
   { path: "/boutique", lastModified: "2026-08-07" },
-  {
-    path: "/guides/meilleurs-outils-ia-francophones-2026",
-    lastModified: "2026-07-30",
-  },
-  { path: "/guides/meilleurs-prompts-chatgpt-2026", lastModified: "2026-08-01" },
-  {
-    path: "/guides/affiche-produit-chatgpt-etude-de-cas",
-    lastModified: "2026-08-01",
-  },
-  {
-    path: "/guides/outils-ia-gratuits-francais-afrique",
-    lastModified: "2026-08-06",
-  },
-  {
-    path: "/guides/creer-business-plan-etude-marche-ia-afrique",
-    lastModified: "2026-08-01",
-  },
-  {
-    path: "/guides/cv-lettre-motivation-entretien-ia-afrique",
-    lastModified: "2026-08-06",
-  },
-  {
-    path: "/guides/deepseek-avis-performances-limites-2026",
-    lastModified: "2026-08-02",
-  },
-  {
-    path: "/guides/definition-intelligence-artificielle",
-    lastModified: "2026-08-05",
-  },
-  { path: "/guides/ia-pronostics-foot-gratuit", lastModified: "2026-08-07" },
-  { path: "/guides/se-former-ia-senegal", lastModified: "2026-08-03" },
 ];
 
 const CATEGORIES_LAST_MODIFIED = "2026-08-01";
@@ -63,6 +33,15 @@ export default async function sitemap() {
     lastModified: new Date(route.lastModified),
     changeFrequency: route.changeFrequency ?? "weekly",
     priority: route.priority ?? 0.7,
+  }));
+
+  // Generated from the guides library, never hand-listed: a guide added to
+  // data/guides.js is in the sitemap automatically.
+  const guideEntries = GUIDES.map((guide) => ({
+    url: `${SITE_URL}${guide.href}`,
+    lastModified: new Date(guide.lastModified),
+    changeFrequency: "weekly",
+    priority: 0.7,
   }));
 
   const categoryEntries = CATEGORIES.map((c) => ({
@@ -86,5 +65,10 @@ export default async function sitemap() {
     }));
   }
 
-  return [...staticEntries, ...categoryEntries, ...promptEntries];
+  return [
+    ...staticEntries,
+    ...guideEntries,
+    ...categoryEntries,
+    ...promptEntries,
+  ];
 }
