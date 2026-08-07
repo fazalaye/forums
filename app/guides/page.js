@@ -32,6 +32,12 @@ const GUIDES = [
       "Les meilleurs prompts ChatGPT en français en 2026 : rédaction, marketing, code, productivité, apprentissage et images. Prêts à copier, mis à jour et testés par la communauté.",
   },
   {
+    href: "/guides/meilleurs-prompts-claude",
+    title: "Les meilleurs prompts Claude en français (2026)",
+    description:
+      "Prompts Claude prêts à copier : CV, création de site web, PowerPoint, apprentissage d'une langue, étude de marché. Plus la technique des balises XML.",
+  },
+  {
     href: "/guides/affiche-produit-chatgpt-etude-de-cas",
     title: "Créer une affiche produit avec ChatGPT : étude de cas (2026)",
     description:
