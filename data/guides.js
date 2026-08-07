@@ -91,4 +91,11 @@ export const GUIDES = [
     description:
       "Formations, écoles, masters et ressources gratuites pour se former à l'intelligence artificielle au Sénégal. Débouchés, salaires et comment débuter sans budget.",
   },
+  {
+    href: "/guides/creer-vendre-ebook-ia",
+    lastModified: "2026-08-07",
+    title: "Créer et vendre un ebook avec l'IA (guide 2026)",
+    description:
+      "Comment créer un ebook avec ChatGPT/Claude et Canva, où le vendre (Chariow, Système.io, Amazon KDP), paiement mobile money inclus. Fiscalité à vérifier.",
+  },
 ];
