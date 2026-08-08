@@ -35,6 +35,24 @@ const PROMPT_RETOUCHE_EXTENSION = `Étends cette image vers [le haut/la gauche/l
 naturellement l'arrière-plan existant, sans ajouter d'éléments nouveaux
 qui ne seraient pas cohérents avec la scène.`;
 
+const PROMPT_ANNIVERSAIRE = `Transforme cette photo en photo souvenir d'anniversaire : ajoute une mise
+en scène festive discrète (ballons ou confettis en arrière-plan, lumière
+chaleureuse), sans modifier mon visage, ma posture ni mes traits
+d'origine.`;
+
+const PROMPT_COIFFURE = `Modifie uniquement ma coiffure sur cette photo pour [décris la coupe :
+ex. cheveux courts, dégradé, frange]. Garde exactement mon visage, ma
+carnation et l'arrière-plan identiques — seule la coiffure doit changer.`;
+
+const PROMPT_RESTAURATION = `Restaure cette vieille photo : corrige les couleurs délavées, répare les
+rayures et les taches, améliore la netteté, sans changer les visages, les
+poses ni les éléments de la scène d'origine.`;
+
+const PROMPT_COUPLE = `Transforme ces deux photos séparées en une seule photo de couple naturelle :
+même éclairage et même ambiance pour les deux personnes, cadrage
+rapproché, pose détendue. Conserve les traits de visage exacts des deux
+personnes.`;
+
 const JSON_EXAMPLE = `{
   "prompt": "Portrait professionnel en studio",
   "style": {
@@ -67,6 +85,10 @@ const FAQ = [
     q: "Le format JSON est-il obligatoire pour écrire un prompt Nano Banana ?",
     a: "Non. Le texte libre fonctionne très bien pour un usage courant. Le format JSON est une option pour les usages avancés où tu veux fixer précisément plusieurs paramètres techniques.",
   },
+  {
+    q: "Peut-on restaurer une vieille photo avec Nano Banana ?",
+    a: "Oui, c'est un des usages les plus recherchés : demande explicitement de corriger les couleurs et réparer les dégâts (rayures, taches) sans changer les visages ni la scène d'origine.",
+  },
 ];
 
 const BREADCRUMB_ITEMS = [
@@ -90,6 +112,7 @@ export default function GuidePage() {
             "Prompts Nano Banana prêts à copier : photo LinkedIn pro, photo CV, logo, retouche d'image. Comment accéder gratuitement à l'outil de Google.",
           url: `${SITE_URL}/guides/nano-banana-prompts`,
           datePublished: "2026-08-06",
+          dateModified: "2026-08-08",
         })}
       />
 
@@ -233,6 +256,51 @@ export default function GuidePage() {
         <div className="glass-card p-6">
           <pre className="whitespace-pre-wrap rounded-xl bg-black/30 p-5 font-sans text-slate-200 text-sm">
             {PROMPT_RETOUCHE_EXTENSION}
+          </pre>
+        </div>
+
+        <h3 className="mb-3 text-xl font-semibold text-white">
+          Photo tendance : anniversaire, coiffure, restauration, couple
+        </h3>
+        <p className="mb-4 text-slate-300">
+          Ces usages reviennent régulièrement dans les tendances virales
+          autour de Nano Banana/Gemini — toujours avec la même règle :
+          préserver les traits du visage d'origine.
+        </p>
+
+        <h3 className="mb-3 text-xl font-semibold text-white">
+          Photo d'anniversaire
+        </h3>
+        <div className="glass-card mb-8 p-6">
+          <pre className="whitespace-pre-wrap rounded-xl bg-black/30 p-5 font-sans text-slate-200 text-sm">
+            {PROMPT_ANNIVERSAIRE}
+          </pre>
+        </div>
+
+        <h3 className="mb-3 text-xl font-semibold text-white">
+          Essayer une coupe de cheveux avant de la faire
+        </h3>
+        <div className="glass-card mb-8 p-6">
+          <pre className="whitespace-pre-wrap rounded-xl bg-black/30 p-5 font-sans text-slate-200 text-sm">
+            {PROMPT_COIFFURE}
+          </pre>
+        </div>
+
+        <h3 className="mb-3 text-xl font-semibold text-white">
+          Restaurer une vieille photo
+        </h3>
+        <div className="glass-card mb-8 p-6">
+          <pre className="whitespace-pre-wrap rounded-xl bg-black/30 p-5 font-sans text-slate-200 text-sm">
+            {PROMPT_RESTAURATION}
+          </pre>
+        </div>
+
+        <h3 className="mb-3 text-xl font-semibold text-white">
+          Photo de couple
+        </h3>
+        <div className="glass-card mb-8 p-6">
+          <pre className="whitespace-pre-wrap rounded-xl bg-black/30 p-5 font-sans text-slate-200 text-sm">
+            {PROMPT_COUPLE}
           </pre>
         </div>
       </section>

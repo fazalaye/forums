@@ -51,7 +51,7 @@ export const GUIDES = [
   },
   {
     href: "/guides/nano-banana-prompts",
-    lastModified: "2026-08-07",
+    lastModified: "2026-08-08",
     title: "Nano Banana : les meilleurs prompts en français (2026)",
     description:
       "Prompts Nano Banana prêts à copier : photo LinkedIn pro, photo CV, logo, retouche d'image. Comment accéder gratuitement à l'outil de Google.",
