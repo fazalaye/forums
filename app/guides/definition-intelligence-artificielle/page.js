@@ -428,6 +428,19 @@ export default function GuidePage() {
             </Link>
             , méthodes et limites incluses.
           </li>
+          <li>
+            <strong className="text-white">
+              Tu veux savoir où en sont les gouvernements sur l'IA ?
+            </strong>{" "}
+            Notre guide{" "}
+            <Link
+              href="/guides/strategies-nationales-ia-afrique-ouest"
+              className="text-brand-300 hover:underline"
+            >
+              stratégies nationales d'IA en Afrique de l'Ouest
+            </Link>{" "}
+            fait le point, pays par pays, avec sources officielles.
+          </li>
         </ul>
       </section>
 
