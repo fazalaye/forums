@@ -233,6 +233,21 @@ export default function GuidePage() {
       </section>
 
       <section className="mb-10">
+        <p className="text-sm text-slate-400">
+          👉 Tu veux voir un prompt d'image ChatGPT appliqué à un cas réel ?
+          Notre étude de cas détaille comment{" "}
+          <Link
+            href="/guides/affiche-produit-chatgpt-etude-de-cas"
+            className="text-brand-300 hover:underline"
+          >
+            transformer une photo produit brute en affiche publicitaire avec
+            ChatGPT
+          </Link>
+          , prompt exact inclus.
+        </p>
+      </section>
+
+      <section className="mb-10">
         <h2 className="mb-4 text-2xl font-bold text-white">
           Questions fréquentes
         </h2>

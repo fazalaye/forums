@@ -151,6 +151,17 @@ export default function GuidePage() {
             ou DALL·E 3. La plupart proposent une version gratuite : testez avant
             de payer.
           </p>
+          <p className="mt-2 text-sm text-slate-400">
+            👉 Envie d'une alternative économique et performante en
+            raisonnement et en code ? Notre{" "}
+            <Link
+              href="/guides/deepseek-avis-performances-limites-2026"
+              className="text-brand-300 hover:underline"
+            >
+              analyse complète de DeepSeek
+            </Link>{" "}
+            détaille ses vraies performances et ses limites.
+          </p>
         </div>
         <div>
           <h2 className="mb-2 text-2xl font-bold text-white">
@@ -162,6 +173,17 @@ export default function GuidePage() {
             abonnements payants (15 à 22 €/mois) débloquent les modèles les plus
             puissants, des limites plus élevées et des fonctions avancées —
             utiles si vous utilisez l'IA quotidiennement.
+          </p>
+          <p className="mt-2 text-sm text-slate-400">
+            👉 Pour voir ces outils appliqués à un cas concret, découvrez
+            comment{" "}
+            <Link
+              href="/guides/ia-pronostics-foot-gratuit"
+              className="text-brand-300 hover:underline"
+            >
+              analyser un match de foot avec l'IA
+            </Link>
+            .
           </p>
         </div>
       </section>

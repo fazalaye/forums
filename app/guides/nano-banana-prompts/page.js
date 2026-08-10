@@ -203,6 +203,18 @@ export default function GuidePage() {
             usage professionnel dessus.
           </p>
         </div>
+        <p className="mt-4 text-sm text-slate-400">
+          👉 Envie de voir un exemple concret de transformation d'image avec
+          l'IA ? Notre étude de cas montre comment{" "}
+          <Link
+            href="/guides/affiche-produit-chatgpt-etude-de-cas"
+            className="text-brand-300 hover:underline"
+          >
+            transformer une photo produit brute en affiche publicitaire avec
+            ChatGPT
+          </Link>
+          , prompt exact inclus.
+        </p>
       </section>
 
       <section className="mb-10">
@@ -343,6 +355,17 @@ export default function GuidePage() {
             catégorie Génération d'images
           </Link>{" "}
           de PromptForums.
+        </p>
+        <p className="mt-4 text-slate-300">
+          Tu préfères travailler avec ChatGPT plutôt qu'avec Nano Banana ?
+          Retrouve notre sélection des{" "}
+          <Link
+            href="/guides/meilleurs-prompts-chatgpt-2026"
+            className="text-brand-300 hover:underline"
+          >
+            meilleurs prompts ChatGPT en 2026
+          </Link>
+          , classés par catégorie.
         </p>
       </section>
 

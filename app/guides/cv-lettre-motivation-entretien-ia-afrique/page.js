@@ -303,6 +303,18 @@ export default function GuidePage() {
               démission.
             </li>
           </ul>
+          <p className="mb-4 text-sm text-slate-400">
+            👉 Tu préfères te lancer en indépendant plutôt que chercher un
+            emploi salarié ? Notre guide pour{" "}
+            <Link
+              href="/guides/creer-vendre-ebook-ia"
+              className="text-brand-300 hover:underline"
+            >
+              créer et vendre un ebook avec l'IA
+            </Link>{" "}
+            détaille une autre façon de générer des revenus avec les mêmes
+            outils.
+          </p>
           <ChariowWidget
             productId="prd_824w69na"
             storeDomain="bundledeals.store"
