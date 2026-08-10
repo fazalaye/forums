@@ -478,6 +478,17 @@ export default function GuidePage() {
             . De quoi construire ses propres outils IA sans budget.
           </li>
         </ul>
+        <p className="mt-2 text-sm text-slate-400">
+          👉 Besoin d'aller plus loin qu'un pitch ? Notre guide pour{" "}
+          <Link
+            href="/guides/creer-business-plan-etude-marche-ia-afrique"
+            className="text-brand-300 hover:underline"
+          >
+            créer un business plan complet avec l'IA en Afrique
+          </Link>{" "}
+          détaille les prompts pour le document entier, l'étude de marché et
+          la stratégie commerciale.
+        </p>
       </section>
 
       <section className="mb-10">

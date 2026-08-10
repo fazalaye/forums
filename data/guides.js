@@ -44,7 +44,7 @@ export const GUIDES = [
   },
   {
     href: "/guides/outils-ia-gratuits-francais-afrique",
-    lastModified: "2026-08-06",
+    lastModified: "2026-08-10",
     title: "Outils IA gratuits en français pour l'Afrique (2026)",
     description:
       "Les meilleurs outils IA gratuits, sans carte bancaire et en français, pour entrepreneurs d'Afrique de l'Ouest. Testés, classés par usage. Mobile-first.",
@@ -65,7 +65,7 @@ export const GUIDES = [
   },
   {
     href: "/guides/cv-lettre-motivation-entretien-ia-afrique",
-    lastModified: "2026-08-06",
+    lastModified: "2026-08-10",
     title: "CV, lettre de motivation, entretien : décroche un emploi avec l'IA",
     description:
       "Utilise ChatGPT gratuitement pour rédiger un CV percutant, une lettre de motivation convaincante et te préparer à l'entretien. Prompts prêts à copier pour le marché de l'emploi en Afrique.",
