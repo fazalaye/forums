@@ -252,6 +252,17 @@ export default function GuidePage() {
             aisance avant le vrai rendez-vous.
           </li>
         </ul>
+        <p className="mt-4 text-sm text-slate-400">
+          👉 Vous visez plutôt l'entrepreneuriat que le salariat ? Notre guide
+          pour{" "}
+          <Link
+            href="/guides/creer-business-plan-etude-marche-ia-afrique"
+            className="text-brand-300 hover:underline"
+          >
+            créer un business plan avec l'IA en Afrique
+          </Link>{" "}
+          utilise la même méthode pour structurer un projet entrepreneurial.
+        </p>
       </section>
 
       <section className="mb-10">
