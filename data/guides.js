@@ -86,10 +86,17 @@ export const GUIDES = [
   },
   {
     href: "/guides/se-former-ia-senegal",
-    lastModified: "2026-08-06",
+    lastModified: "2026-08-10",
     title: "Se former à l'IA au Sénégal : le guide complet 2026",
     description:
       "Formations, écoles, masters et ressources gratuites pour se former à l'intelligence artificielle au Sénégal. Débouchés, salaires et comment débuter sans budget.",
+  },
+  {
+    href: "/guides/strategies-nationales-ia-afrique-ouest",
+    lastModified: "2026-08-10",
+    title: "IA en Afrique de l'Ouest : les stratégies nationales en 2026",
+    description:
+      "Sénégal, Bénin, Mali, Côte d'Ivoire : où en sont les stratégies nationales d'intelligence artificielle en Afrique de l'Ouest francophone. Faits et chiffres vérifiés, sources officielles.",
   },
   {
     href: "/guides/creer-vendre-ebook-ia",

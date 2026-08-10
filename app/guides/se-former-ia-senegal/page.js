@@ -103,7 +103,15 @@ export default function GuidePage() {
             </strong>{" "}
             La stratégie « Sénégal Numérique » et les initiatives publiques
             de formation (comme Force-N) placent les compétences tech au
-            cœur du développement du pays.
+            cœur du développement du pays. Pour le détail de la stratégie
+            nationale d'IA et son objectif de formation, voir notre guide{" "}
+            <Link
+              href="/guides/strategies-nationales-ia-afrique-ouest"
+              className="text-brand-300 hover:underline"
+            >
+              stratégies nationales d'IA en Afrique de l'Ouest
+            </Link>
+            .
           </li>
           <li>
             <strong className="text-white">Les barrières tombent.</strong>{" "}
