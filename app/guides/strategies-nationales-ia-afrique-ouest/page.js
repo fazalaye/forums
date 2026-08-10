@@ -66,7 +66,7 @@ export default function GuidePage() {
         d'Afrique de l'Ouest ?
       </h1>
       <p className="mb-6 text-lg text-slate-300">
-        Ces un à deux dernières années, plusieurs gouvernements d'Afrique de
+        Depuis un à deux ans, plusieurs gouvernements d'Afrique de
         l'Ouest sont passés du discours sur l'IA au financement
         d'institutions et de stratégies concrètes. Ce guide dresse un état
         des lieux factuel et sourcé — Sénégal, Côte d'Ivoire, Bénin et Mali —
@@ -235,7 +235,7 @@ export default function GuidePage() {
         <p className="text-slate-300">
           Le fil conducteur, lui, est clair : les gouvernements d'Afrique de
           l'Ouest sont passés des déclarations d'intention à des actions
-          financées, à peu près au cours des un à deux dernières années.
+          financées, à peu près en un à deux ans.
         </p>
       </section>
 
