@@ -196,6 +196,18 @@ export default function CaseStudyPage() {
             {PROMPT_TEXT}
           </pre>
         </div>
+        <p className="mt-4 text-sm text-slate-400">
+          👉 Ce prompt n'est qu'un exemple parmi d'autres. Retrouvez notre
+          sélection des{" "}
+          <Link
+            href="/guides/meilleurs-prompts-chatgpt-2026"
+            className="text-brand-300 hover:underline"
+          >
+            meilleurs prompts ChatGPT en 2026
+          </Link>
+          , classés par catégorie, pour d'autres usages (rédaction, marketing,
+          code...).
+        </p>
       </section>
 
       <section className="mb-10">
@@ -207,6 +219,19 @@ export default function CaseStudyPage() {
             <li key={step}>{step}</li>
           ))}
         </ol>
+        <p className="mt-4 text-sm text-slate-400">
+          👉 ChatGPT n'est pas le seul outil capable de ce genre de retouche.
+          Nano Banana, le générateur d'images de Google, propose lui aussi
+          d'excellents prompts pour la photo produit et la retouche —
+          découvrez{" "}
+          <Link
+            href="/guides/nano-banana-prompts"
+            className="text-brand-300 hover:underline"
+          >
+            les meilleurs prompts Nano Banana en français
+          </Link>
+          .
+        </p>
       </section>
 
       <section className="mb-10">

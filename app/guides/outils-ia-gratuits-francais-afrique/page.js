@@ -280,6 +280,27 @@ export default function GuidePage() {
           </Link>
           .
         </p>
+        <p className="mt-2 text-sm text-slate-400">
+          👉 Vous voulez un comparatif chiffré, avec prix et notes ?
+          Consultez notre{" "}
+          <Link
+            href="/guides/meilleurs-outils-ia-francophones-2026"
+            className="text-brand-300 hover:underline"
+          >
+            classement des 10 meilleurs outils IA en 2026
+          </Link>
+          .
+        </p>
+        <p className="mt-2 text-sm text-slate-400">
+          👉 DeepSeek mérite un examen plus poussé : notre{" "}
+          <Link
+            href="/guides/deepseek-avis-performances-limites-2026"
+            className="text-brand-300 hover:underline"
+          >
+            analyse complète des performances et limites de DeepSeek
+          </Link>{" "}
+          détaille ce qui consomme vraiment le quota gratuit.
+        </p>
       </section>
 
       <section className="mb-10">

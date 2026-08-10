@@ -277,6 +277,17 @@ export default function GuidePage() {
           </Link>
           .
         </p>
+        <p className="mt-4 text-slate-300">
+          Claude ne génère pas d'images. Pour ce type de besoin (photo
+          LinkedIn, logo, retouche), consulte notre guide des{" "}
+          <Link
+            href="/guides/nano-banana-prompts"
+            className="text-brand-300 hover:underline"
+          >
+            meilleurs prompts Nano Banana en français
+          </Link>
+          .
+        </p>
       </section>
 
       <section className="mb-10">

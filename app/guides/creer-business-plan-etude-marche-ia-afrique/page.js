@@ -216,6 +216,18 @@ export default function GuidePage() {
             pour la réutiliser à ta prochaine étape.
           </li>
         </ul>
+        <p className="mt-4 text-sm text-slate-400">
+          👉 Ton projet est plutôt un contenu à vendre (formation, guide,
+          recueil de conseils) qu'un produit ou service classique ? Notre
+          guide pour{" "}
+          <Link
+            href="/guides/creer-vendre-ebook-ia"
+            className="text-brand-300 hover:underline"
+          >
+            créer et vendre un ebook avec l'IA
+          </Link>{" "}
+          applique la même logique à ce type d'activité.
+        </p>
       </section>
 
       <section className="mb-10">

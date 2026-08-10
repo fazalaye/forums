@@ -427,6 +427,16 @@ export default function GuidePage() {
           en réunissant au même endroit les meilleurs outils et les prompts
           les plus efficaces, en français.
         </p>
+        <p className="text-slate-300">
+          Pour voir comment il se positionne face aux autres, consultez notre{" "}
+          <Link
+            href="/guides/meilleurs-outils-ia-francophones-2026"
+            className="text-brand-300 hover:underline"
+          >
+            comparatif des 10 meilleurs outils IA en 2026
+          </Link>
+          .
+        </p>
       </section>
 
       <section className="mb-10">

@@ -415,6 +415,19 @@ export default function GuidePage() {
             </Link>{" "}
             recense les écoles, formations gratuites et débouchés.
           </li>
+          <li>
+            <strong className="text-white">
+              Tu veux voir l'IA appliquée à un cas concret ?
+            </strong>{" "}
+            Découvre comment{" "}
+            <Link
+              href="/guides/ia-pronostics-foot-gratuit"
+              className="text-brand-300 hover:underline"
+            >
+              analyser un match de foot avec l'IA
+            </Link>
+            , méthodes et limites incluses.
+          </li>
         </ul>
       </section>
 
