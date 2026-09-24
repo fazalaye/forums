@@ -79,7 +79,7 @@ export const GUIDES = [
   },
   {
     href: "/guides/ia-pronostics-foot-gratuit",
-    lastModified: "2026-08-07",
+    lastModified: "2026-09-24",
     title: "Analyser un match de foot avec l'IA : méthodes, données et limites",
     description:
       "Quelles données ces modèles consomment, la loi de Poisson et les xG expliqués simplement, et un prompt pour mener l'analyse toi-même.",

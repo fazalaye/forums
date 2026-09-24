@@ -17,10 +17,10 @@ const ROUTES = [
   { path: "", lastModified: "2026-07-30", changeFrequency: "daily", priority: 1 },
   { path: "/prompts", lastModified: "2026-08-01" },
   { path: "/submit", lastModified: "2026-07-16" },
-  { path: "/a-propos", lastModified: "2026-07-22" },
-  { path: "/contact", lastModified: "2026-07-28" },
+  { path: "/a-propos", lastModified: "2026-09-24" },
+  { path: "/contact", lastModified: "2026-09-24" },
   { path: "/legal", lastModified: "2026-07-28" },
-  { path: "/privacy", lastModified: "2026-07-28" },
+  { path: "/privacy", lastModified: "2026-09-24" },
   { path: "/guides", lastModified: "2026-08-05" },
   { path: "/boutique", lastModified: "2026-08-07" },
 ];

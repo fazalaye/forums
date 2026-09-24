@@ -12,6 +12,8 @@ const DESCRIPTION =
 export const metadata = {
   title: TITLE,
   description: DESCRIPTION,
+  keywords: ["analyse football IA", "xG", "loi de Poisson", "pronostics IA"],
+  authors: [{ name: "PromptForums" }],
   alternates: {
     canonical: `${SITE_URL}/guides/ia-pronostics-foot-gratuit`,
   },
@@ -59,6 +61,7 @@ export default function GuidePage() {
           description: DESCRIPTION,
           url: `${SITE_URL}/guides/ia-pronostics-foot-gratuit`,
           datePublished: "2026-08-05",
+          dateModified: "2026-09-24",
         })}
       />
 
@@ -73,6 +76,13 @@ export default function GuidePage() {
         données publiques, un résultat mesurable, et une part d'aléatoire
         irréductible.
       </p>
+      <aside className="mb-10 rounded-xl border border-amber-300/30 bg-amber-400/10 p-5 text-sm text-amber-100">
+        <strong className="text-amber-50">Avertissement important :</strong>{" "}
+        ce contenu est pédagogique et ne constitue ni un conseil de pari ni
+        une promesse de gain. Une analyse IA ne permet pas de garantir le
+        résultat d'un match ou de gagner de l'argent. Ne misez jamais une somme
+        nécessaire à vos dépenses et respectez la réglementation applicable.
+      </aside>
       <p className="mb-6 text-slate-300">
         Ce guide explique concrètement{" "}
         <strong className="text-white">

@@ -3,7 +3,7 @@ import { SITE_URL } from "@/lib/seo";
 export const metadata = {
   title: "Contact",
   description:
-    "Contactez l'équipe PromptForums pour toute question, partenariat ou demande de publicité.",
+    "Contactez l'équipe PromptForums pour une question, une correction éditoriale, un partenariat ou une demande de publicité.",
   alternates: {
     canonical: `${SITE_URL}/contact`,
   },
@@ -14,9 +14,13 @@ export default function ContactPage() {
     <div className="mx-auto max-w-2xl">
       <h1 className="mb-6 text-4xl font-extrabold">Contact</h1>
       <div className="glass-card flex flex-col gap-4 p-8 text-slate-300">
+        <p className="text-sm text-slate-400">
+          Une réponse est généralement apportée sous quelques jours ouvrés.
+        </p>
         <p>
-          Une question, un partenariat, une demande de publicité ou une
-          suggestion de site à ajouter à l'annuaire ? Écrivez-nous.
+          Une question, une correction à signaler, un partenariat, une demande
+          de publicité ou une suggestion de site à ajouter à l'annuaire ?
+          Écrivez-nous.
         </p>
         <p>
           📧 Email :{" "}

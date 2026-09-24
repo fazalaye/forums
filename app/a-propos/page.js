@@ -6,6 +6,7 @@ export const metadata = {
   title: "À propos — L'annuaire francophone des prompts et outils IA",
   description:
     "PromptForums est l'annuaire francophone indépendant des meilleurs sites, outils et prompts d'intelligence artificielle : ChatGPT, Midjourney, Claude et plus, testés et notés par la communauté.",
+  keywords: ["PromptForums", "annuaire IA francophone", "outils IA", "prompts IA"],
   alternates: { canonical: `${SITE_URL}/a-propos` },
 };
 
@@ -46,6 +47,9 @@ export default function AboutPage() {
       <h1 className="mb-6 text-4xl font-extrabold">À propos de PromptForums</h1>
 
       <div className="glass-card flex flex-col gap-6 p-8 text-slate-300">
+        <p className="text-sm text-slate-400">
+          Dernière mise à jour : 24 septembre 2026
+        </p>
         <p className="text-lg text-slate-200">
           <strong className="text-white">PromptForums</strong> est l'annuaire
           francophone indépendant des meilleurs sites, outils et prompts
@@ -62,6 +66,20 @@ export default function AboutPage() {
             vous faire gagner du temps en réunissant au même endroit les
             meilleurs outils et les prompts les plus efficaces, testés et notés
             par de vrais utilisateurs, en français.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="mb-2 text-xl font-bold text-white">
+            Notre méthode éditoriale
+          </h2>
+          <p>
+            Les fiches sont sélectionnées et relues par l'équipe PromptForums
+            avant publication. Les notes et avis sont issus de la communauté ;
+            les informations importantes sont vérifiées sur les sites officiels
+            et les fiches sont corrigées lorsqu'elles deviennent obsolètes.
+            Les mises en avant commerciales sont signalées et n'influencent pas
+            notre présentation éditoriale.
           </p>
         </section>
 
