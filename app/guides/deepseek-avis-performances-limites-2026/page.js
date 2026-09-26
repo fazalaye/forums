@@ -1,7 +1,7 @@
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { faqSchema, breadcrumbSchema, SITE_URL, socialMetadata } from "@/lib/seo";
+import { faqSchema, breadcrumbSchema, articleSchema, SITE_URL, socialMetadata } from "@/lib/seo";
 
 const TITLE = "DeepSeek : la vérité sur les performances du modèle chinois gratuit (2026)";
 const DESCRIPTION =
@@ -78,6 +78,7 @@ export default function GuidePage() {
     <article className="mx-auto max-w-3xl">
       <JsonLd data={faqSchema(FAQ)} />
       <JsonLd data={breadcrumbSchema(BREADCRUMB_ITEMS)} />
+      <JsonLd data={articleSchema({ title: TITLE, description: DESCRIPTION, url: URL })} />
 
       <Breadcrumbs items={BREADCRUMB_ITEMS} />
       <p className="mb-3 text-sm text-slate-400">Guide · Avis outil IA</p>

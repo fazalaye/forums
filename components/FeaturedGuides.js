@@ -24,7 +24,7 @@ export default function FeaturedGuides() {
             id="featured-guides-title"
             className="text-2xl font-extrabold text-white sm:text-3xl"
           >
-            Guides à la une
+            Guides &amp; tutoriels IA à la une
           </h2>
         </div>
         <Link

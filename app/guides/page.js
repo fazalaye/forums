@@ -4,22 +4,25 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { breadcrumbSchema, SITE_URL, socialMetadata } from "@/lib/seo";
 import { GUIDES } from "@/data/guides";
 
+const GUIDE_INDEX_URL = `${SITE_URL}/guides`;
+
+export async function generateMetadata() {
+  const year = new Date().getFullYear();
+  const title = `Guides IA ${year} : tutoriels, prompts et outils pratiques`;
+  const description =
+    `Découvrez nos guides pratiques ${year} pour choisir des outils IA, copier des prompts et appliquer l’intelligence artificielle à vos projets.`;
+
+  return {
+    title,
+    description,
+    alternates: { canonical: GUIDE_INDEX_URL },
+    ...socialMetadata({ title, description, url: GUIDE_INDEX_URL }),
+  };
+}
+
 const TITLE = "Guides pratiques sur l'intelligence artificielle";
 const DESCRIPTION =
   "Parcourez les guides PromptForums sur les prompts, les outils d'intelligence artificielle, la formation et des cas d'usage concrets, en français.";
-
-export const metadata = {
-  title: TITLE,
-  description: DESCRIPTION,
-  alternates: {
-    canonical: `${SITE_URL}/guides`,
-  },
-  ...socialMetadata({
-    title: TITLE,
-    description: DESCRIPTION,
-    url: `${SITE_URL}/guides`,
-  }),
-};
 
 
 

@@ -35,8 +35,8 @@ export default function Footer() {
           </h4>
           <ul className="space-y-2 text-sm text-slate-400">
             <li><Link href="/a-propos" className="hover:text-white">À propos</Link></li>
-            <li><Link href="/legal" className="hover:text-white">Mentions légales</Link></li>
-            <li><Link href="/privacy" className="hover:text-white">Confidentialité</Link></li>
+            <li><Link href="/mentions-legales" className="hover:text-white">Mentions légales</Link></li>
+            <li><Link href="/politique-de-confidentialite" className="hover:text-white">Confidentialité</Link></li>
             <li><Link href="/cgu" className="hover:text-white">Conditions d’utilisation</Link></li>
             <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
           </ul>

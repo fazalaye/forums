@@ -15,22 +15,19 @@ import {
 
 export const dynamic = "force-dynamic";
 
-const HOME_TITLE = "PromptForums — L'annuaire des meilleurs sites et prompts IA";
-const HOME_DESCRIPTION =
-  "Découvrez et comparez des outils IA ainsi que des prompts en français pour ChatGPT, Claude, Midjourney et plus. Explorez l'annuaire et des guides pratiques pour mieux utiliser l'intelligence artificielle.";
+export async function generateMetadata() {
+  const year = new Date().getFullYear();
+  const title = `PromptForums | Prompts et outils IA à découvrir en ${year}`;
+  const description =
+    `Trouvez les meilleurs prompts et comparez des outils IA en français pour ChatGPT, Claude, Midjourney et plus. Explorez l’annuaire et nos guides pratiques ${year}.`;
 
-export const metadata = {
-  title: { absolute: HOME_TITLE },
-  description: HOME_DESCRIPTION,
-  alternates: {
-    canonical: SITE_URL,
-  },
-  ...socialMetadata({
-    title: HOME_TITLE,
-    description: HOME_DESCRIPTION,
-    url: SITE_URL,
-  }),
-};
+  return {
+    title: { absolute: title },
+    description,
+    alternates: { canonical: SITE_URL },
+    ...socialMetadata({ title, description, url: SITE_URL }),
+  };
+}
 
 async function getSites() {
   const conn = await dbConnect();
@@ -59,6 +56,7 @@ export default async function HomePage({ searchParams }) {
           </span>{" "}
           et outils IA
         </h1>
+        <AdBanner slotId="home-under-title" />
         <p className="max-w-2xl text-lg text-slate-300">
           Comparez, notez et découvrez les sites et prompts les plus utiles pour
           ChatGPT, Midjourney, Claude et bien plus — mis à jour chaque semaine.
@@ -72,8 +70,6 @@ export default async function HomePage({ searchParams }) {
           </a>
         </div>
       </section>
-
-      <AdBanner slotId="home-under-hero" />
 
       <NewsletterInline />
 

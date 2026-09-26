@@ -14,6 +14,12 @@ export default function ContactForm() {
     const email = String(formData.get("email") || "").trim();
     const subject = String(formData.get("subject") || "").trim();
     const message = String(formData.get("message") || "").trim();
+
+    if (!name || !email || !subject || !message) {
+      setNotice("Veuillez renseigner chaque champ avec du texte valide.");
+      return;
+    }
+
     const body = `Nom : ${name}\nE-mail : ${email}\n\n${message}`;
     const mailto = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
       subject

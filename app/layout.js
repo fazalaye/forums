@@ -44,9 +44,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
-      <body>
+      <head>
         <JsonLd data={websiteSchema()} />
         <JsonLd data={organizationSchema()} />
+      </head>
+      <body>
         <Providers>
           <Header />
           <main className="mx-auto min-h-[70vh] max-w-7xl px-6 py-10">

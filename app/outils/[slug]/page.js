@@ -188,6 +188,36 @@ export default async function ToolDetailPage({ params }) {
             ne figurent pas dans cette fiche, ils restent à confirmer auprès de
             l’éditeur.
           </p>
+          <p className="mt-4 text-slate-300">
+            Un premier essai peut consister à lui confier une tâche limitée,
+            représentative de votre besoin, avec un résultat facile à relire.
+            Selon sa catégorie{category ? ` (${category.label.toLowerCase()})` : ""},
+            il peut s’agir de préparer un brouillon, résumer un document non
+            confidentiel, générer une proposition visuelle ou explorer une
+            question technique. Cet exemple décrit une méthode d’évaluation,
+            pas un test effectué par PromptForums ni une fonction garantie de
+            cette fiche.
+          </p>
+          <p className="mt-4 text-slate-300">
+            Avant l’essai, ajustez les paramètres liés à votre situation :
+            langue de sortie, public visé, longueur, format, appareil utilisé
+            et niveau de détail attendu. Commencez sans données personnelles ni
+            document interne. Comparez ensuite le résultat à des critères
+            observables, comme la présence des éléments demandés, la lisibilité,
+            la possibilité de corriger la sortie et le temps nécessaire pour la
+            reprendre. Une réponse plausible n’est pas une validation factuelle ;
+            vérifiez les affirmations importantes auprès de sources fiables.
+          </p>
+          <p className="mt-4 text-slate-300">
+            Pour une décision d’usage, notez les conditions qui comptent pour
+            vous : limites de l’offre gratuite, export des fichiers, langues
+            disponibles, compatibilité avec vos outils et traitement des
+            données. Si un point n’est pas documenté ici, consultez l’aide et
+            les conditions officielles plutôt que de le déduire du nom ou de la
+            catégorie du service. Cette vérification permet de distinguer un
+            outil adapté à une tâche ponctuelle d’un service que l’on peut
+            raisonnablement intégrer à une activité récurrente.
+          </p>
         </section>
 
         <section className="mt-8">

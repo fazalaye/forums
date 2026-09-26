@@ -3,7 +3,7 @@ import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CopyPromptButton from "@/components/CopyPromptButton";
 import ChariowWidget from "@/components/ChariowWidget";
-import { faqSchema, breadcrumbSchema, SITE_URL, socialMetadata } from "@/lib/seo";
+import { faqSchema, breadcrumbSchema, articleSchema, SITE_URL, socialMetadata } from "@/lib/seo";
 
 const TITLE = "CV, lettre de motivation, entretien : décroche un emploi avec l'IA";
 const DESCRIPTION =
@@ -58,6 +58,7 @@ export default function GuidePage() {
     <article className="mx-auto max-w-3xl">
       <JsonLd data={faqSchema(FAQ)} />
       <JsonLd data={breadcrumbSchema(BREADCRUMB_ITEMS)} />
+      <JsonLd data={articleSchema({ title: TITLE, description: DESCRIPTION, url: URL })} />
 
       <Breadcrumbs items={BREADCRUMB_ITEMS} />
       <p className="mb-3 text-sm text-slate-400">Guide · Emploi & Carrière</p>
