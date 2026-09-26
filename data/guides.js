@@ -30,17 +30,29 @@ export const GUIDES = [
   },
   {
     href: "/guides/meilleurs-prompts-claude",
-    lastModified: "2026-08-10",
+    lastModified: "2026-09-26",
     title: "Les meilleurs prompts Claude en français (2026)",
     description:
       "Prompts Claude prêts à copier : CV, création de site web, PowerPoint, apprentissage d'une langue, étude de marché. Plus la technique des balises XML.",
+    featuredCategory: "Prompts & outils",
+    featuredExcerpt:
+      "Retrouvez des prompts Claude en français pour le CV, les présentations, les sites web et l’apprentissage. Le guide explique aussi comment structurer une demande complexe avec des balises XML.",
+    readingMinutes: 8,
+    featuredImage: "/guide-assets/meilleurs-prompts-claude-card.svg",
+    featuredImageAlt: "Illustration éditoriale des prompts Claude",
   },
   {
     href: "/guides/affiche-produit-chatgpt-etude-de-cas",
-    lastModified: "2026-08-10",
+    lastModified: "2026-09-26",
     title: "Créer une affiche produit avec ChatGPT : étude de cas (2026)",
     description:
       "Comment j'ai transformé une photo produit fournisseur brute en affiche publicitaire professionnelle avec ChatGPT : la méthode, le prompt exact utilisé et le résultat avant/après.",
+    featuredCategory: "Étude de cas",
+    featuredExcerpt:
+      "Découvrez le prompt et les étapes décrites pour transformer des visuels fournisseur en affiche produit. L’exemple porte sur un produit anti-cafards et rappelle de vérifier chaque caractéristique avant publication.",
+    readingMinutes: 6,
+    featuredImage: "/case-studies/anti-cafard-apres-affiche.png",
+    featuredImageAlt: "Affiche produit créée dans l’étude de cas",
   },
   {
     href: "/guides/outils-ia-gratuits-francais-afrique",
@@ -79,17 +91,29 @@ export const GUIDES = [
   },
   {
     href: "/guides/ia-pronostics-foot-gratuit",
-    lastModified: "2026-09-24",
+    lastModified: "2026-09-26",
     title: "Analyser un match de foot avec l'IA : méthodes, données et limites",
     description:
       "Quelles données ces modèles consomment, la loi de Poisson et les xG expliqués simplement, et un prompt pour mener l'analyse toi-même.",
+    featuredCategory: "Analyse sportive",
+    featuredExcerpt:
+      "Comprenez les données et méthodes statistiques utilisées pour analyser un match, dont les xG et la loi de Poisson. Un prompt permet de structurer une analyse tout en gardant visibles ses limites et son incertitude.",
+    readingMinutes: 10,
+    featuredImage: "/guide-assets/ia-pronostics-foot-forebet.jpg",
+    featuredImageAlt: "Exemple d’interface de statistiques football présentée dans le guide",
   },
   {
     href: "/guides/se-former-ia-senegal",
-    lastModified: "2026-08-10",
+    lastModified: "2026-09-26",
     title: "Se former à l'IA au Sénégal : le guide complet 2026",
     description:
       "Formations, écoles, masters et ressources gratuites pour se former à l'intelligence artificielle au Sénégal. Débouchés, salaires et comment débuter sans budget.",
+    featuredCategory: "Formation & carrière",
+    featuredExcerpt:
+      "Faites le point sur les parcours de formation en intelligence artificielle accessibles au Sénégal, des cursus aux ressources en ligne. Le guide présente aussi des pistes pour débuter et des débouchés à vérifier selon son profil.",
+    readingMinutes: 12,
+    featuredImage: "/guide-assets/se-former-ia-senegal-sonatel-academy.jpg",
+    featuredImageAlt: "Ressource de formation IA au Sénégal présentée dans le guide",
   },
   {
     href: "/guides/strategies-nationales-ia-afrique-ouest",

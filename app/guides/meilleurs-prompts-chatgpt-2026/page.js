@@ -2,17 +2,19 @@ import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CopyPromptButton from "@/components/CopyPromptButton";
-import { faqSchema, breadcrumbSchema, SITE_URL } from "@/lib/seo";
+import { faqSchema, breadcrumbSchema, SITE_URL, socialMetadata } from "@/lib/seo";
 
 const UPDATED = "juillet 2026";
+const TITLE = "Les meilleurs prompts ChatGPT en 2026 (par catégorie)";
+const DESCRIPTION =
+  "Les meilleurs prompts ChatGPT en français en 2026 : rédaction, marketing, code, productivité, apprentissage et images. Prêts à copier, mis à jour et testés par la communauté.";
+const URL = `${SITE_URL}/guides/meilleurs-prompts-chatgpt-2026`;
 
 export const metadata = {
-  title: "Les meilleurs prompts ChatGPT en 2026 (par catégorie)",
-  description:
-    "Les meilleurs prompts ChatGPT en français en 2026 : rédaction, marketing, code, productivité, apprentissage et images. Prêts à copier, mis à jour et testés par la communauté.",
-  alternates: {
-    canonical: `${SITE_URL}/guides/meilleurs-prompts-chatgpt-2026`,
-  },
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: URL },
+  ...socialMetadata({ title: TITLE, description: DESCRIPTION, url: URL, type: "article" }),
 };
 
 // Curated prompts grouped by category. Kept as page data so the visible

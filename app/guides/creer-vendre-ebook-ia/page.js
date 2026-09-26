@@ -1,18 +1,18 @@
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { faqSchema, breadcrumbSchema, articleSchema, SITE_URL } from "@/lib/seo";
+import { faqSchema, breadcrumbSchema, articleSchema, SITE_URL, socialMetadata } from "@/lib/seo";
 
 const TITLE = "Créer et vendre un ebook avec l'IA (guide 2026)";
 const DESCRIPTION =
   "Comment créer un ebook avec ChatGPT/Claude et Canva, où le vendre (Chariow, Système.io, Amazon KDP), paiement mobile money inclus. Fiscalité à vérifier.";
+const URL = `${SITE_URL}/guides/creer-vendre-ebook-ia`;
 
 export const metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: {
-    canonical: `${SITE_URL}/guides/creer-vendre-ebook-ia`,
-  },
+  alternates: { canonical: URL },
+  ...socialMetadata({ title: TITLE, description: DESCRIPTION, url: URL, type: "article" }),
 };
 
 const FAQ = [

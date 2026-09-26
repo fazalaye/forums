@@ -15,7 +15,7 @@ export default function PrivacyPage() {
       <h1 className="mb-6 text-4xl font-extrabold">Politique de confidentialité</h1>
       <div className="glass-card flex flex-col gap-6 p-8 text-slate-300">
         <p className="text-sm text-slate-400">
-          Dernière mise à jour : 24 septembre 2026
+          Dernière mise à jour : 26 septembre 2026
         </p>
         <section>
           <h2 className="mb-2 text-xl font-bold text-white">
@@ -72,6 +72,26 @@ export default function PrivacyPage() {
             newsletter et envoi d'e-mails). Elles sont conservées pendant la
             durée utile à ces finalités, puis supprimées ou anonymisées, sauf
             obligation légale contraire.
+          </p>
+        </section>
+        <section>
+          <h2 className="mb-2 text-xl font-bold text-white">
+            Services tiers, publicité et mesure d’audience
+          </h2>
+          <p>
+            La connexion peut faire appel aux fournisseurs d’authentification
+            proposés sur le site, notamment Google ou GitHub, selon le mode
+            choisi. Le site contient également des liens vers des services
+            tiers ; leur ouverture est soumise à leurs propres politiques.
+          </p>
+          <p className="mt-3">
+            À la date de mise à jour de cette politique, aucun script Google
+            AdSense ni Google Analytics n’est intégré au site. Si ces services
+            sont activés ultérieurement, cette politique sera mise à jour pour
+            décrire les données et cookies concernés, les finalités, les
+            prestataires et les moyens de gérer les choix requis. Aucun
+            emplacement publicitaire actuellement visible dans l’interface ne
+            dépose de cookie publicitaire.
           </p>
         </section>
         <section>

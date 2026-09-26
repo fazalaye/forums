@@ -1,16 +1,24 @@
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { breadcrumbSchema, SITE_URL } from "@/lib/seo";
+import { breadcrumbSchema, SITE_URL, socialMetadata } from "@/lib/seo";
 import { GUIDES } from "@/data/guides";
 
+const TITLE = "Guides pratiques sur l'intelligence artificielle";
+const DESCRIPTION =
+  "Parcourez les guides PromptForums sur les prompts, les outils d'intelligence artificielle, la formation et des cas d'usage concrets, en français.";
+
 export const metadata = {
-  title: "Guides",
-  description:
-    "Tous les guides PromptForums : comparatifs d'outils IA, bibliothèques de prompts et études de cas, en français.",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: {
     canonical: `${SITE_URL}/guides`,
   },
+  ...socialMetadata({
+    title: TITLE,
+    description: DESCRIPTION,
+    url: `${SITE_URL}/guides`,
+  }),
 };
 
 
@@ -26,10 +34,9 @@ export default function GuidesIndexPage() {
       <JsonLd data={breadcrumbSchema(breadcrumbItems)} />
 
       <Breadcrumbs items={breadcrumbItems} />
-      <h1 className="mb-4 text-4xl font-extrabold leading-tight">Guides</h1>
+      <h1 className="mb-4 text-4xl font-extrabold leading-tight">{TITLE}</h1>
       <p className="mb-8 text-lg text-slate-300">
-        Comparatifs d'outils, bibliothèques de prompts et études de cas testés
-        par la communauté PromptForums.
+        {DESCRIPTION}
       </p>
 
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">

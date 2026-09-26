@@ -30,11 +30,14 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="mb-3 text-sm font-semibold text-slate-200">Légal</h4>
+          <h4 className="mb-3 text-sm font-semibold text-slate-200">
+            Informations &amp; Légal
+          </h4>
           <ul className="space-y-2 text-sm text-slate-400">
             <li><Link href="/a-propos" className="hover:text-white">À propos</Link></li>
             <li><Link href="/legal" className="hover:text-white">Mentions légales</Link></li>
             <li><Link href="/privacy" className="hover:text-white">Confidentialité</Link></li>
+            <li><Link href="/cgu" className="hover:text-white">Conditions d’utilisation</Link></li>
             <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
           </ul>
         </div>

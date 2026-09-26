@@ -5,15 +5,31 @@ import DirectoryClient from "@/components/DirectoryClient";
 import AdBanner from "@/components/AdBanner";
 import NewsletterCTA from "@/components/NewsletterCTA";
 import NewsletterInline from "@/components/NewsletterInline";
+import FeaturedGuides from "@/components/FeaturedGuides";
 import JsonLd from "@/components/JsonLd";
-import { directoryItemListSchema, SITE_URL } from "@/lib/seo";
+import {
+  directoryItemListSchema,
+  SITE_URL,
+  socialMetadata,
+} from "@/lib/seo";
 
 export const dynamic = "force-dynamic";
 
+const HOME_TITLE = "PromptForums — L'annuaire des meilleurs sites et prompts IA";
+const HOME_DESCRIPTION =
+  "Découvrez et comparez des outils IA ainsi que des prompts en français pour ChatGPT, Claude, Midjourney et plus. Explorez l'annuaire et des guides pratiques pour mieux utiliser l'intelligence artificielle.";
+
 export const metadata = {
+  title: { absolute: HOME_TITLE },
+  description: HOME_DESCRIPTION,
   alternates: {
     canonical: SITE_URL,
   },
+  ...socialMetadata({
+    title: HOME_TITLE,
+    description: HOME_DESCRIPTION,
+    url: SITE_URL,
+  }),
 };
 
 async function getSites() {
@@ -57,7 +73,11 @@ export default async function HomePage({ searchParams }) {
         </div>
       </section>
 
+      <AdBanner slotId="home-under-hero" />
+
       <NewsletterInline />
+
+      <FeaturedGuides />
 
       <AdBanner />
 

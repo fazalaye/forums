@@ -1,15 +1,17 @@
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { faqSchema, breadcrumbSchema, articleSchema, SITE_URL } from "@/lib/seo";
+import { faqSchema, breadcrumbSchema, articleSchema, SITE_URL, socialMetadata } from "@/lib/seo";
 
+const TITLE = "Outils IA gratuits en français pour l'Afrique (2026)";
+const DESCRIPTION =
+  "Les meilleurs outils IA gratuits, sans carte bancaire et en français, pour entrepreneurs d'Afrique de l'Ouest. Testés, classés par usage. Mobile-first.";
+const URL = `${SITE_URL}/guides/outils-ia-gratuits-francais-afrique`;
 export const metadata = {
-  title: "Outils IA gratuits en français pour l'Afrique (2026)",
-  description:
-    "Les meilleurs outils IA gratuits, sans carte bancaire et en français, pour entrepreneurs d'Afrique de l'Ouest. Testés, classés par usage. Mobile-first.",
-  alternates: {
-    canonical: `${SITE_URL}/guides/outils-ia-gratuits-francais-afrique`,
-  },
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: URL },
+  ...socialMetadata({ title: TITLE, description: DESCRIPTION, url: URL, type: "article" }),
 };
 
 const CRITERIA = [

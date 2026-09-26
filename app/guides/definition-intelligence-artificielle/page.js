@@ -1,15 +1,17 @@
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { faqSchema, breadcrumbSchema, articleSchema, SITE_URL } from "@/lib/seo";
+import { faqSchema, breadcrumbSchema, articleSchema, SITE_URL, socialMetadata } from "@/lib/seo";
 
+const TITLE = "Qu'est-ce que l'intelligence artificielle ? Définition simple";
+const DESCRIPTION =
+  "Définition claire de l'intelligence artificielle, avec les définitions officielles (OCDE, UE), des exemples concrets au quotidien, et les avantages et inconvénients.";
+const URL = `${SITE_URL}/guides/definition-intelligence-artificielle`;
 export const metadata = {
-  title: "Qu'est-ce que l'intelligence artificielle ? Définition simple",
-  description:
-    "Définition claire de l'intelligence artificielle, avec les définitions officielles (OCDE, UE), des exemples concrets au quotidien, et les avantages et inconvénients.",
-  alternates: {
-    canonical: `${SITE_URL}/guides/definition-intelligence-artificielle`,
-  },
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: URL },
+  ...socialMetadata({ title: TITLE, description: DESCRIPTION, url: URL, type: "article" }),
 };
 
 const FAQ = [

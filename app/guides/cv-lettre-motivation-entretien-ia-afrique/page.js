@@ -3,15 +3,17 @@ import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CopyPromptButton from "@/components/CopyPromptButton";
 import ChariowWidget from "@/components/ChariowWidget";
-import { faqSchema, breadcrumbSchema, SITE_URL } from "@/lib/seo";
+import { faqSchema, breadcrumbSchema, SITE_URL, socialMetadata } from "@/lib/seo";
 
+const TITLE = "CV, lettre de motivation, entretien : décroche un emploi avec l'IA";
+const DESCRIPTION =
+  "Utilise ChatGPT gratuitement pour rédiger un CV percutant, une lettre de motivation convaincante et te préparer à l'entretien. Prompts prêts à copier pour le marché de l'emploi en Afrique.";
+const URL = `${SITE_URL}/guides/cv-lettre-motivation-entretien-ia-afrique`;
 export const metadata = {
-  title: "CV, lettre de motivation, entretien : décroche un emploi avec l'IA",
-  description:
-    "Utilise ChatGPT gratuitement pour rédiger un CV percutant, une lettre de motivation convaincante et te préparer à l'entretien. Prompts prêts à copier pour le marché de l'emploi en Afrique.",
-  alternates: {
-    canonical: `${SITE_URL}/guides/cv-lettre-motivation-entretien-ia-afrique`,
-  },
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: URL },
+  ...socialMetadata({ title: TITLE, description: DESCRIPTION, url: URL, type: "article" }),
 };
 
 const PROMPT_CV =

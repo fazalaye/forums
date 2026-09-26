@@ -1,4 +1,5 @@
 import StarRating from "./StarRating";
+import Link from "next/link";
 import { CATEGORIES } from "@/data/categories";
 
 const PRICING_LABELS = {
@@ -78,6 +79,13 @@ export default function SiteCard({ site, index = 0 }) {
           {site.priceLabel}
         </span>
       </div>
+
+      <Link
+        href={`/outils/${encodeURIComponent(site.slug)}`}
+        className="text-center text-sm font-medium text-brand-300 hover:underline"
+      >
+        Détails de l’outil
+      </Link>
 
       <a
         href={`/out/${site.slug}`}

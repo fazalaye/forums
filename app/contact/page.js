@@ -1,4 +1,5 @@
 import { SITE_URL } from "@/lib/seo";
+import ContactForm from "@/components/ContactForm";
 
 export const metadata = {
   title: "Contact",
@@ -22,6 +23,7 @@ export default function ContactPage() {
           de publicité ou une suggestion de site à ajouter à l'annuaire ?
           Écrivez-nous.
         </p>
+        <ContactForm />
         <p>
           📧 Email :{" "}
           <a href="mailto:admin@promptforums.org" className="text-brand-300 underline">

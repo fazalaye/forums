@@ -1,15 +1,26 @@
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { faqSchema, breadcrumbSchema, articleSchema, SITE_URL } from "@/lib/seo";
+import {
+  faqSchema,
+  breadcrumbSchema,
+  articleSchema,
+  SITE_URL,
+  socialMetadata,
+} from "@/lib/seo";
+
+const TITLE = "Les meilleurs prompts Claude en français (2026)";
+const DESCRIPTION =
+  "Prompts Claude prêts à copier : CV, création de site web, PowerPoint, apprentissage d'une langue, étude de marché. Plus la technique des balises XML.";
+const URL = `${SITE_URL}/guides/meilleurs-prompts-claude`;
 
 export const metadata = {
-  title: "Les meilleurs prompts Claude en français (2026)",
-  description:
-    "Prompts Claude prêts à copier : CV, création de site web, PowerPoint, apprentissage d'une langue, étude de marché. Plus la technique des balises XML.",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: {
-    canonical: `${SITE_URL}/guides/meilleurs-prompts-claude`,
+    canonical: URL,
   },
+  ...socialMetadata({ title: TITLE, description: DESCRIPTION, url: URL }),
 };
 
 const PROMPT_CV = `Aide-moi à rédiger un CV pour un poste de [intitulé du poste]. Voici mon
@@ -107,10 +118,9 @@ export default function GuidePage() {
       <JsonLd data={breadcrumbSchema(BREADCRUMB_ITEMS)} />
       <JsonLd
         data={articleSchema({
-          title: "Les meilleurs prompts Claude en français (2026)",
-          description:
-            "Prompts Claude prêts à copier : CV, création de site web, PowerPoint, apprentissage d'une langue, étude de marché. Plus la technique des balises XML.",
-          url: `${SITE_URL}/guides/meilleurs-prompts-claude`,
+          title: TITLE,
+          description: DESCRIPTION,
+          url: URL,
           datePublished: "2026-08-07",
         })}
       />

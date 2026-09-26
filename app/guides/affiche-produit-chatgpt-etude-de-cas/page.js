@@ -2,15 +2,20 @@ import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CopyPromptButton from "@/components/CopyPromptButton";
-import { faqSchema, breadcrumbSchema, SITE_URL } from "@/lib/seo";
+import { faqSchema, breadcrumbSchema, SITE_URL, socialMetadata } from "@/lib/seo";
+
+const TITLE = "Créer une affiche produit avec ChatGPT : étude de cas (2026)";
+const DESCRIPTION =
+  "Découvrez le prompt et les étapes décrites pour créer une affiche produit avec ChatGPT à partir de visuels fournisseur, ainsi que les vérifications à faire avant publication.";
+const URL = `${SITE_URL}/guides/affiche-produit-chatgpt-etude-de-cas`;
 
 export const metadata = {
-  title: "Créer une affiche produit avec ChatGPT : étude de cas (2026)",
-  description:
-    "Comment j'ai transformé une photo produit fournisseur brute en affiche publicitaire professionnelle avec ChatGPT : la méthode, le prompt exact utilisé et le résultat avant/après.",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: {
-    canonical: `${SITE_URL}/guides/affiche-produit-chatgpt-etude-de-cas`,
+    canonical: URL,
   },
+  ...socialMetadata({ title: TITLE, description: DESCRIPTION, url: URL, type: "article" }),
 };
 
 const PROS = [

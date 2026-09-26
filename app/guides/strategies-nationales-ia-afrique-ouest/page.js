@@ -1,15 +1,17 @@
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { faqSchema, breadcrumbSchema, articleSchema, SITE_URL } from "@/lib/seo";
+import { faqSchema, breadcrumbSchema, articleSchema, SITE_URL, socialMetadata } from "@/lib/seo";
 
+const TITLE = "IA en Afrique de l'Ouest : les stratégies nationales en 2026";
+const DESCRIPTION =
+  "Sénégal, Bénin, Mali, Côte d'Ivoire : où en sont les stratégies nationales d'intelligence artificielle en Afrique de l'Ouest francophone. Faits et chiffres vérifiés, sources officielles.";
+const URL = `${SITE_URL}/guides/strategies-nationales-ia-afrique-ouest`;
 export const metadata = {
-  title: "IA en Afrique de l'Ouest : les stratégies nationales en 2026",
-  description:
-    "Sénégal, Bénin, Mali, Côte d'Ivoire : où en sont les stratégies nationales d'intelligence artificielle en Afrique de l'Ouest francophone. Faits et chiffres vérifiés, sources officielles.",
-  alternates: {
-    canonical: `${SITE_URL}/guides/strategies-nationales-ia-afrique-ouest`,
-  },
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: URL },
+  ...socialMetadata({ title: TITLE, description: DESCRIPTION, url: URL, type: "article" }),
 };
 
 const FAQ = [

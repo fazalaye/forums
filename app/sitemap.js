@@ -3,6 +3,8 @@ import { CATEGORIES } from "@/data/categories";
 import { GUIDES } from "@/data/guides";
 import { dbConnect } from "@/lib/mongodb";
 import Prompt from "@/models/Prompt";
+import Site from "@/models/Site";
+import { CURATED_SITES } from "@/data/curatedSites";
 
 export const dynamic = "force-dynamic";
 
@@ -14,14 +16,15 @@ export const dynamic = "force-dynamic";
 //
 // When you meaningfully edit a page, bump its date here.
 const ROUTES = [
-  { path: "", lastModified: "2026-07-30", changeFrequency: "daily", priority: 1 },
+  { path: "", lastModified: "2026-09-26", changeFrequency: "daily", priority: 1 },
   { path: "/prompts", lastModified: "2026-08-01" },
   { path: "/submit", lastModified: "2026-07-16" },
   { path: "/a-propos", lastModified: "2026-09-24" },
-  { path: "/contact", lastModified: "2026-09-24" },
+  { path: "/contact", lastModified: "2026-09-26" },
   { path: "/legal", lastModified: "2026-07-28" },
-  { path: "/privacy", lastModified: "2026-09-24" },
-  { path: "/guides", lastModified: "2026-08-05" },
+  { path: "/privacy", lastModified: "2026-09-26" },
+  { path: "/cgu", lastModified: "2026-09-26" },
+  { path: "/guides", lastModified: "2026-09-26" },
   { path: "/boutique", lastModified: "2026-08-07" },
 ];
 
@@ -52,6 +55,7 @@ export default async function sitemap() {
   }));
 
   let promptEntries = [];
+  let toolEntries = [];
   const conn = await dbConnect();
   if (conn) {
     const prompts = await Prompt.find({ slug: { $exists: true, $ne: null } })
@@ -63,12 +67,37 @@ export default async function sitemap() {
       changeFrequency: "monthly",
       priority: 0.5,
     }));
+    const sites = await Site.find({ status: "approved" })
+      .select("slug updatedAt createdAt")
+      .lean();
+    toolEntries = sites.map((site) => ({
+      url: `${SITE_URL}/outils/${site.slug}`,
+      lastModified: site.updatedAt || site.createdAt,
+      changeFrequency: "monthly",
+      priority: 0.5,
+    }));
   }
+
+  const bundledToolEntries = CURATED_SITES.map((site) => ({
+    url: `${SITE_URL}/outils/${site.slug}`,
+    lastModified: new Date("2026-09-26"),
+    changeFrequency: "monthly",
+    priority: 0.5,
+  }));
+  const uniqueToolEntries = [
+    ...new Map(
+      [...bundledToolEntries, ...toolEntries].map((entry) => [
+        entry.url,
+        entry,
+      ])
+    ).values(),
+  ];
 
   return [
     ...staticEntries,
     ...guideEntries,
     ...categoryEntries,
     ...promptEntries,
+    ...uniqueToolEntries,
   ];
 }

@@ -2,12 +2,19 @@ import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CopyPromptButton from "@/components/CopyPromptButton";
-import { faqSchema, breadcrumbSchema, articleSchema, SITE_URL } from "@/lib/seo";
+import {
+  faqSchema,
+  breadcrumbSchema,
+  articleSchema,
+  SITE_URL,
+  socialMetadata,
+} from "@/lib/seo";
 
 const TITLE =
   "Analyser un match de foot avec l'IA : méthodes, données et limites";
 const DESCRIPTION =
   "Comment les modèles statistiques et le machine learning analysent un match de football : quelles données ils utilisent, la loi de Poisson et les xG expliqués simplement, et pourquoi l'analyse ne devient jamais une prédiction fiable.";
+const URL = `${SITE_URL}/guides/ia-pronostics-foot-gratuit`;
 
 export const metadata = {
   title: TITLE,
@@ -15,8 +22,9 @@ export const metadata = {
   keywords: ["analyse football IA", "xG", "loi de Poisson", "pronostics IA"],
   authors: [{ name: "PromptForums" }],
   alternates: {
-    canonical: `${SITE_URL}/guides/ia-pronostics-foot-gratuit`,
+    canonical: URL,
   },
+  ...socialMetadata({ title: TITLE, description: DESCRIPTION, url: URL, type: "article" }),
 };
 
 const PROMPT_ANALYSE =
@@ -46,7 +54,7 @@ const BREADCRUMB_ITEMS = [
   { name: "Guides", url: `${SITE_URL}/guides` },
   {
     name: "Analyser un match de foot avec l'IA",
-    url: `${SITE_URL}/guides/ia-pronostics-foot-gratuit`,
+    url: URL,
   },
 ];
 

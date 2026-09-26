@@ -1,15 +1,26 @@
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { faqSchema, breadcrumbSchema, articleSchema, SITE_URL } from "@/lib/seo";
+import {
+  faqSchema,
+  breadcrumbSchema,
+  articleSchema,
+  SITE_URL,
+  socialMetadata,
+} from "@/lib/seo";
+
+const TITLE = "Se former à l'IA au Sénégal : le guide complet 2026";
+const DESCRIPTION =
+  "Formations, écoles, masters et ressources gratuites pour se former à l'intelligence artificielle au Sénégal. Débouchés, salaires et comment débuter sans budget.";
+const URL = `${SITE_URL}/guides/se-former-ia-senegal`;
 
 export const metadata = {
-  title: "Se former à l'IA au Sénégal : le guide complet 2026",
-  description:
-    "Formations, écoles, masters et ressources gratuites pour se former à l'intelligence artificielle au Sénégal. Débouchés, salaires et comment débuter sans budget.",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: {
-    canonical: `${SITE_URL}/guides/se-former-ia-senegal`,
+    canonical: URL,
   },
+  ...socialMetadata({ title: TITLE, description: DESCRIPTION, url: URL }),
 };
 
 const FAQ = [
@@ -51,10 +62,9 @@ export default function GuidePage() {
       <JsonLd data={breadcrumbSchema(BREADCRUMB_ITEMS)} />
       <JsonLd
         data={articleSchema({
-          title: "Se former à l'IA au Sénégal : le guide complet 2026",
-          description:
-            "Formations, écoles, masters et ressources gratuites pour se former à l'intelligence artificielle au Sénégal. Débouchés, salaires et comment débuter sans budget.",
-          url: `${SITE_URL}/guides/se-former-ia-senegal`,
+          title: TITLE,
+          description: DESCRIPTION,
+          url: URL,
           datePublished: "2026-08-03",
         })}
       />

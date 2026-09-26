@@ -2,15 +2,17 @@ import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CopyPromptButton from "@/components/CopyPromptButton";
-import { faqSchema, breadcrumbSchema, SITE_URL } from "@/lib/seo";
+import { faqSchema, breadcrumbSchema, SITE_URL, socialMetadata } from "@/lib/seo";
 
+const TITLE = "Créer un business plan avec l'IA en Afrique (guide + prompts gratuits)";
+const DESCRIPTION =
+  "Comment utiliser ChatGPT et l'IA gratuite pour créer un business plan, une étude de marché locale et une stratégie commerciale en Afrique. Prompts prêts à copier.";
+const URL = `${SITE_URL}/guides/creer-business-plan-etude-marche-ia-afrique`;
 export const metadata = {
-  title: "Créer un business plan avec l'IA en Afrique (guide + prompts gratuits)",
-  description:
-    "Comment utiliser ChatGPT et l'IA gratuite pour créer un business plan, une étude de marché locale et une stratégie commerciale en Afrique. Prompts prêts à copier.",
-  alternates: {
-    canonical: `${SITE_URL}/guides/creer-business-plan-etude-marche-ia-afrique`,
-  },
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: URL },
+  ...socialMetadata({ title: TITLE, description: DESCRIPTION, url: URL, type: "article" }),
 };
 
 const PROMPT_BUSINESS_PLAN =

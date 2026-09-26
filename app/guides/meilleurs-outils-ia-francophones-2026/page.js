@@ -1,17 +1,19 @@
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { faqSchema, breadcrumbSchema, SITE_URL } from "@/lib/seo";
+import { faqSchema, breadcrumbSchema, SITE_URL, socialMetadata } from "@/lib/seo";
 
 const UPDATED = "juillet 2026";
+const TITLE = "Les 10 meilleurs outils IA en 2026 (comparatif francophone)";
+const DESCRIPTION =
+  "Comparatif à jour des meilleurs outils d'intelligence artificielle en 2026 : ChatGPT, Claude, Midjourney, Perplexity et plus. Prix, usages et notes de la communauté PromptForums.";
+const URL = `${SITE_URL}/guides/meilleurs-outils-ia-francophones-2026`;
 
 export const metadata = {
-  title: "Les 10 meilleurs outils IA en 2026 (comparatif francophone)",
-  description:
-    "Comparatif à jour des meilleurs outils d'intelligence artificielle en 2026 : ChatGPT, Claude, Midjourney, Perplexity et plus. Prix, usages et notes de la communauté PromptForums.",
-  alternates: {
-    canonical: `${SITE_URL}/guides/meilleurs-outils-ia-francophones-2026`,
-  },
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: URL },
+  ...socialMetadata({ title: TITLE, description: DESCRIPTION, url: URL, type: "article" }),
 };
 
 // Curated ranking. Kept as page data so the visible table and the ItemList

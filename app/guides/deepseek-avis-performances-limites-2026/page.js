@@ -1,15 +1,17 @@
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { faqSchema, breadcrumbSchema, SITE_URL } from "@/lib/seo";
+import { faqSchema, breadcrumbSchema, SITE_URL, socialMetadata } from "@/lib/seo";
 
+const TITLE = "DeepSeek : la vérité sur les performances du modèle chinois gratuit (2026)";
+const DESCRIPTION =
+  "DeepSeek est-il vraiment gratuit ? Performances réelles face à ChatGPT, limites du quota gratuit et ce qui consomme le plus de ressources. Analyse honnête, sans chiffres inventés.";
+const URL = `${SITE_URL}/guides/deepseek-avis-performances-limites-2026`;
 export const metadata = {
-  title: "DeepSeek : la vérité sur les performances du modèle chinois gratuit (2026)",
-  description:
-    "DeepSeek est-il vraiment gratuit ? Performances réelles face à ChatGPT, limites du quota gratuit et ce qui consomme le plus de ressources. Analyse honnête, sans chiffres inventés.",
-  alternates: {
-    canonical: `${SITE_URL}/guides/deepseek-avis-performances-limites-2026`,
-  },
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: URL },
+  ...socialMetadata({ title: TITLE, description: DESCRIPTION, url: URL, type: "article" }),
 };
 
 const KEY_POINTS = [

@@ -1,15 +1,17 @@
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { faqSchema, breadcrumbSchema, articleSchema, SITE_URL } from "@/lib/seo";
+import { faqSchema, breadcrumbSchema, articleSchema, SITE_URL, socialMetadata } from "@/lib/seo";
 
+const TITLE = "Nano Banana : les meilleurs prompts en français (2026)";
+const DESCRIPTION =
+  "Prompts Nano Banana prêts à copier : photo LinkedIn pro, photo CV, logo, retouche d'image. Comment accéder gratuitement à l'outil de Google.";
+const URL = `${SITE_URL}/guides/nano-banana-prompts`;
 export const metadata = {
-  title: "Nano Banana : les meilleurs prompts en français (2026)",
-  description:
-    "Prompts Nano Banana prêts à copier : photo LinkedIn pro, photo CV, logo, retouche d'image. Comment accéder gratuitement à l'outil de Google.",
-  alternates: {
-    canonical: `${SITE_URL}/guides/nano-banana-prompts`,
-  },
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: URL },
+  ...socialMetadata({ title: TITLE, description: DESCRIPTION, url: URL, type: "article" }),
 };
 
 const PROMPT_LINKEDIN = `Transforme cette photo en portrait professionnel pour LinkedIn : arrière-plan
