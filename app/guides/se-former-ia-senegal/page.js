@@ -9,9 +9,12 @@ import {
   socialMetadata,
 } from "@/lib/seo";
 
-const TITLE = "Se former à l'IA au Sénégal : le guide complet 2026";
+// SEO (Search Console 2026-T3) : position ~8,9 mais CTR ~2 %. Titre enrichi de
+// déclencheurs (« formations gratuites », « débuter sans budget ») pour monter le CTR.
+const TITLE =
+  "Se Former à l'IA au Sénégal 2026 : Formations Gratuites & Écoles | Guide Complet";
 const DESCRIPTION =
-  "Formations, écoles, masters et ressources gratuites pour se former à l'intelligence artificielle au Sénégal. Débouchés, salaires et comment débuter sans budget.";
+  "Formations IA au Sénégal : écoles, masters, certifications et ressources 100 % gratuites pour débuter sans budget. Débouchés, salaires et parcours pas à pas — le guide complet 2026.";
 const URL = `${SITE_URL}/guides/se-former-ia-senegal`;
 
 export const metadata = {
@@ -66,6 +69,7 @@ export default function GuidePage() {
           description: DESCRIPTION,
           url: URL,
           datePublished: "2026-08-03",
+          dateModified: "2026-10-01",
         })}
       />
 
@@ -140,6 +144,8 @@ export default function GuidePage() {
               height={1230}
               alt="Offres d'emploi en intelligence artificielle à Dakar : chargé de projets IA & Innovation, spécialiste IA & automatisation"
               className="w-full rounded-2xl border border-white/10"
+            /
+              loading="lazy" decoding="async"
             />
             <figcaption className="mt-2 text-center text-sm text-slate-400">
               Exemples réels d'offres actuellement ouvertes à Dakar : stage
@@ -247,6 +253,8 @@ export default function GuidePage() {
               height={1321}
               alt="Formation gratuite et certifiante en intelligence artificielle, École du Code Sonatel Academy (4 mois, présentielle)"
               className="w-full rounded-2xl border border-white/10"
+            /
+              loading="lazy" decoding="async"
             />
             <figcaption className="mt-2 text-center text-sm text-slate-400">
               Le programme « Intelligence Artificielle » de l'École du Code
@@ -490,6 +498,46 @@ export default function GuidePage() {
             </div>
           ))}
         </div>
+      </section>
+
+      {/* Maillage interne : ce guide est n°1 sur « formation ia dakar » —
+          on le relie aux guides géographiques voisins (Côte d'Ivoire, Cameroun)
+          et aux ressources complémentaires (prompts Claude). */}
+      <section className="mb-10">
+        <h2 className="mb-4 text-2xl font-bold text-white">
+          Guides liés — même démarche, autres pays
+        </h2>
+        <ul className="flex list-disc flex-col gap-2 pl-5 text-brand-300">
+          <li>
+            <Link
+              href="/guides/se-former-ia-cote-divoire"
+              className="hover:underline"
+            >
+              Se former à l'IA en Côte d'Ivoire : formations et écoles (2026)
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/guides/se-former-ia-cameroun"
+              className="hover:underline"
+            >
+              Se former à l'IA au Cameroun : formations et écoles (2026)
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/guides/strategies-nationales-ia-afrique-ouest"
+              className="hover:underline"
+            >
+              IA en Afrique de l'Ouest : les stratégies nationales en 2026
+            </Link>
+          </li>
+          <li>
+            <Link href="/guides/meilleurs-prompts-claude" className="hover:underline">
+              Les meilleurs prompts Claude en français (2026)
+            </Link>
+          </li>
+        </ul>
       </section>
 
       <div className="glass-card flex flex-col items-start gap-4 p-6">

@@ -10,16 +10,25 @@ import {
   socialMetadata,
 } from "@/lib/seo";
 
+// SEO (Search Console 2026-T3) : position moyenne ~9 mais CTR ~2 %.
+// Le titre a été réécrit pour placer le mot-clé recherché (« pronostics foot IA gratuit »)
+// en tête, avec l'année et un marqueur « Guide complet », afin de viser un CTR > 5 %.
 const TITLE =
-  "Analyser un match de foot avec l'IA : méthodes, données et limites";
+  "Pronostics Foot IA Gratuit 2026 : Analyse d'un Match avec l'IA | PromptForums";
 const DESCRIPTION =
-  "Comment les modèles statistiques et le machine learning analysent un match de football : quelles données ils utilisent, la loi de Poisson et les xG expliqués simplement, et pourquoi l'analyse ne devient jamais une prédiction fiable.";
+  "Pronostics et analyse de match de foot avec l'IA, gratuitement : quelles données utiliser (xG, loi de Poisson), un prompt prêt à copier, et les limites à connaître avant de parier. Guide complet 2026.";
 const URL = `${SITE_URL}/guides/ia-pronostics-foot-gratuit`;
 
 export const metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  keywords: ["analyse football IA", "xG", "loi de Poisson", "pronostics IA"],
+  keywords: [
+    "pronostics foot IA gratuit",
+    "analyse football IA",
+    "xG",
+    "loi de Poisson",
+    "pronostics IA",
+  ],
   authors: [{ name: "PromptForums" }],
   alternates: {
     canonical: URL,
@@ -53,7 +62,7 @@ const BREADCRUMB_ITEMS = [
   { name: "Accueil", url: SITE_URL },
   { name: "Guides", url: `${SITE_URL}/guides` },
   {
-    name: "Analyser un match de foot avec l'IA",
+    name: "Pronostics foot IA gratuit",
     url: URL,
   },
 ];
@@ -69,14 +78,15 @@ export default function GuidePage() {
           description: DESCRIPTION,
           url: `${SITE_URL}/guides/ia-pronostics-foot-gratuit`,
           datePublished: "2026-08-05",
-          dateModified: "2026-09-24",
+          dateModified: "2026-10-01",
         })}
       />
 
       <Breadcrumbs items={BREADCRUMB_ITEMS} />
       <p className="mb-3 text-sm text-slate-400">Guide · Analyse de données</p>
       <h1 className="mb-4 text-4xl font-extrabold leading-tight">
-        Analyser un match de foot avec l'IA : méthodes, données et limites
+        Pronostics foot IA gratuit : analyser un match avec l'IA (méthodes,
+        données et limites)
       </h1>
       <p className="mb-6 text-lg text-slate-300">
         Le football est l'un des terrains les plus intéressants pour comprendre
@@ -209,7 +219,9 @@ export default function GuidePage() {
             height={1124}
             alt="Interface Forebet montrant les probabilités 1X2, le coefficient et le score prédit pour des matchs de l'UEFA Europa League"
             className="w-full rounded-2xl border border-white/10"
-          />
+          /
+              loading="lazy" decoding="async"
+            />
           <figcaption className="mt-2 text-center text-sm text-slate-400">
             Forebet affiche une distribution de probabilités (1X2) plutôt qu'une
             réponse unique — la bonne façon de présenter une sortie de modèle.
@@ -249,7 +261,9 @@ export default function GuidePage() {
             height={1567}
             alt="Interface FutPre avec le bouton Analyse IA et les onglets Prédictions, Simulations, BetWizard"
             className="w-full rounded-2xl border border-white/10"
-          />
+          /
+              loading="lazy" decoding="async"
+            />
           <figcaption className="mt-2 text-center text-sm text-slate-400">
             FutPre : le mode « Simulations » rejoue le match de nombreuses fois
             pour montrer la dispersion des résultats possibles.
@@ -297,7 +311,9 @@ export default function GuidePage() {
             height={1464}
             alt="Interface BetMines listant des analyses de matchs football avec pourcentages de probabilité"
             className="w-full rounded-2xl border border-white/10"
-          />
+          /
+              loading="lazy" decoding="async"
+            />
           <figcaption className="mt-2 text-center text-sm text-slate-400">
             BetMines affiche un pourcentage de probabilité par match, sans
             expliquer comment il est obtenu.
