@@ -3,9 +3,15 @@ import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { faqSchema, breadcrumbSchema, articleSchema, SITE_URL, socialMetadata } from "@/lib/seo";
 
-const TITLE = "Qu'est-ce que l'intelligence artificielle ? Définition simple";
+// SEO (Search Console 2026-T3) : la requête générique « définition intelligence
+// artificielle » nous place ~80-95e face à des sites à très forte autorité.
+// Le balisage est réorienté vers la longue traîne (« définition simple pour
+// débutant »), là où nous pouvons réellement ranking. La page reste en ligne
+// (les guides voisins y pointent) — voir recommandation n°2 du rapport.
+const TITLE =
+  "Intelligence Artificielle : Définition Simple pour Débutants (2026)";
 const DESCRIPTION =
-  "Définition claire de l'intelligence artificielle, avec les définitions officielles (OCDE, UE), des exemples concrets au quotidien, et les avantages et inconvénients.";
+  "Comprendre l'IA simplement : définition en une phrase, exemples concrets du quotidien, définitions officielles (OCDE, UE) et ce que l'IA ne peut pas faire — le guide clair pour débutants.";
 const URL = `${SITE_URL}/guides/definition-intelligence-artificielle`;
 export const metadata = {
   title: TITLE,
@@ -53,19 +59,18 @@ export default function GuidePage() {
       <JsonLd data={breadcrumbSchema(BREADCRUMB_ITEMS)} />
       <JsonLd
         data={articleSchema({
-          title: "Qu'est-ce que l'intelligence artificielle ? Définition simple",
-          description:
-            "Définition claire de l'intelligence artificielle, avec les définitions officielles (OCDE, UE), des exemples concrets au quotidien, et les avantages et inconvénients.",
+          title: TITLE,
+          description: DESCRIPTION,
           url: `${SITE_URL}/guides/definition-intelligence-artificielle`,
           datePublished: "2026-08-03",
+          dateModified: "2026-10-01",
         })}
       />
 
       <Breadcrumbs items={BREADCRUMB_ITEMS} />
       <p className="mb-3 text-sm text-slate-400">Guide · Glossaire</p>
       <h1 className="mb-4 text-4xl font-extrabold leading-tight">
-        Qu'est-ce que l'intelligence artificielle ? Définition simple et
-        exemples
+        Intelligence artificielle : définition simple et exemples pour débutants
       </h1>
       <p className="mb-6 text-lg text-slate-300">
         Tu as sûrement déjà lu ce mot dix fois aujourd'hui : intelligence

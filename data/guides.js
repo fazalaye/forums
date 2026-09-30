@@ -8,11 +8,33 @@
 // Bump lastModified when you meaningfully edit a guide.
 export const GUIDES = [
   {
-    href: "/guides/definition-intelligence-artificielle",
-    lastModified: "2026-08-10",
-    title: "Qu'est-ce que l'intelligence artificielle ? Définition simple",
+    href: "/guides/se-former-ia-cote-divoire",
+    lastModified: "2026-10-01",
+    title: "Se former à l'IA en Côte d'Ivoire : le guide complet (2026)",
     description:
-      "Définition claire de l'intelligence artificielle, avec les définitions officielles (OCDE, UE), des exemples concrets au quotidien, et les avantages et inconvénients.",
+      "Formations IA en Côte d'Ivoire : écoles d'Abidjan, cursus publics, MOOC gratuits et parcours pour débuter sans budget. Débouchés, salaires et étapes concrètes.",
+    featuredCategory: "Formation & carrière",
+    featuredExcerpt:
+      "Toutes les voies pour apprendre l'intelligence artificielle en Côte d'Ivoire : écoles et programmes publics d'Abidjan, ressources gratuites en ligne, et un plan pour débuter même sans budget.",
+    readingMinutes: 10,
+  },
+  {
+    href: "/guides/se-former-ia-cameroun",
+    lastModified: "2026-10-01",
+    title: "Se former à l'IA au Cameroun : le guide complet (2026)",
+    description:
+      "Formations IA au Cameroun : écoles de Yaoundé et Douala, initiatives publiques, cours gratuits en ligne et méthode pour se lancer sans budget. Débouchés et salaires.",
+    featuredCategory: "Formation & carrière",
+    featuredExcerpt:
+      "Un tour complet des formations en intelligence artificielle accessibles au Cameroun — universités, écoles privées et ressources gratuites — avec les débouchés réels du marché.",
+    readingMinutes: 10,
+  },
+  {
+    href: "/guides/definition-intelligence-artificielle",
+    lastModified: "2026-10-01",
+    title: "Intelligence Artificielle : Définition Simple pour Débutants (2026)",
+    description:
+      "Comprendre l'IA simplement : définition en une phrase, exemples concrets du quotidien, définitions officielles (OCDE, UE) et ce que l'IA ne peut pas faire — le guide clair pour débutants.",
   },
   {
     href: "/guides/meilleurs-outils-ia-francophones-2026",
@@ -91,8 +113,8 @@ export const GUIDES = [
   },
   {
     href: "/guides/ia-pronostics-foot-gratuit",
-    lastModified: "2026-09-26",
-    title: "Analyser un match de foot avec l'IA : méthodes, données et limites",
+    lastModified: "2026-10-01",
+    title: "Pronostics Foot IA Gratuit 2026 : Analyse d'un Match avec l'IA",
     description:
       "Quelles données ces modèles consomment, la loi de Poisson et les xG expliqués simplement, et un prompt pour mener l'analyse toi-même.",
     featuredCategory: "Analyse sportive",
@@ -104,8 +126,8 @@ export const GUIDES = [
   },
   {
     href: "/guides/se-former-ia-senegal",
-    lastModified: "2026-09-26",
-    title: "Se former à l'IA au Sénégal : le guide complet 2026",
+    lastModified: "2026-10-01",
+    title: "Se Former à l'IA au Sénégal 2026 : Formations Gratuites & Écoles",
     description:
       "Formations, écoles, masters et ressources gratuites pour se former à l'intelligence artificielle au Sénégal. Débouchés, salaires et comment débuter sans budget.",
     featuredCategory: "Formation & carrière",
