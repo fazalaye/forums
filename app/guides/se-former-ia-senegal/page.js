@@ -79,20 +79,20 @@ export default function GuidePage() {
         Se former à l'IA au Sénégal : le guide complet
       </h1>
       <p className="mb-6 text-lg text-slate-300">
-        L'intelligence artificielle n'est plus une affaire réservée à la
-        Silicon Valley. À Dakar comme à Thiès ou Saint-Louis, les entreprises
-        cherchent déjà des profils capables d'automatiser, d'analyser des
-        données et de créer avec l'IA — et elles peinent à les trouver.
-        Résultat : se former à l'IA au Sénégal est aujourd'hui l'un des paris
-        de carrière les plus rentables du pays.
+        L'intelligence artificielle n'est plus une affaire réservée à la Silicon
+        Valley. À Dakar comme à Thiès ou Saint-Louis, les entreprises cherchent
+        déjà des profils capables d'automatiser, d'analyser des données et de
+        créer avec l'IA — et elles peinent à les trouver. Résultat : se former à
+        l'IA au Sénégal est aujourd'hui l'un des paris de carrière les plus
+        rentables du pays.
       </p>
       <p className="mb-6 text-slate-300">
         Mais par où commencer ? Faut-il un master, un bootcamp, ou suffit-il
         d'apprendre en ligne ? Ce guide fait le tour complet des voies de
-        formation en intelligence artificielle au Sénégal : universités,
-        écoles privées, plateformes en ligne et ressources 100 % gratuites.
-        Tu y trouveras aussi les débouchés réels, une idée des salaires en
-        FCFA, et une méthode concrète pour te lancer même sans budget.
+        formation en intelligence artificielle au Sénégal : universités, écoles
+        privées, plateformes en ligne et ressources 100 % gratuites. Tu y
+        trouveras aussi les débouchés réels, une idée des salaires en FCFA, et
+        une méthode concrète pour te lancer même sans budget.
       </p>
 
       <section className="mb-10">
@@ -115,10 +115,10 @@ export default function GuidePage() {
             <strong className="text-white">
               Le Sénégal investit dans le numérique.
             </strong>{" "}
-            La stratégie « Sénégal Numérique » et les initiatives publiques
-            de formation (comme Force-N) placent les compétences tech au
-            cœur du développement du pays. Pour le détail de la stratégie
-            nationale d'IA et son objectif de formation, voir notre guide{" "}
+            La stratégie « Sénégal Numérique » et les initiatives publiques de
+            formation (comme Force-N) placent les compétences tech au cœur du
+            développement du pays. Pour le détail de la stratégie nationale d'IA
+            et son objectif de formation, voir notre guide{" "}
             <Link
               href="/guides/strategies-nationales-ia-afrique-ouest"
               className="text-brand-300 hover:underline"
@@ -128,10 +128,10 @@ export default function GuidePage() {
             .
           </li>
           <li>
-            <strong className="text-white">Les barrières tombent.</strong>{" "}
-            Une bonne connexion, un ordinateur et de la discipline suffisent
-            pour démarrer. Beaucoup d'outils et de cours sont gratuits — nous
-            y revenons plus bas.
+            <strong className="text-white">Les barrières tombent.</strong> Une
+            bonne connexion, un ordinateur et de la discipline suffisent pour
+            démarrer. Beaucoup d'outils et de cours sont gratuits — nous y
+            revenons plus bas.
           </li>
         </ul>
 
@@ -144,20 +144,20 @@ export default function GuidePage() {
               height={1230}
               alt="Offres d'emploi en intelligence artificielle à Dakar : chargé de projets IA & Innovation, spécialiste IA & automatisation"
               className="w-full rounded-2xl border border-white/10"
-            /
-              loading="lazy" decoding="async"
+              loading="lazy"
+              decoding="async"
             />
             <figcaption className="mt-2 text-center text-sm text-slate-400">
               Exemples réels d'offres actuellement ouvertes à Dakar : stage
-              chargé de projets IA & Innovation (L3M Holding), spécialiste IA
-              & automatisation (Sabma Digital)…
+              chargé de projets IA & Innovation (L3M Holding), spécialiste IA &
+              automatisation (Sabma Digital)…
             </figcaption>
           </figure>
         </div>
 
         <p className="text-slate-300">
-          En clair : c'est une compétence qui se monnaie, dans un marché où
-          la concurrence entre candidats reste faible. Le train est en gare.
+          En clair : c'est une compétence qui se monnaie, dans un marché où la
+          concurrence entre candidats reste faible. Le train est en gare.
         </p>
       </section>
 
@@ -174,25 +174,21 @@ export default function GuidePage() {
           Universités et masters en intelligence artificielle
         </h3>
         <p className="mb-4 text-slate-300">
-          Pour un parcours diplômant et reconnu, les établissements
-          sénégalais montent en puissance sur la data science et l'IA :
+          Pour un parcours diplômant et reconnu, les établissements sénégalais
+          montent en puissance sur la data science et l'IA :
         </p>
         <ul className="mb-4 flex flex-col gap-3 text-slate-300">
           <li>
-            <strong className="text-white">
-              AIMS Sénégal
-            </strong>{" "}
-            (African Institute for Mathematical Sciences, à Mbour) —
-            référence continentale en mathématiques appliquées et machine
-            learning, à l'origine de programmes d'IA panafricains de haut
-            niveau.
+            <strong className="text-white">AIMS Sénégal</strong> (African
+            Institute for Mathematical Sciences, à Mbour) — référence
+            continentale en mathématiques appliquées et machine learning, à
+            l'origine de programmes d'IA panafricains de haut niveau.
           </li>
           <li>
             <strong className="text-white">
               École Supérieure Polytechnique (ESP) – UCAD
             </strong>{" "}
-            — filières informatique et data où l'IA prend une place
-            croissante.
+            — filières informatique et data où l'IA prend une place croissante.
           </li>
           <li>
             <strong className="text-white">
@@ -208,15 +204,14 @@ export default function GuidePage() {
           </li>
         </ul>
         <p className="mb-4 text-sm text-slate-400">
-          💡 Les intitulés et conditions d'admission d'un master en
-          intelligence artificielle au Sénégal évoluent vite. Vérifie
-          toujours l'offre en cours directement auprès de l'établissement
-          avant de candidater.
+          💡 Les intitulés et conditions d'admission d'un master en intelligence
+          artificielle au Sénégal évoluent vite. Vérifie toujours l'offre en
+          cours directement auprès de l'établissement avant de candidater.
         </p>
         <p className="mb-8 text-slate-300">
-          <strong className="text-white">Pour qui ?</strong> Étudiants et
-          jeunes diplômés visant un poste d'ingénieur IA, data scientist ou
-          chercheur, avec un vrai bagage mathématique.
+          <strong className="text-white">Pour qui ?</strong> Étudiants et jeunes
+          diplômés visant un poste d'ingénieur IA, data scientist ou chercheur,
+          avec un vrai bagage mathématique.
         </p>
 
         <h3 className="mb-3 text-xl font-semibold text-white">
@@ -228,18 +223,16 @@ export default function GuidePage() {
         </p>
         <ul className="mb-4 flex flex-col gap-3 text-slate-300">
           <li>
-            <strong className="text-white">Sonatel Academy</strong> (portée
-            par Orange, en partenariat avec Simplon) — formations au code
-            gratuites et sélectives, socle idéal avant de se spécialiser.
+            <strong className="text-white">Sonatel Academy</strong> (portée par
+            Orange, en partenariat avec Simplon) — formations au code gratuites
+            et sélectives, socle idéal avant de se spécialiser.
           </li>
           <li>
-            <strong className="text-white">Simplon Sénégal</strong> —
-            formations inclusives au numérique et à la data.
+            <strong className="text-white">Simplon Sénégal</strong> — formations
+            inclusives au numérique et à la data.
           </li>
           <li>
-            <strong className="text-white">
-              Bootcamps privés en data/IA
-            </strong>{" "}
+            <strong className="text-white">Bootcamps privés en data/IA</strong>{" "}
             qui ouvrent régulièrement à Dakar.
           </li>
         </ul>
@@ -253,8 +246,8 @@ export default function GuidePage() {
               height={1321}
               alt="Formation gratuite et certifiante en intelligence artificielle, École du Code Sonatel Academy (4 mois, présentielle)"
               className="w-full rounded-2xl border border-white/10"
-            /
-              loading="lazy" decoding="async"
+              loading="lazy"
+              decoding="async"
             />
             <figcaption className="mt-2 text-center text-sm text-slate-400">
               Le programme « Intelligence Artificielle » de l'École du Code
@@ -266,8 +259,8 @@ export default function GuidePage() {
 
         <p className="mb-8 text-slate-300">
           <strong className="text-white">Pour qui ?</strong> Personnes en
-          reconversion ou débutants motivés qui préfèrent la pratique
-          intensive à la théorie longue.
+          reconversion ou débutants motivés qui préfèrent la pratique intensive
+          à la théorie longue.
         </p>
 
         <h3 className="mb-3 text-xl font-semibold text-white">
@@ -279,26 +272,23 @@ export default function GuidePage() {
         </p>
         <ul className="mb-4 flex flex-col gap-3 text-slate-300">
           <li>
-            <strong className="text-white">OpenClassrooms</strong> —
-            parcours diplômants en data et IA, populaires en Afrique
-            francophone.
+            <strong className="text-white">OpenClassrooms</strong> — parcours
+            diplômants en data et IA, populaires en Afrique francophone.
           </li>
           <li>
-            <strong className="text-white">Coursera et edX</strong> — cours
-            des meilleures universités (souvent gratuits à suivre, payants
-            pour le certificat).
+            <strong className="text-white">Coursera et edX</strong> — cours des
+            meilleures universités (souvent gratuits à suivre, payants pour le
+            certificat).
           </li>
           <li>
-            <strong className="text-white">
-              DataCamp et Kaggle Learn
-            </strong>{" "}
-            — pour coder en Python et pratiquer le machine learning.
+            <strong className="text-white">DataCamp et Kaggle Learn</strong> —
+            pour coder en Python et pratiquer le machine learning.
           </li>
         </ul>
         <p className="mb-8 text-slate-300">
           <strong className="text-white">Pour qui ?</strong> Ceux qui
-          travaillent déjà, ont un budget serré, ou veulent tester le
-          domaine avant de s'engager.
+          travaillent déjà, ont un budget serré, ou veulent tester le domaine
+          avant de s'engager.
         </p>
 
         <h3 className="mb-3 text-xl font-semibold text-white">
@@ -322,11 +312,9 @@ export default function GuidePage() {
             francophones d'IA et de data science.
           </li>
           <li>
-            <strong className="text-white">
-              Les outils IA eux-mêmes
-            </strong>{" "}
-            — la meilleure façon d'apprendre l'IA, c'est de l'utiliser tous
-            les jours.
+            <strong className="text-white">Les outils IA eux-mêmes</strong> — la
+            meilleure façon d'apprendre l'IA, c'est de l'utiliser tous les
+            jours.
           </li>
         </ul>
         <p className="mt-2 text-sm text-slate-400">
@@ -351,19 +339,18 @@ export default function GuidePage() {
         </p>
         <ol className="list-decimal space-y-3 pl-5 text-slate-300">
           <li>
-            <strong className="text-white">Ton objectif</strong> — ingénieur
-            IA, data analyst, ou simplement utiliser l'IA dans ton métier
-            actuel ? Le niveau d'exigence n'est pas le même.
+            <strong className="text-white">Ton objectif</strong> — ingénieur IA,
+            data analyst, ou simplement utiliser l'IA dans ton métier actuel ?
+            Le niveau d'exigence n'est pas le même.
           </li>
           <li>
             <strong className="text-white">Ton point de départ</strong> — à
-            l'aise avec les maths et un peu de code ? Vise plus haut.
-            Débutant total ? Commence par une initiation gratuite.
+            l'aise avec les maths et un peu de code ? Vise plus haut. Débutant
+            total ? Commence par une initiation gratuite.
           </li>
           <li>
-            <strong className="text-white">Ton temps</strong> — quelques
-            heures par semaine (en ligne) ou immersion complète (bootcamp,
-            master) ?
+            <strong className="text-white">Ton temps</strong> — quelques heures
+            par semaine (en ligne) ou immersion complète (bootcamp, master) ?
           </li>
           <li>
             <strong className="text-white">Ton budget</strong> — de 0 FCFA
@@ -372,14 +359,14 @@ export default function GuidePage() {
           </li>
           <li>
             <strong className="text-white">La reconnaissance</strong> — un
-            diplôme rassure les employeurs classiques ; un portfolio de
-            projets convainc les startups et les clients en freelance.
+            diplôme rassure les employeurs classiques ; un portfolio de projets
+            convainc les startups et les clients en freelance.
           </li>
         </ol>
         <p className="mt-6 text-slate-300">
-          <strong className="text-white">Règle d'or :</strong> commence
-          gratuit, prouve ton intérêt avec un ou deux projets concrets, puis
-          investis dans une formation payante en connaissance de cause.
+          <strong className="text-white">Règle d'or :</strong> commence gratuit,
+          prouve ton intérêt avec un ou deux projets concrets, puis investis
+          dans une formation payante en connaissance de cause.
         </p>
       </section>
 
@@ -389,8 +376,8 @@ export default function GuidePage() {
         </h2>
         <p className="mb-4 text-slate-300">
           Se former, oui, mais pour quels métiers ? Les entreprises
-          d'intelligence artificielle au Sénégal et les grands groupes
-          recrutent notamment sur ces postes :
+          d'intelligence artificielle au Sénégal et les grands groupes recrutent
+          notamment sur ces postes :
         </p>
         <ul className="mb-6 flex flex-col gap-3 text-slate-300">
           <li>
@@ -412,8 +399,8 @@ export default function GuidePage() {
             — intégrer les IA génératives dans des produits.
           </li>
           <li>
-            <strong className="text-white">Consultant IA</strong> —
-            accompagner les entreprises dans leur transformation.
+            <strong className="text-white">Consultant IA</strong> — accompagner
+            les entreprises dans leur transformation.
           </li>
           <li>
             <strong className="text-white">Freelance IA</strong> —
@@ -422,10 +409,10 @@ export default function GuidePage() {
           </li>
         </ul>
         <p className="text-slate-300">
-          Les rémunérations varient fortement selon l'expérience et
-          l'employeur, mais les profils data et IA figurent parmi les mieux
-          payés du secteur tech sénégalais — et le freelance permet de
-          facturer aussi des clients hors du pays, en devises.
+          Les rémunérations varient fortement selon l'expérience et l'employeur,
+          mais les profils data et IA figurent parmi les mieux payés du secteur
+          tech sénégalais — et le freelance permet de facturer aussi des clients
+          hors du pays, en devises.
         </p>
       </section>
 
@@ -439,19 +426,19 @@ export default function GuidePage() {
         <ol className="list-decimal space-y-3 pl-5 text-slate-300">
           <li>
             <strong className="text-white">Semaine 1-2</strong> — suis une
-            introduction gratuite (Elements of AI en français) pour
-            comprendre les concepts.
+            introduction gratuite (Elements of AI en français) pour comprendre
+            les concepts.
           </li>
           <li>
-            <strong className="text-white">Semaine 3-6</strong> — apprends
-            les bases de Python et du machine learning (Kaggle Learn,
+            <strong className="text-white">Semaine 3-6</strong> — apprends les
+            bases de Python et du machine learning (Kaggle Learn,
             OpenClassrooms).
           </li>
           <li>
             <strong className="text-white">En parallèle</strong> — utilise
-            chaque jour des outils IA génératifs pour un usage réel
-            (rédaction, image, code, productivité). C'est la pratique qui
-            ancre les compétences.
+            chaque jour des outils IA génératifs pour un usage réel (rédaction,
+            image, code, productivité). C'est la pratique qui ancre les
+            compétences.
           </li>
           <li>
             <strong className="text-white">Semaine 7+</strong> — réalise un
@@ -476,13 +463,13 @@ export default function GuidePage() {
         <h2 className="mb-4 text-2xl font-bold text-white">Conclusion</h2>
         <p className="text-slate-300">
           Se former à l'IA au Sénégal n'a jamais été aussi accessible : entre
-          les masters d'AIMS ou de l'ESP, les bootcamps de Sonatel Academy,
-          les plateformes en ligne et une montagne de ressources gratuites,
-          chacun peut trouver une porte d'entrée adaptée à son niveau et à
-          son budget. La vraie clé n'est pas le diplôme parfait, mais la
-          régularité : apprends un peu chaque jour, pratique avec de vrais
-          outils, et construis un portfolio. Le marché sénégalais manque de
-          talents IA — à toi de saisir la place.
+          les masters d'AIMS ou de l'ESP, les bootcamps de Sonatel Academy, les
+          plateformes en ligne et une montagne de ressources gratuites, chacun
+          peut trouver une porte d'entrée adaptée à son niveau et à son budget.
+          La vraie clé n'est pas le diplôme parfait, mais la régularité :
+          apprends un peu chaque jour, pratique avec de vrais outils, et
+          construis un portfolio. Le marché sénégalais manque de talents IA — à
+          toi de saisir la place.
         </p>
       </section>
 
@@ -533,7 +520,10 @@ export default function GuidePage() {
             </Link>
           </li>
           <li>
-            <Link href="/guides/meilleurs-prompts-claude" className="hover:underline">
+            <Link
+              href="/guides/meilleurs-prompts-claude"
+              className="hover:underline"
+            >
               Les meilleurs prompts Claude en français (2026)
             </Link>
           </li>
@@ -543,9 +533,9 @@ export default function GuidePage() {
       <div className="glass-card flex flex-col items-start gap-4 p-6">
         <p className="text-slate-200">
           Ce guide est un point de départ. Sur{" "}
-          <strong className="text-white">PromptForums</strong>, retrouvez
-          chaque outil testé, noté et comparé — mis à jour chaque semaine —
-          et une bibliothèque de prompts prêts à copier.
+          <strong className="text-white">PromptForums</strong>, retrouvez chaque
+          outil testé, noté et comparé — mis à jour chaque semaine — et une
+          bibliothèque de prompts prêts à copier.
         </p>
         <div className="flex flex-wrap gap-3">
           <Link href="/?category=emploi#annuaire" className="btn-primary">

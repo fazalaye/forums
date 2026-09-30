@@ -33,7 +33,12 @@ export const metadata = {
   alternates: {
     canonical: URL,
   },
-  ...socialMetadata({ title: TITLE, description: DESCRIPTION, url: URL, type: "article" }),
+  ...socialMetadata({
+    title: TITLE,
+    description: DESCRIPTION,
+    url: URL,
+    type: "article",
+  }),
 };
 
 const PROMPT_ANALYSE =
@@ -95,10 +100,10 @@ export default function GuidePage() {
         irréductible.
       </p>
       <aside className="mb-10 rounded-xl border border-amber-300/30 bg-amber-400/10 p-5 text-sm text-amber-100">
-        <strong className="text-amber-50">Avertissement important :</strong>{" "}
-        ce contenu est pédagogique et ne constitue ni un conseil de pari ni
-        une promesse de gain. Une analyse IA ne permet pas de garantir le
-        résultat d'un match ou de gagner de l'argent. Ne misez jamais une somme
+        <strong className="text-amber-50">Avertissement important :</strong> ce
+        contenu est pédagogique et ne constitue ni un conseil de pari ni une
+        promesse de gain. Une analyse IA ne permet pas de garantir le résultat
+        d'un match ou de gagner de l'argent. Ne misez jamais une somme
         nécessaire à vos dépenses et respectez la réglementation applicable.
       </aside>
       <p className="mb-6 text-slate-300">
@@ -179,12 +184,11 @@ export default function GuidePage() {
         </h3>
         <p className="text-slate-300">
           Un modèle entraîné sur des milliers de matchs pour repérer des
-          régularités qu'aucune formule ne capture. Plus puissant sur le
-          papier, mais avec deux faiblesses : il exige énormément de données
-          propres, et il fonctionne souvent en « boîte noire » — il donne un
-          résultat sans que l'on puisse examiner le raisonnement. Quand un
-          outil ne documente pas sa méthode, c'est presque toujours de ça qu'il
-          s'agit.
+          régularités qu'aucune formule ne capture. Plus puissant sur le papier,
+          mais avec deux faiblesses : il exige énormément de données propres, et
+          il fonctionne souvent en « boîte noire » — il donne un résultat sans
+          que l'on puisse examiner le raisonnement. Quand un outil ne documente
+          pas sa méthode, c'est presque toujours de ça qu'il s'agit.
         </p>
       </section>
 
@@ -193,16 +197,14 @@ export default function GuidePage() {
           3. Trois outils et ce qu'ils révèlent de leur méthode
         </h2>
         <p className="mb-6 text-slate-300">
-          Le meilleur critère pour juger un outil d'analyse n'est pas le taux
-          de réussite qu'il affiche — c'est ce qu'il accepte de montrer de son
+          Le meilleur critère pour juger un outil d'analyse n'est pas le taux de
+          réussite qu'il affiche — c'est ce qu'il accepte de montrer de son
           fonctionnement.
         </p>
 
         <h3 className="mb-3 text-xl font-semibold text-white">Forebet</h3>
         <p className="mb-4 text-slate-300">
-          <strong className="text-white">
-            Le plus transparent des trois.
-          </strong>{" "}
+          <strong className="text-white">Le plus transparent des trois.</strong>{" "}
           En ligne depuis 2009, Forebet documente publiquement sa méthodologie :
           des modèles mathématiques, dont une loi de Poisson pour estimer le
           nombre de buts probables, appliqués à une base de plus de 700
@@ -219,9 +221,9 @@ export default function GuidePage() {
             height={1124}
             alt="Interface Forebet montrant les probabilités 1X2, le coefficient et le score prédit pour des matchs de l'UEFA Europa League"
             className="w-full rounded-2xl border border-white/10"
-          /
-              loading="lazy" decoding="async"
-            />
+            loading="lazy"
+            decoding="async"
+          />
           <figcaption className="mt-2 text-center text-sm text-slate-400">
             Forebet affiche une distribution de probabilités (1X2) plutôt qu'une
             réponse unique — la bonne façon de présenter une sortie de modèle.
@@ -242,9 +244,7 @@ export default function GuidePage() {
 
         <h3 className="mb-3 text-xl font-semibold text-white">FutPre</h3>
         <p className="mb-4 text-slate-300">
-          <strong className="text-white">
-            L'approche par simulation.
-          </strong>{" "}
+          <strong className="text-white">L'approche par simulation.</strong>{" "}
           Application mobile qui combine forme des équipes, blessures et
           confrontations directes, avec un mode « simulation » qui rejoue
           jusqu'à 100 fois le même match. C'est une méthode statistique
@@ -261,9 +261,9 @@ export default function GuidePage() {
             height={1567}
             alt="Interface FutPre avec le bouton Analyse IA et les onglets Prédictions, Simulations, BetWizard"
             className="w-full rounded-2xl border border-white/10"
-          /
-              loading="lazy" decoding="async"
-            />
+            loading="lazy"
+            decoding="async"
+          />
           <figcaption className="mt-2 text-center text-sm text-slate-400">
             FutPre : le mode « Simulations » rejoue le match de nombreuses fois
             pour montrer la dispersion des résultats possibles.
@@ -292,13 +292,11 @@ export default function GuidePage() {
 
         <h3 className="mb-3 text-xl font-semibold text-white">BetMines</h3>
         <p className="mb-4 text-slate-300">
-          <strong className="text-white">
-            Le plus opaque sur sa méthode.
-          </strong>{" "}
-          L'application fournit des statistiques d'équipes détaillées, utiles
-          en tant que source de données brutes, mais ne documente pas comment
-          son algorithme parvient à ses conclusions. Son mode « paris virtuels »
-          a en revanche une vraie valeur analytique : il permet de tester une
+          <strong className="text-white">Le plus opaque sur sa méthode.</strong>{" "}
+          L'application fournit des statistiques d'équipes détaillées, utiles en
+          tant que source de données brutes, mais ne documente pas comment son
+          algorithme parvient à ses conclusions. Son mode « paris virtuels » a
+          en revanche une vraie valeur analytique : il permet de tester une
           hypothèse sur plusieurs dizaines de matchs sans argent réel, ce qui
           est exactement la bonne façon d'évaluer un modèle — sur un
           échantillon, pas sur trois résultats.
@@ -311,9 +309,9 @@ export default function GuidePage() {
             height={1464}
             alt="Interface BetMines listant des analyses de matchs football avec pourcentages de probabilité"
             className="w-full rounded-2xl border border-white/10"
-          /
-              loading="lazy" decoding="async"
-            />
+            loading="lazy"
+            decoding="async"
+          />
           <figcaption className="mt-2 text-center text-sm text-slate-400">
             BetMines affiche un pourcentage de probabilité par match, sans
             expliquer comment il est obtenu.
@@ -379,8 +377,8 @@ export default function GuidePage() {
             C'est aussi pourquoi les taux de précision affichés par les
             applications (« 80 % de réussite ») doivent être lus avec méfiance :
             ils viennent presque toujours de l'éditeur, sans vérification
-            indépendante, et sans préciser sur quel échantillon ni sur quel
-            type de pari ils sont calculés.
+            indépendante, et sans préciser sur quel échantillon ni sur quel type
+            de pari ils sont calculés.
           </p>
           <p className="text-sm text-slate-300">
             <strong className="text-white">
@@ -388,8 +386,8 @@ export default function GuidePage() {
             </strong>{" "}
             les cotes des bookmakers intègrent une marge structurelle. Aucun
             outil grand public, gratuit ou payant, ne l'annule de façon fiable.
-            Ces modèles servent à comprendre un match — pas à générer un
-            revenu. Ne joue jamais un argent dont tu as besoin.
+            Ces modèles servent à comprendre un match — pas à générer un revenu.
+            Ne joue jamais un argent dont tu as besoin.
           </p>
         </div>
       </section>
@@ -401,11 +399,10 @@ export default function GuidePage() {
         <p className="text-slate-300">
           Le football est un bon révélateur du fonctionnement réel de l'IA : des
           données de qualité inégale, des méthodes qui vont de la formule
-          vérifiable à la boîte noire, et un résultat qui reste probabiliste.
-          Le réflexe utile, ici comme ailleurs, est simple : préférer un outil
-          qui explique sa méthode à un outil qui annonce un score de réussite.
-          Pour aller plus loin sur le fonctionnement de ces systèmes, notre
-          guide{" "}
+          vérifiable à la boîte noire, et un résultat qui reste probabiliste. Le
+          réflexe utile, ici comme ailleurs, est simple : préférer un outil qui
+          explique sa méthode à un outil qui annonce un score de réussite. Pour
+          aller plus loin sur le fonctionnement de ces systèmes, notre guide{" "}
           <Link
             href="/guides/definition-intelligence-artificielle"
             className="text-brand-300 hover:underline"
@@ -433,9 +430,9 @@ export default function GuidePage() {
       <div className="glass-card flex flex-col items-start gap-4 p-6">
         <p className="text-slate-200">
           Ce guide est un point de départ. Sur{" "}
-          <strong className="text-white">PromptForums</strong>, retrouvez
-          chaque outil testé, noté et comparé — mis à jour chaque semaine —
-          et une bibliothèque de prompts prêts à copier.
+          <strong className="text-white">PromptForums</strong>, retrouvez chaque
+          outil testé, noté et comparé — mis à jour chaque semaine — et une
+          bibliothèque de prompts prêts à copier.
         </p>
         <div className="flex flex-wrap gap-3">
           <Link href="/" className="btn-primary">
