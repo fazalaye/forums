@@ -125,6 +125,19 @@ export const GUIDES = [
     featuredImageAlt: "Exemple d’interface de statistiques football présentée dans le guide",
   },
   {
+    href: "/guides/ia-pronostic-vs-forebet",
+    lastModified: "2026-11-22",
+    title: "IA pronostic foot vs Forebet : quelle méthode choisir en 2026-2027 ?",
+    description:
+      "IA de pronostic ou algorithme traditionnel comme Forebet : comparez leurs données, leurs limites et leur utilité avec un prompt d’analyse football à copier.",
+    featuredCategory: "Analyse sportive",
+    featuredExcerpt:
+      "Comparez les probabilités d’un algorithme statistique à l’analyse en langage naturel d’une IA, avec deux exemples d’interfaces et un prompt à copier.",
+    readingMinutes: 7,
+    featuredImage: "/guide-assets/ia-pronostics-foot-forebet.jpg",
+    featuredImageAlt: "Interface d’un outil de pronostics football présentant des probabilités",
+  },
+  {
     href: "/guides/se-former-ia-senegal",
     lastModified: "2026-10-01",
     title: "Se Former à l'IA au Sénégal 2026 : Formations Gratuites & Écoles",
